@@ -1,0 +1,266 @@
+GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/01/26 15:35:00 Page 1
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+      CEE 6410 - Water Resources Systems Analysis
+      Homework 3. Vehicle Shipment Problem in GAMS
+       
+      THE PROBLEM:
+      How many vehicles to go from each supplier to each dealership to minimize the vehicle cost. 
+      Suppliers: Kansas City, Dallas
+       
+      Data are as fol-lows:
+       
+      Supplier            Shipment cost                                              Resource Availability   
+                           Minneapolis    New York      San Francisco     Seattle     Resource Availability
+      Kansas City          4              12            18                18          1000
+      Dallas               9              15            17                21          800
+       
+      Demand
+      Minneapolis         400
+      New York            250
+      San Francisco       450
+      Seattle             450
+       
+       
+       
+      THE SOLUTION:
+      Uses General Algebraic Modeling System to Solve this Linear Program
+       
+      Talha Quddoos
+      talha.quddoos@usu.edu
+      September 28, 2026
+  31   
+  32  * 1. DEFINE the SETS
+  33  * Setting up sets for supply nodes and demand nodes
+  34  SETS
+  35      i suppliers /KansasCity, Dallas/
+  36      j dealerships /Minneapolis,NewYork,SanFrancisco,Seattle/;
+  37   
+  38   
+  39   
+  40  * 2. * Setting up parameters for available resources at supplier and the demand/sale at the dealerships
+  41   
+  42  PARAMETERS
+  43      supply(i) vehicles in supplier inventory/KansasCity 1000, Dallas 800/
+  44      demand(j) vehicle sales or demand at dealerships  /Minneapolis 400,NewYork 250,SanFrancisco 450,Seattle 450 /;
+  45   
+  46   
+  47  * Cost matrix from supply to demand
+  48      table costToShip(i,j)
+  49                  Minneapolis NewYork SanFrancisco Seattle
+  50      KansasCity  4           12      18           18
+  51      Dallas      9           15      17           21;
+  52   
+  53   
+  54   
+  55  * 3. DEFINE the variables
+  56  VARIABLES
+  57      x(i,j) vehicles to ship from a factory i to dealership j (Number)
+  58      z  shipment cost;
+  59  * Non-negativity constraints
+  60  POSITIVE VARIABLES x;
+  61   
+  62  * 4. COMBINE variables and data in equations
+  63  EQUATIONS
+  64      objective equation representing objective function
+  65      supplyConstraint(i) equation representing supply constraint
+  66      demandConstraint(j) equation representing demand constraint;
+  67   
+  68  objective.. sum((i,j),costToShip(i,j)*x(i,j)) =e=z;
+  69  supplyConstraint(i).. sum(j, x(i,j))=L=supply(i);
+  70  demandConstraint(j).. sum(i, x(i,j))=E=demand(j);
+  71   
+  72  * 5. DEFINE the MODEL from the EQUATIONS
+  73  MODEL Shipment /all/;
+  74  *Altnerative way to write (include all previously defined equations)
+  75  *MODEL PLANTING /ALL/;
+  76   
+  77   
+  78  * 6. SOLVE the MODEL
+  79  * Solve the Manufacturing model using a Linear Programming Solver (see File=>Options=>Solvers)
+  80  *     to maximize VPROFIT
+  81  SOLVE Shipment USING LP Minimize z;
+  82   
+  83   
+  84  * 6. CLick File menu => RUN (F9) or Solve icon and examine solution report in .LST file
+
+
+COMPILATION TIME     =        0.000 SECONDS      3 MB  54.4.0 9a60ae27 WEX-WEI
+GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/01/26 15:35:00 Page 2
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Equation Listing    SOLVE Shipment Using LP From line 81
+
+
+---- objective  =E=  equation representing objective function
+
+objective..  4*x(KansasCity,Minneapolis) + 12*x(KansasCity,NewYork) + 18*x(KansasCity,SanFrancisco) + 18*x(KansasCity,Seattle) + 9*x(Dallas,Minneapolis) + 15*x(Dallas,NewYork) + 17*x(Dallas,SanFrancisco) + 21*x(Dallas,Seattle) - z =E= 0 ; (LHS = 0)
+     
+
+---- supplyConstraint  =L=  equation representing supply constraint
+
+supplyConstraint(KansasCity)..  x(KansasCity,Minneapolis) + x(KansasCity,NewYork) + x(KansasCity,SanFrancisco) + x(KansasCity,Seattle) =L= 1000 ; (LHS = 0)
+     
+supplyConstraint(Dallas)..  x(Dallas,Minneapolis) + x(Dallas,NewYork) + x(Dallas,SanFrancisco) + x(Dallas,Seattle) =L= 800 ; (LHS = 0)
+     
+
+---- demandConstraint  =E=  equation representing demand constraint
+
+demandConstraint(Minneapolis)..  x(KansasCity,Minneapolis) + x(Dallas,Minneapolis) =E= 400 ; (LHS = 0, INFES = 400 ****)
+     
+demandConstraint(NewYork)..  x(KansasCity,NewYork) + x(Dallas,NewYork) =E= 250 ; (LHS = 0, INFES = 250 ****)
+     
+demandConstraint(SanFrancisco)..  x(KansasCity,SanFrancisco) + x(Dallas,SanFrancisco) =E= 450 ; (LHS = 0, INFES = 450 ****)
+     
+REMAINING ENTRY SKIPPED
+
+GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/01/26 15:35:00 Page 3
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Column Listing      SOLVE Shipment Using LP From line 81
+
+
+---- x  vehicles to ship from a factory i to dealership j (Number)
+
+x(KansasCity,Minneapolis)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        4       objective
+        1       supplyConstraint(KansasCity)
+        1       demandConstraint(Minneapolis)
+
+x(KansasCity,NewYork)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       12       objective
+        1       supplyConstraint(KansasCity)
+        1       demandConstraint(NewYork)
+
+x(KansasCity,SanFrancisco)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       18       objective
+        1       supplyConstraint(KansasCity)
+        1       demandConstraint(SanFrancisco)
+
+REMAINING 5 ENTRIES SKIPPED
+
+---- z  shipment cost
+
+z
+                (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
+       -1       objective
+
+GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/01/26 15:35:00 Page 4
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Range Statistics    SOLVE Shipment Using LP From line 81
+
+
+RANGE STATISTICS (ABSOLUTE NON-ZERO FINITE VALUES)
+
+RHS       [min, max] : [ 2.500E+02, 1.000E+03] - Zero values observed as well
+Bound     [min, max] : [        NA,        NA] - Zero values observed as well
+Matrix    [min, max] : [ 1.000E+00, 2.100E+01]
+
+GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/01/26 15:35:00 Page 5
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Model Statistics    SOLVE Shipment Using LP From line 81
+
+
+MODEL STATISTICS
+
+BLOCKS OF EQUATIONS           3     SINGLE EQUATIONS            7
+BLOCKS OF VARIABLES           2     SINGLE VARIABLES            9
+NON ZERO ELEMENTS            25
+
+
+GENERATION TIME      =        0.000 SECONDS      4 MB  54.4.0 9a60ae27 WEX-WEI
+GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/01/26 15:35:00 Page 6
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Solution Report     SOLVE Shipment Using LP From line 81
+
+
+               S O L V E      S U M M A R Y
+
+     MODEL   Shipment            OBJECTIVE  z
+     TYPE    LP                  DIRECTION  MINIMIZE
+     SOLVER  CPLEX               FROM LINE  81
+
+**** SOLVER STATUS     1 Normal Completion
+**** MODEL STATUS      1 Optimal
+**** OBJECTIVE VALUE            20650.0000
+
+ RESOURCE USAGE, LIMIT          0.000 10000000000.000
+ ITERATION COUNT, LIMIT         1    2147483647
+*** This solver runs with a community license.
+--- GMO setup time: 0.00s
+--- GMO memory 0.50 Mb (peak 0.50 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.2.0 link memory 0.00 Mb (peak 0.00 Mb)
+--- Starting Cplex
+
+
+--- LP status (1): optimal.
+--- Cplex Time: 0.00sec (det. 0.01 ticks)
+
+
+Optimal solution found
+Objective:        20650.000000
+
+
+                           LOWER          LEVEL          UPPER         MARGINAL
+
+---- EQU objective           .              .              .            -1.0000      
+
+  objective  equation representing objective function
+
+---- EQU supplyConstraint  equation representing supply constraint
+
+                  LOWER          LEVEL          UPPER         MARGINAL
+
+KansasCity        -INF         1000.0000      1000.0000        -3.0000      
+Dallas            -INF          550.0000       800.0000          .          
+
+---- EQU demandConstraint  equation representing demand constraint
+
+                    LOWER          LEVEL          UPPER         MARGINAL
+
+Minneapolis        400.0000       400.0000       400.0000         7.0000      
+NewYork            250.0000       250.0000       250.0000        15.0000      
+SanFrancisco       450.0000       450.0000       450.0000        17.0000      
+Seattle            450.0000       450.0000       450.0000        21.0000      
+
+---- VAR x  vehicles to ship from a factory i to dealership j (Number)
+
+                               LOWER          LEVEL          UPPER         MARGINAL
+
+KansasCity.Minneapolis           .           400.0000        +INF             .          
+KansasCity.NewYork               .           150.0000        +INF             .          
+KansasCity.SanFrancisco          .              .            +INF            4.0000      
+KansasCity.Seattle               .           450.0000        +INF             .          
+Dallas    .Minneapolis           .              .            +INF            2.0000      
+Dallas    .NewYork               .           100.0000        +INF             .          
+Dallas    .SanFrancisco          .           450.0000        +INF             .          
+Dallas    .Seattle               .              .            +INF            EPS         
+
+                           LOWER          LEVEL          UPPER         MARGINAL
+
+---- VAR z                 -INF        20650.0000        +INF             .          
+
+  z  shipment cost
+
+
+**** REPORT SUMMARY :        0     NONOPT
+                             0 INFEASIBLE
+                             0  UNBOUNDED
+
+
+EXECUTION TIME       =        0.046 SECONDS      4 MB  54.4.0 9a60ae27 WEX-WEI
+
+
+USER: Course License                                 G260818+0003Ac-GEN
+      Utah State University                                     DCE5615
+      License for teaching and research at degree granting institutions
+
+
+**** FILE SUMMARY
+
+Input      C:\Users\talha\Downloads\Courses\CEE 6410 Civil Engineering Systems Analysis in the Age of Uncertainty\Assignments\HW3GAMS Solution\Ex3-transport GAMSv2.gms
+Output     C:\Users\talha\Downloads\Courses\CEE 6410 Civil Engineering Systems Analysis in the Age of Uncertainty\Assignments\GAMS\Ex3-transport GAMSv2.lst
