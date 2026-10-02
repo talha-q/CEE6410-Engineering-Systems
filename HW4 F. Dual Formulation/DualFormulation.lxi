@@ -1,0 +1,16 @@
+B 3 C o m p i l a t i o n
+B 94 Equation Listing    SOLVE Shipment Using LP From line 82
+D 97 objective
+D 102 supplyConstraint
+D 109 demandConstraint
+B 121 Column Listing      SOLVE Shipment Using LP From line 82
+E 124 x
+E 146 z
+B 154 Range Statistics    SOLVE Shipment Using LP From line 82
+B 165 Model Statistics    SOLVE Shipment Using LP From line 82
+B 178 Solution Report     SOLVE Shipment Using LP From line 82
+F 211 objective
+F 215 supplyConstraint
+F 222 demandConstraint
+G 231 x
+G 246 z
