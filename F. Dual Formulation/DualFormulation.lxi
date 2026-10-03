@@ -1,16 +1,27 @@
 B 3 C o m p i l a t i o n
-B 94 Equation Listing    SOLVE Shipment Using LP From line 82
-D 97 objective
-D 102 supplyConstraint
-D 109 demandConstraint
-B 121 Column Listing      SOLVE Shipment Using LP From line 82
-E 124 x
-E 146 z
-B 154 Range Statistics    SOLVE Shipment Using LP From line 82
-B 165 Model Statistics    SOLVE Shipment Using LP From line 82
-B 178 Solution Report     SOLVE Shipment Using LP From line 82
-F 211 objective
-F 215 supplyConstraint
-F 222 demandConstraint
-G 231 x
-G 246 z
+B 124 Equation Listing    SOLVE PLANT_PRIMAL Using LP From line 110
+D 127 PROFIT_PRIMAL
+D 132 RES_CONS_PRIMAL
+B 144 Column Listing      SOLVE PLANT_PRIMAL Using LP From line 110
+E 147 x
+E 165 VPROFIT
+B 173 Range Statistics    SOLVE PLANT_PRIMAL Using LP From line 110
+B 184 Model Statistics    SOLVE PLANT_PRIMAL Using LP From line 110
+B 197 Solution Report     SOLVE PLANT_PRIMAL Using LP From line 110
+F 230 PROFIT_PRIMAL
+F 234 RES_CONS_PRIMAL
+G 243 x
+G 252 VPROFIT
+B 262 Equation Listing    SOLVE PLANT_DUAL Using LP From line 111
+D 265 REDCOST_DUAL
+D 270 RES_CONS_DUAL
+B 278 Column Listing      SOLVE PLANT_DUAL Using LP From line 111
+E 281 y
+E 302 VREDCOST
+B 310 Range Statistics    SOLVE PLANT_DUAL Using LP From line 111
+B 321 Model Statistics    SOLVE PLANT_DUAL Using LP From line 111
+B 334 Solution Report     SOLVE PLANT_DUAL Using LP From line 111
+F 367 REDCOST_DUAL
+F 371 RES_CONS_DUAL
+G 378 y
+G 389 VREDCOST
