@@ -28,42 +28,36 @@ Full details at https://usu.instructure.com/courses/818402/files/100525844?wrap=
 
 David E Rosenberg
 david.rosenberg@usu.edu
+
+Model Completed By
+Talha Quddoos
+talha.quddoos@usu.edu
+October 09, 2026
+
 $offtext
 
-* 1. DEFINE the SETS
-SETS parklot Parking Lots /north, south, west/
-    vendor Vendors of grandstands /PurpleRain, BlueSky/;
+* 1. DEFINE the SETS or Dimensions
+SETS
+    i Parking Lots            /north, south, west/
+    j Vendors of grandstands  /PurpleRain, BlueSky/;
 
 * 2. DEFINE input data
 PARAMETERS
-   MaxPassengers(parklot) maximimum number of peoparklote parking lot can handle (Number)
-         /north 600,
-          south 500,
-          west  600/
-   Cost(parklot) cost per passenger from parking lot ($ per person)
-          /north 4,
-          south 5,
-          west  7/
-   TravelTime(parklot) Travel time from parking lot (minutes)
-         /north 20,
-          south 12,
-          west  8/
-   MaxAverageTime Maximum average travel time for all pasengers (minutes) /13/
-   Attendees number of attendees /1200/
-   ReservationCost(vendor) Cost to reserve grandstands from vendor ($)
-        /PurpleRain 1000,
-         BlueSky    1500/
-   Seats(vendor) Seats per grandstand (number)
-        /PurpleRain 100,
-         BlueSky    200/
-    UnitCost(vendor) Cost per grandstand to load ship and setup ($ per grandstand)
-        /PurpleRain 200,
-         BlueSky    300/;
+   MaxPassengers(i)     maximimum number of peoparklote parking lot can handle (Number)  /north 600,south 500, west  600/
+   Cost(i)              Cost per passenger from parking lot ($ per person)               /north 4,south 5, west  7/
+   TravelTime(i)        Travel time from parking lot (minutes)                           /north 20,south 12, west  8/
+   ReservationCost(j)   Cost to reserve grandstands from vendor ($)                      /PurpleRain 1000, BlueSky    1500/    
+   Seats(j)             Seats per grandstand (number)                                    /PurpleRain 100, BlueSky    200/   
+   UnitCost(j)          Cost per grandstand to load ship and setup ($ per grandstand)    /PurpleRain 200, BlueSky    300/    
+   MaxAverageTime       Maximum average travel time for all pasengers (minutes)          /13/
+   Attendees            Number of attendees                                              /1200/;
 
 
 
 * 3. DEFINE the variables
-
+VARIABLES I(src) binary decision to build or do prject from source src (1=yes 0=no)
+          X(src) volume of water provided by source src (ac-ft per year)
+          TCOST  total capital and operating costs of supply actions ($);
 
 * 4. COMBINE variables and data in equations
 *EQUATIONS

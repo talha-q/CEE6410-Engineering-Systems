@@ -9,9 +9,17 @@ With the additional $35,000 capital cost for establishing the wholesale contract
 
 Integer version using INTEGER VARIABLES statement and SOLVE as MIP.
 
+Code by 
 David E Rosenberg
 david.rosenberg@usu.edu
 September 28, 2015
+
+Run by 
+Talha Quddoos
+talha.quddoos@usu.edu
+October 09, 2026
+
+
 $offtext
 
 * 1. DEFINE the SETS
