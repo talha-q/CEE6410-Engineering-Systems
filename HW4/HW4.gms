@@ -112,8 +112,19 @@ sStartEnd.. s('6') =g= ResviorStore;
 * 5. DEFINE the MODEL from the EQUATIONS
 MODEL reservoir /all/;
 
+
+option lp = cplex;
+reservoir.optfile = 1;
+$onecho > cplex.opt
+rhsrng minFlowA
+$offecho
+
+
 * 6. SOLVE the MODEL
 SOLVE reservoir USING LP MAXIMIZING B;
 
 * 7. Display results
 DISPLAY B.l, wTr.l, spill.l, wIr.l, flowA.l, s.l;
+
+
+* Ask CPLEX to report ranging for the minimum flow constraint
