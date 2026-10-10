@@ -43,36 +43,62 @@ SETS
 
 * 2. DEFINE input data
 PARAMETERS
-   MaxPassengers(i)     maximimum number of peoparklote parking lot can handle (Number)  /north 600,south 500, west  600/
+   Capacity(i)          Parking lot capacity (each Number is person)                     /north 600,south 500, west  600/
    Cost(i)              Cost per passenger from parking lot ($ per person)               /north 4,south 5, west  7/
    TravelTime(i)        Travel time from parking lot (minutes)                           /north 20,south 12, west  8/
    ReservationCost(j)   Cost to reserve grandstands from vendor ($)                      /PurpleRain 1000, BlueSky    1500/    
    Seats(j)             Seats per grandstand (number)                                    /PurpleRain 100, BlueSky    200/   
    UnitCost(j)          Cost per grandstand to load ship and setup ($ per grandstand)    /PurpleRain 200, BlueSky    300/    
    MaxAverageTime       Maximum average travel time for all pasengers (minutes)          /13/
-   Attendees            Number of attendees                                              /1200/;
-
+   Attendees            Number of attendees                                              /1200/
+   BusCapacity          Bus Capacity (Passengers per Bus)                                /50/;
 
 
 * 3. DEFINE the variables
-VARIABLES I(src) binary decision to build or do prject from source src (1=yes 0=no)
-          X(src) volume of water provided by source src (ac-ft per year)
-          TCOST  total capital and operating costs of supply actions ($);
+Variables
+    ECOST    Event Expense ($)
+    Buses(i) Number of buses from Parking Lot (i)
+    GS(j)    Number of Grandstands from a Vendor (j)
+    VSelect(j)     Vendor Selection Binary (1=yes  0=No)
+    
+
+;
+Integer Variable Buses, GS;
+Binary Variable VSelect;
+
 
 * 4. COMBINE variables and data in equations
 *EQUATIONS
+Equations
+   Expense         Total Event Cost ($) and obj. function 
+   CapLimit(i)     C: Max capacity of parking space
+   TTimeLimit      C: Max Avg. Travel Time (mins)
+   GSLimitSeats    C: Grandstand Limit Seats (Number)
+   VendorLink(j)   C: Linking Vendor to Binary
+   RshipLimit      C: All buses ride at capacity
+;
 
+*Obj Function   
+Expense..          sum(i,Cost(i)*Buses(i)*BusCapacity)+sum(j,ReservationCost(j)*VSelect(j) + UnitCost(j)* GS(j)) =e=  ECOST ;
+
+*Constraints   
+CapLimit(i)..         BusCapacity * Buses(i)                          =l=  Capacity(i) ;
+TTimeLimit..          sum(i, TravelTime(i) * Buses(i) * BusCapacity)  =l=  MaxAverageTime*Attendees;
+GSLimitSeats..        sum(j, GS(j) * Seats(j))                        =g=  Attendees;
+VendorLink(j)..       GS(j)  =l= (Attendees/Seats(j)) * VSelect(j);
+RshipLimit..          sum(i, Buses(i) * BusCapacity)                   =g=  Attendees;
 
 * 5. DEFINE the MODEL from the EQUATIONS
+model EventPlanning /all/;
 
 
 * 6. Solve the Model as a Mixed Integer Program
-
+solve EventPlanning using mip minimize ECOST;
 
 * 7. Disparklotay the decision variable values in the list file
-*DISLAY X.L, I.L, TCOST.L;
+display GS.L, Buses.L, ECOST.L;
 
 * Dump all input data and results to a GAMS gdx file
-Execute_Unload "MIP-SpecialEvent.gdx";
+Execute_Unload "MIP-SpecialEvent_Talha.gdx";
 * Dump the gdx file to an Excel workbook
-Execute "gdx2xls MIP-SpecialEvent.gdx"
+Execute "gdx2xls MIP-SpecialEvent_Talha.gdx"
