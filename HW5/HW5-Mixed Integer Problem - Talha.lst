@@ -1,0 +1,473 @@
+GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/19/26 23:18:15 Page 1
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+      Reservoir Design Problem - Mixed Integer Programming HW5
+      CEE 6410/5410 by Dr.David Rosenberg
+       
+      -------------------------------
+      Problem text from canvas
+      -------------------------------
+      Formulate and Solve the mixed integer program for Chapter 7, Problem #1 (a 3rd change, this one final)
+      Technical portion of the grading rubric:
+      Integer programming
+      a) Problem Formulation - Dimensions, Decision Variables (10 pts), Objective Function (10 pts), Constraints (10 pts)
+      b) Solution Method (20)
+      c) Results, Recommendations, and New Insights for Management (20)
+       
+      -------------------------------
+      Problem Statement 
+      -------------------------------
+      A farmer plans to develop water for irrigation. He is considering two possible sources of
+      water: a gravity diversion from a possible reservoir with two alternative capacities and/or a
+      pump from a lower river diversion (refer to Figure 7.3). Between the reservoir and pump
+      site the river base flow increases by 2 acft/day due to groundwater drainage into the river.
+      Ignore losses from the reservoir. The river flow into the reservoir and the farmer's demand
+      during each of two six-month seasons of the year are given in Table 7.5. Revenue is estimated
+      at $300 per year per acre irrigated.
+       
+       
+      Assume that there are only two possible sizes of reservoir: a high dam that has capacity of
+      700 acft or a low dam with capacity of 300 acft. The capital costs are $10,000/year and
+      $6,000/year for the high and low dams, respectively (no operating cost). The pump capacity
+      is fixed at 2.2 acft/day with a capital cost (if it is built) of $8,000/year and operating cost
+      of $20/acft.
+       
+       
+      Table 7.5
+      Season,t     River Inflow, Qt (acft)    Irrigation Demand (acft/acre)    
+      1            600                        1.0
+      2            200                        3.0
+       
+      Table 7.6
+      Facility            Capital ($/year)    Operating Cost ($/acft)  Capacity (acft)
+      Reservior High      10000               0                        700
+      Reservior Low       6000                0                        300
+      Pump                8000                20                       2.2acft/day
+       
+      Full details at https://usu.instructure.com/courses/818402/files/100525844?wrap=1
+       
+       
+      Author
+      Talha Quddoos
+      talha.quddoos@usu.edu
+      October 19, 2026
+       
+  54   
+  55  *------House Keeping-------------------------
+  56  *Number of seasons:     2
+  57  *Season Length:         6months
+  58  *Pump Capacity/season:  2.2*30*6  =           396 acft/season
+  59  *Ground Water Drainage: 2acft/day = 2*30*60 = 360 acft/season
+  60   
+  61   
+  62  *------1. DEFINE the SETS or Dimensions-------
+  63  SETS
+  64      t Seasons          /1,2/
+  65      src Water Sources  /Dam1, Dam2, Pump/
+  66  *    Dam1 is High capacity dam and Dam2 is low capacity dam
+  67                      ;
+  68   
+  69   
+  70  *------2. DEFINE input data-------
+  71   
+  72  PARAMETERS
+  73   
+  74      Q(t)           River inflow (acft)               /1 600,2 200/
+  75      Demand(t)      Irrigation Demand (acft per acre) /1 1,2 3/
+  76      Capacity(src)  Source Capacity (acft)            /Dam1 700, Dam2 300, Pump 396/
+  77      Cost(src)      Capital Cost ($)                  /Dam1 10000, Dam2 6000, Pump 8000/
+  78      OpCost(src)    Operational Cost($ per acft)      /Dam1 0, Dam2 0, Pump 20/
+  79      Revenue        Irrigation Revenue ($ per acre)   /300/
+  80      GroundDrainage Ground Water Drainage (per season)/360/;
+  81   
+  82   
+  83  *------3. DEFINE the variables-------
+  84  Variables
+  85      Z           Profit ($)
+  86      AC          Acres irrigated by water
+  87      R(t)        Water released from reservior in season t (acft per season)
+  88      Sp(t)       Water spill in river from reservior
+  89      P(t)        Water pumped from pump in season t (acft per season)
+  90      S(t)        Reservior storage at the end of season t (acft)
+  91      I(src)      Binary variable for the source choices;
+  92   
+  93  Binary Variable I;
+  94  Positive Variables Sp,AC,R,P,S;
+  95   
+  96  *------4. COMBINE variables and data in equations-------
+  97  *EQUATIONS
+  98  Equations
+  99     Profit          Total Profit ($) and obj. function
+ 100     MB1             Mass Balance at the end of season 1
+ 101     MB2             Mass Balance at the end of season 2
+ 102     StCap1          Storage Capacity in season 1
+ 103     StCap2          Storage Capacity in season 2
+ 104     Demand1         Water Demand in season 1
+ 105     Demand2         Water Demand in season 2
+ 106     DamSelect       Dam type choice
+ 107     PumpCap1        Pump Capacity in season 1
+ 108     PumpCap2        Pump Capacity in season 2
+ 109     Pwater1         water pumped in season 1
+ 110     Pwater2         water pumped in season 2
+ 111   
+ 112   
+ 113  ;
+ 114   
+ 115  *------Objective Function -------
+ 116  *Maximizing Profit = Benefits - Costs
+ 117  Profit..              Revenue*AC - Cost('Dam1')*I('Dam1') -Cost('Dam2')*I('Dam2') - Cost('Pump')*I('Pump') - OpCost('Pump')*Sum(t,P(t)) =e=  Z ;
+ 118  MB1..                 S('2') =e= S('1') + Q('1')-Sp('1')-R('1');
+ 119  MB2..                 S('1') =e= S('2') + Q('2')-Sp('2')-R('2');
+ 120  StCap1..              S('1') =L= Capacity('Dam1')*I('Dam1') + Capacity('Dam2')*I('Dam2');
+ 121  StCap2..              S('2') =L= Capacity('Dam1')*I('Dam1') + Capacity('Dam2')*I('Dam2');
+ 122  Demand1..             R('1')+P('1') =G= 1*AC;
+ 123  Demand2..             R('2')+P('2') =G= 3*AC;
+ 124  DamSelect..           I('Dam1')+I('Dam2')=L=1;
+ 125  PumpCap1..            P('1') =L= Capacity('Pump')*I('Pump');
+ 126  PumpCap2..            P('2') =L= Capacity('Pump')*I('Pump');
+ 127  Pwater1..             P('1') =L= Sp('1')+GroundDrainage;
+ 128  Pwater2..             P('2') =L= Sp('2')+GroundDrainage;
+ 129   
+ 130   
+ 131  **Constraints
+ 132  *CapLimit(i)..         BusCapacity * Buses(i)                          =l=  Capacity(i) ;
+ 133  *TTimeLimit..          sum(i, TravelTime(i) * Buses(i) * BusCapacity)  =l=  MaxAverageTime*Attendees;
+ 134  *GSLimitSeats..        sum(j, GS(j) * Seats(j))                        =g=  Attendees;
+ 135  *VendorLink(j)..       GS(j)  =l= (Attendees/Seats(j)) * VSelect(j);
+ 136  *RshipLimit..          sum(i, Buses(i) * BusCapacity)                   =g=  Attendees;
+ 137   
+ 138  *------5. DEFINE the MODEL from the EQUATIONS -------
+ 139  model WaterDistribution /all/;
+ 140   
+ 141   
+ 142  *------6. Solve the Model as a Mixed Integer Program -------
+ 143  solve WaterDistribution using mip maximize Z;
+ 144   
+ 145  *------7. Disparklotay the decision variable values in the list file -------
+ 146  *display GS.L, Buses.L, Z.L;
+ 147  *
+ 148  ** Dump all input data and results to a GAMS gdx file
+ 149  *Execute_Unload "MIP-HW5_Talha.gdx";
+ 150  ** Dump the gdx file to an Excel workbook
+ 151  *Execute "gdx2xls MIP-HW5_Talha.gdx"
+
+
+COMPILATION TIME     =        0.000 SECONDS      3 MB  54.4.0 9a60ae27 WEX-WEI
+GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/19/26 23:18:15 Page 2
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Equation Listing    SOLVE WaterDistribution Using MIP From line 143
+
+
+---- Profit  =E=  Total Profit ($) and obj. function
+
+Profit..  - Z + 300*AC - 20*P(1) - 20*P(2) - 10000*I(Dam1) - 6000*I(Dam2) - 8000*I(Pump) =E= 0 ; (LHS = 0)
+     
+
+---- MB1  =E=  Mass Balance at the end of season 1
+
+MB1..  R(1) + Sp(1) - S(1) + S(2) =E= 600 ; (LHS = 0, INFES = 600 ****)
+     
+
+---- MB2  =E=  Mass Balance at the end of season 2
+
+MB2..  R(2) + Sp(2) + S(1) - S(2) =E= 200 ; (LHS = 0, INFES = 200 ****)
+     
+
+---- StCap1  =L=  Storage Capacity in season 1
+
+StCap1..  S(1) - 700*I(Dam1) - 300*I(Dam2) =L= 0 ; (LHS = 0)
+     
+
+---- StCap2  =L=  Storage Capacity in season 2
+
+StCap2..  S(2) - 700*I(Dam1) - 300*I(Dam2) =L= 0 ; (LHS = 0)
+     
+
+---- Demand1  =G=  Water Demand in season 1
+
+Demand1..  - AC + R(1) + P(1) =G= 0 ; (LHS = 0)
+     
+
+---- Demand2  =G=  Water Demand in season 2
+
+Demand2..  - 3*AC + R(2) + P(2) =G= 0 ; (LHS = 0)
+     
+
+---- DamSelect  =L=  Dam type choice
+
+DamSelect..  I(Dam1) + I(Dam2) =L= 1 ; (LHS = 0)
+     
+
+---- PumpCap1  =L=  Pump Capacity in season 1
+
+PumpCap1..  P(1) - 396*I(Pump) =L= 0 ; (LHS = 0)
+     
+
+---- PumpCap2  =L=  Pump Capacity in season 2
+
+PumpCap2..  P(2) - 396*I(Pump) =L= 0 ; (LHS = 0)
+     
+
+---- Pwater1  =L=  water pumped in season 1
+
+Pwater1..  - Sp(1) + P(1) =L= 360 ; (LHS = 0)
+     
+
+---- Pwater2  =L=  water pumped in season 2
+
+Pwater2..  - Sp(2) + P(2) =L= 360 ; (LHS = 0)
+     
+GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/19/26 23:18:15 Page 3
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Column Listing      SOLVE WaterDistribution Using MIP From line 143
+
+
+---- Z  Profit ($)
+
+Z
+                (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
+       -1       Profit
+
+
+---- AC  Acres irrigated by water
+
+AC
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+      300       Profit
+       -1       Demand1
+       -3       Demand2
+
+
+---- R  Water released from reservior in season t (acft per season)
+
+R(1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       MB1
+        1       Demand1
+
+R(2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       MB2
+        1       Demand2
+
+
+---- Sp  Water spill in river from reservior
+
+Sp(1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       MB1
+       -1       Pwater1
+
+Sp(2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       MB2
+       -1       Pwater2
+
+
+---- P  Water pumped from pump in season t (acft per season)
+
+P(1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+      -20       Profit
+        1       Demand1
+        1       PumpCap1
+        1       Pwater1
+
+P(2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+      -20       Profit
+        1       Demand2
+        1       PumpCap2
+        1       Pwater2
+
+
+---- S  Reservior storage at the end of season t (acft)
+
+S(1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -1       MB1
+        1       MB2
+        1       StCap1
+
+S(2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       MB1
+       -1       MB2
+        1       StCap2
+
+
+---- I  Binary variable for the source choices
+
+I(Dam1)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+   -10000       Profit
+     -700       StCap1
+     -700       StCap2
+        1       DamSelect
+
+I(Dam2)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+    -6000       Profit
+     -300       StCap1
+     -300       StCap2
+        1       DamSelect
+
+I(Pump)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+    -8000       Profit
+     -396       PumpCap1
+     -396       PumpCap2
+
+GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/19/26 23:18:15 Page 4
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Range Statistics    SOLVE WaterDistribution Using MIP From line 143
+
+
+RANGE STATISTICS (ABSOLUTE NON-ZERO FINITE VALUES)
+
+RHS       [min, max] : [ 1.000E+00, 6.000E+02] - Zero values observed as well
+Bound     [min, max] : [ 1.000E+00, 1.000E+00] - Zero values observed as well
+Matrix    [min, max] : [ 1.000E+00, 1.000E+04]
+
+GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/19/26 23:18:15 Page 5
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Model Statistics    SOLVE WaterDistribution Using MIP From line 143
+
+
+MODEL STATISTICS
+
+BLOCKS OF EQUATIONS          12     SINGLE EQUATIONS           12
+BLOCKS OF VARIABLES           7     SINGLE VARIABLES           13
+NON ZERO ELEMENTS            37     DISCRETE VARIABLES          3
+
+
+GENERATION TIME      =        0.015 SECONDS      4 MB  54.4.0 9a60ae27 WEX-WEI
+GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/19/26 23:18:15 Page 6
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Solution Report     SOLVE WaterDistribution Using MIP From line 143
+
+
+               S O L V E      S U M M A R Y
+
+     MODEL   WaterDistribution   OBJECTIVE  Z
+     TYPE    MIP                 DIRECTION  MAXIMIZE
+     SOLVER  CPLEX               FROM LINE  143
+
+**** SOLVER STATUS     1 Normal Completion
+**** MODEL STATUS      1 Optimal
+**** OBJECTIVE VALUE            81600.0000
+
+ RESOURCE USAGE, LIMIT          0.094 10000000000.000
+ ITERATION COUNT, LIMIT        10    2147483647
+*** This solver runs with a community license.
+--- GMO setup time: 0.00s
+--- GMO memory 0.50 Mb (peak 0.50 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.2.0 link memory 0.00 Mb (peak 0.00 Mb)
+--- Starting Cplex
+
+
+--- MIP status (101): integer optimal solution.
+--- Cplex Time: 0.09sec (det. 0.13 ticks)
+
+
+Proven optimal solution
+MIP Solution:        81600.000000    (10 iterations, 0 nodes)
+
+Best possible:       81600.000000
+Absolute gap:            0.000000
+Relative gap:            0.000000
+
+
+                           LOWER          LEVEL          UPPER
+
+---- EQU Profit              .              .              .          
+---- EQU MB1              600.0000       600.0000       600.0000      
+---- EQU MB2              200.0000       200.0000       200.0000      
+---- EQU StCap1            -INF         -700.0000          .          
+---- EQU StCap2            -INF         -120.0000          .          
+---- EQU Demand1             .              .            +INF         
+---- EQU Demand2             .              .            +INF         
+---- EQU DamSelect         -INF            1.0000         1.0000      
+---- EQU PumpCap1          -INF          -36.0000          .          
+---- EQU PumpCap2          -INF          -36.0000          .          
+---- EQU Pwater1           -INF          360.0000       360.0000      
+---- EQU Pwater2           -INF          360.0000       360.0000      
+
+  Profit  Total Profit ($) and obj. function
+  MB1  Mass Balance at the end of season 1
+  MB2  Mass Balance at the end of season 2
+  StCap1  Storage Capacity in season 1
+  StCap2  Storage Capacity in season 2
+  Demand1  Water Demand in season 1
+  Demand2  Water Demand in season 2
+  DamSelect  Dam type choice
+  PumpCap1  Pump Capacity in season 1
+  PumpCap2  Pump Capacity in season 2
+  Pwater1  water pumped in season 1
+  Pwater2  water pumped in season 2
+
+                           LOWER          LEVEL          UPPER
+
+---- VAR Z                 -INF        81600.0000        +INF         
+---- VAR AC                  .           380.0000        +INF         
+
+  Z  Profit ($)
+  AC  Acres irrigated by water
+
+---- VAR R  Water released from reservior in season t (acft per season)
+
+         LOWER          LEVEL          UPPER
+
+1          .            20.0000        +INF         
+2          .           780.0000        +INF         
+
+---- VAR Sp  Water spill in river from reservior
+
+         LOWER          LEVEL          UPPER
+
+1          .              .            +INF         
+2          .              .            +INF         
+
+---- VAR P  Water pumped from pump in season t (acft per season)
+
+         LOWER          LEVEL          UPPER
+
+1          .           360.0000        +INF         
+2          .           360.0000        +INF         
+
+---- VAR S  Reservior storage at the end of season t (acft)
+
+         LOWER          LEVEL          UPPER
+
+1          .              .            +INF         
+2          .           580.0000        +INF         
+
+---- VAR I  Binary variable for the source choices
+
+            LOWER          LEVEL          UPPER
+
+Dam1          .             1.0000         1.0000      
+Dam2          .              .             1.0000      
+Pump          .             1.0000         1.0000      
+
+
+**** REPORT SUMMARY :        0     NONOPT
+                             0 INFEASIBLE
+                             0  UNBOUNDED
+
+
+EXECUTION TIME       =        0.203 SECONDS      4 MB  54.4.0 9a60ae27 WEX-WEI
+
+
+USER: Course License                                 G260818+0003Ac-GEN
+      Utah State University                                     DCE5615
+      License for teaching and research at degree granting institutions
+
+
+**** FILE SUMMARY
+
+Input      C:\Users\talha\Downloads\Courses\CEE 6410 Civil Engineering Systems Analysis in the Age of Uncertainty\Assignments\CEE6410Github\CEE6410-Engineering-Systems\HW5\HW5-Mixed Integer Problem - Talha.gms
+Output     C:\Users\talha\Downloads\Courses\CEE 6410 Civil Engineering Systems Analysis in the Age of Uncertainty\Assignments\CEE6410Github\CEE6410-Engineering-Systems\HW5\HW5-Mixed Integer Problem - Talha.lst

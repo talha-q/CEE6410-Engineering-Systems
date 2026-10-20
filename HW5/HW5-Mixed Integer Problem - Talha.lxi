@@ -1,0 +1,44 @@
+B 3 C o m p i l a t i o n
+B 160 Equation Listing    SOLVE WaterDistribution Using MIP From line 143
+D 163 Profit
+D 168 MB1
+D 173 MB2
+D 178 StCap1
+D 183 StCap2
+D 188 Demand1
+D 193 Demand2
+D 198 DamSelect
+D 203 PumpCap1
+D 208 PumpCap2
+D 213 Pwater1
+D 218 Pwater2
+B 224 Column Listing      SOLVE WaterDistribution Using MIP From line 143
+E 227 Z
+E 234 AC
+E 243 R
+E 256 Sp
+E 269 P
+E 286 S
+E 301 I
+B 325 Range Statistics    SOLVE WaterDistribution Using MIP From line 143
+B 336 Model Statistics    SOLVE WaterDistribution Using MIP From line 143
+B 349 Solution Report     SOLVE WaterDistribution Using MIP From line 143
+F 386 Profit
+F 387 MB1
+F 388 MB2
+F 389 StCap1
+F 390 StCap2
+F 391 Demand1
+F 392 Demand2
+F 393 DamSelect
+F 394 PumpCap1
+F 395 PumpCap2
+F 396 Pwater1
+F 397 Pwater2
+G 414 Z
+G 415 AC
+G 420 R
+G 427 Sp
+G 434 P
+G 441 S
+G 448 I
