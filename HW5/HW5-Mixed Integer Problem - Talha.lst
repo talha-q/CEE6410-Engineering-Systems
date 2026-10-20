@@ -1,4 +1,4 @@
-GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/19/26 23:18:15 Page 1
+GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/19/26 23:35:06 Page 1
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -146,16 +146,16 @@ C o m p i l a t i o n
  143  solve WaterDistribution using mip maximize Z;
  144   
  145  *------7. Disparklotay the decision variable values in the list file -------
- 146  *display GS.L, Buses.L, Z.L;
+ 146  display I.L, AC.L, R.L, Sp.L, P.L, S.L, Z.L;
  147  *
- 148  ** Dump all input data and results to a GAMS gdx file
- 149  *Execute_Unload "MIP-HW5_Talha.gdx";
- 150  ** Dump the gdx file to an Excel workbook
- 151  *Execute "gdx2xls MIP-HW5_Talha.gdx"
+ 148  * Dump all input data and results to a GAMS gdx file
+ 149  Execute_Unload "MIP-HW5_Talha.gdx";
+ 150  * Dump the gdx file to an Excel workbook
+ 151  Execute "gdx2xls MIP-HW5_Talha.gdx"
 
 
 COMPILATION TIME     =        0.000 SECONDS      3 MB  54.4.0 9a60ae27 WEX-WEI
-GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/19/26 23:18:15 Page 2
+GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/19/26 23:35:06 Page 2
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE WaterDistribution Using MIP From line 143
 
@@ -219,7 +219,7 @@ Pwater1..  - Sp(1) + P(1) =L= 360 ; (LHS = 0)
 
 Pwater2..  - Sp(2) + P(2) =L= 360 ; (LHS = 0)
      
-GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/19/26 23:18:15 Page 3
+GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/19/26 23:35:06 Page 3
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE WaterDistribution Using MIP From line 143
 
@@ -320,7 +320,7 @@ I(Pump)
      -396       PumpCap1
      -396       PumpCap2
 
-GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/19/26 23:18:15 Page 4
+GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/19/26 23:35:06 Page 4
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Range Statistics    SOLVE WaterDistribution Using MIP From line 143
 
@@ -331,7 +331,7 @@ RHS       [min, max] : [ 1.000E+00, 6.000E+02] - Zero values observed as well
 Bound     [min, max] : [ 1.000E+00, 1.000E+00] - Zero values observed as well
 Matrix    [min, max] : [ 1.000E+00, 1.000E+04]
 
-GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/19/26 23:18:15 Page 5
+GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/19/26 23:35:06 Page 5
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Model Statistics    SOLVE WaterDistribution Using MIP From line 143
 
@@ -343,8 +343,8 @@ BLOCKS OF VARIABLES           7     SINGLE VARIABLES           13
 NON ZERO ELEMENTS            37     DISCRETE VARIABLES          3
 
 
-GENERATION TIME      =        0.015 SECONDS      4 MB  54.4.0 9a60ae27 WEX-WEI
-GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/19/26 23:18:15 Page 6
+GENERATION TIME      =        0.000 SECONDS      4 MB  54.4.0 9a60ae27 WEX-WEI
+GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/19/26 23:35:06 Page 6
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE WaterDistribution Using MIP From line 143
 
@@ -359,7 +359,7 @@ Solution Report     SOLVE WaterDistribution Using MIP From line 143
 **** MODEL STATUS      1 Optimal
 **** OBJECTIVE VALUE            81600.0000
 
- RESOURCE USAGE, LIMIT          0.094 10000000000.000
+ RESOURCE USAGE, LIMIT          0.015 10000000000.000
  ITERATION COUNT, LIMIT        10    2147483647
 *** This solver runs with a community license.
 --- GMO setup time: 0.00s
@@ -370,7 +370,7 @@ Solution Report     SOLVE WaterDistribution Using MIP From line 143
 
 
 --- MIP status (101): integer optimal solution.
---- Cplex Time: 0.09sec (det. 0.13 ticks)
+--- Cplex Time: 0.01sec (det. 0.13 ticks)
 
 
 Proven optimal solution
@@ -457,9 +457,42 @@ Pump          .             1.0000         1.0000
 **** REPORT SUMMARY :        0     NONOPT
                              0 INFEASIBLE
                              0  UNBOUNDED
+GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/19/26 23:35:06 Page 7
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+E x e c u t i o n
 
 
-EXECUTION TIME       =        0.203 SECONDS      4 MB  54.4.0 9a60ae27 WEX-WEI
+----    146 VARIABLE I.L  Binary variable for the source choices
+
+Dam1 1.000,    Pump 1.000
+
+
+----    146 VARIABLE AC.L                  =      380.000  Acres irrigated by water
+
+----    146 VARIABLE R.L  Water released from reservior in season t (acft per season)
+
+1  20.000,    2 780.000
+
+
+----    146 VARIABLE Sp.L  Water spill in river from reservior
+
+                      ( ALL       0.000 )
+
+
+----    146 VARIABLE P.L  Water pumped from pump in season t (acft per season)
+
+1 360.000,    2 360.000
+
+
+----    146 VARIABLE S.L  Reservior storage at the end of season t (acft)
+
+2 580.000
+
+
+----    146 VARIABLE Z.L                   =    81600.000  Profit ($)
+
+
+EXECUTION TIME       =        5.531 SECONDS      4 MB  54.4.0 9a60ae27 WEX-WEI
 
 
 USER: Course License                                 G260818+0003Ac-GEN

@@ -115,6 +115,8 @@ Equations
 *------Objective Function -------
 *Maximizing Profit = Benefits - Costs
 Profit..              Revenue*AC - Cost('Dam1')*I('Dam1') -Cost('Dam2')*I('Dam2') - Cost('Pump')*I('Pump') - OpCost('Pump')*Sum(t,P(t)) =e=  Z ;
+
+*------Constraints -------
 MB1..                 S('2') =e= S('1') + Q('1')-Sp('1')-R('1');                                                                                      
 MB2..                 S('1') =e= S('2') + Q('2')-Sp('2')-R('2');
 StCap1..              S('1') =L= Capacity('Dam1')*I('Dam1') + Capacity('Dam2')*I('Dam2');
@@ -128,13 +130,6 @@ Pwater1..             P('1') =L= Sp('1')+GroundDrainage;
 Pwater2..             P('2') =L= Sp('2')+GroundDrainage;
 
 
-**Constraints   
-*CapLimit(i)..         BusCapacity * Buses(i)                          =l=  Capacity(i) ;
-*TTimeLimit..          sum(i, TravelTime(i) * Buses(i) * BusCapacity)  =l=  MaxAverageTime*Attendees;
-*GSLimitSeats..        sum(j, GS(j) * Seats(j))                        =g=  Attendees;
-*VendorLink(j)..       GS(j)  =l= (Attendees/Seats(j)) * VSelect(j);
-*RshipLimit..          sum(i, Buses(i) * BusCapacity)                   =g=  Attendees;
-
 *------5. DEFINE the MODEL from the EQUATIONS -------  
 model WaterDistribution /all/;
 
@@ -143,9 +138,9 @@ model WaterDistribution /all/;
 solve WaterDistribution using mip maximize Z;
 
 *------7. Disparklotay the decision variable values in the list file ------- 
-*display GS.L, Buses.L, Z.L;
+display I.L, AC.L, R.L, Sp.L, P.L, S.L, Z.L;
 *
-** Dump all input data and results to a GAMS gdx file
-*Execute_Unload "MIP-HW5_Talha.gdx";
-** Dump the gdx file to an Excel workbook
-*Execute "gdx2xls MIP-HW5_Talha.gdx"
+* Dump all input data and results to a GAMS gdx file
+Execute_Unload "MIP-HW5_Talha.gdx";
+* Dump the gdx file to an Excel workbook
+Execute "gdx2xls MIP-HW5_Talha.gdx"
