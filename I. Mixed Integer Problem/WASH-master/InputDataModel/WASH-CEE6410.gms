@@ -575,9 +575,9 @@ FlowMarginal(j,t)  = EQ6.m(j,t) ;
 * Unload results to excel
 *=======================================================================
 * Dump all input data and results to a GAMS gdx file
-Execute_Unload "WASH-CEE6410-solution.gdx";
+Execute_Unload "WASH-CEE6410-solution_Sed.gdx";
 * Dump the gdx file to an Excel workbook
-Execute "gdx2xls WASH-CEE6410-solution.gdx"
+Execute "gdx2xls WASH-CEE6410-solution_Sed.gdx"
 
 *===============================================================================================
 *Loop over the objective function to develop a pareto-optimal curve with the demand constraint
