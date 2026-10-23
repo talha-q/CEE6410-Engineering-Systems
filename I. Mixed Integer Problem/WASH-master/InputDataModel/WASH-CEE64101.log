@@ -89,3 +89,27 @@ CONOPT 4         54.4.0 9a60ae27 Sep 9, 2026           WEI x86 64bit/MS Window
        6   3          4.3715415831E+02 3.1E-01      25 1.0E+00    25 T  T
        7   3          4.5119863139E+02 3.9E-01      41 1.0E+00    35 T  T
        8   3          4.6611829938E+02 1.7E+00      53 1.0E+00    47 T  T
+       9   3          4.8401427414E+02 2.1E+00      72 1.0E+00    69 T  T
+      10   3          4.9143314985E+02 8.2E-02      48 1.0E+00    28 T  T
+      11   3          4.9174755051E+02 1.5E-01      26 1.0E+00     5 T  T
+      12   3          4.9177569590E+02 1.5E-01      24 4.6E-01     4 F  T
+      13   4          4.9178876463E+02 1.5E-01      23 1.0E+00    19 T  T
+      14   4          4.9179072065E+02 1.1E-03       5 7.8E-01     6 F  T
+      15   4          4.9179081263E+02 3.9E-04       5 1.0E+00     5 F  T
+ 
+    Iter Phase   Ninf     Objective     RGmax      NSB   Step  InItr MX OK
+      16   4          4.9179081340E+02 3.6E-05       5 1.0E+00     2 F  T
+      17   4          4.9179081340E+02 9.0E-07       5 1.0E+00     1 F  T
+      18   4          4.9179081340E+02 3.4E-09       5
+ 
+ ** Optimal solution. Reduced gradient less than tolerance.
+ 
+--- Reading solution for model WASH
+--- Executing after solve: elapsed 0:00:05.928
+--- WASH-CEE6410.gms(577) 6 Mb
+--- GDX File (execute_unload) C:\Users\talha\Downloads\Courses\CEE 6410 Civil Engineering Systems Analysis\Assignments\CEE6410Github\CEE6410-Engineering-Systems\I. Mixed Integer Problem\WASH-master\InputDataModel\WASH-CEE6410-solution.gdx
+--- WASH-CEE6410.gms(579) 6 Mb
+GDX2XLS          54.4.0 9a60ae27 Sep 9, 2026           WEI x86 64bit/MS Window
+Output file: C:\Users\talha\Downloads\Courses\CEE 6410 Civil Engineering Systems Analysis\Assignments\CEE6410Github\CEE6410-Engineering-Systems\I. Mixed Integer Problem\WASH-master\InputDataModel\WASH-CEE6410-solution.xlsx
+*** Status: Normal completion
+--- Job WASH-CEE6410.gms Stop 10/23/26 16:39:59 elapsed 0:01:43.777
