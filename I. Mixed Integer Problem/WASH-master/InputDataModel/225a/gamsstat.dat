@@ -1,0 +1,203 @@
+=1
+=2
+=0CONOPT 4         54.4.0 9a60ae27 Sep 9, 2026           WEI x86 64bit/MS Window
+=1
+ 
+ 
+    C O N O P T   version 4.39.2
+    Copyright (C) GAMS Software GmbH
+                  GAMS Development Corporation
+ 
+=2
+=1
+    Will use up to 4 threads.
+ 
+=2
+ 
+  ***  Line    0  SET       LFEERR =            0
+ 
+  ***  Line    0  SET       LFEERR =            0
+ 
+  ***  Line    0  SET       LFITER =   2147483647
+ 
+  ***  Line    0  SET       RVTIME =      100000000.0
+=1
+ 
+    The user model has 5880 constraints and 5005 variables
+    with 12097 Jacobian elements, 1685 of which are nonlinear.
+    The Hessian of the Lagrangian has 485 elements on the diagonal,
+    600 elements below the diagonal, and 1685 nonlinear variables.
+=2
+ 
+    Iter Phase   Ninf   Infeasibility   RGmax      NSB   Step  InItr MX OK
+       0   0          7.4283542164E+03 (Input point)
+=1
+ 
+    The pre-triangular part of the model has 2456 constraints and 1182 variables.
+=2
+=1
+    The post-triangular part of the model has 3002 constraints and variables.
+=2
+=1
+ 
+    Preprocessed model has 422 constraints and 821 variables
+    with 1291 Jacobian elements, 14 of which are nonlinear.
+=2
+                      2.9586523428E+02 (Full preprocessed model)
+                      3.0397038408E+01 (After scaling)
+                      1.1225208249E+01 (After adjusting individual variables)
+ 
+    Iter Phase   Ninf   Infeasibility   RGmax      NSB   Step  InItr MX OK
+       1   0          9.3037328023E+00                 1.0E+00     3 T  T
+       2   0          9.3036495499E+00                 1.0E+00     1 T  T
+       3   1      10  2.5901192805E+00 1.0E+00      29 1.0E+00    24 T  T
+       4   1       2  4.0812106604E-01 1.0E+00      21 1.0E+00    22 T  T
+       5   1       1  4.5446921945E-02 1.0E+00       3 1.0E+00     3 T  T
+ 
+ ** Feasible solution. Value of objective =    435.393379510
+ 
+Search for an optimal solution.
+ 
+ 
+    Iter Phase   Ninf     Objective     RGmax      NSB   Step  InItr MX OK
+       6   3          4.3715415831E+02 3.1E-01      25 1.0E+00    25 T  T
+       7   3          4.5119863139E+02 3.9E-01      41 1.0E+00    35 T  T
+       8   3          4.6611829938E+02 1.7E+00      53 1.0E+00    47 T  T
+       9   3          4.8401427414E+02 2.1E+00      72 1.0E+00    69 T  T
+      10   3          4.9143314985E+02 8.2E-02      48 1.0E+00    28 T  T
+      11   3          4.9174755051E+02 1.5E-01      26 1.0E+00     5 T  T
+      12   3          4.9177569590E+02 1.5E-01      24 4.6E-01     4 F  T
+      13   4          4.9178876463E+02 1.5E-01      23 1.0E+00    19 T  T
+      14   4          4.9179072065E+02 1.1E-03       5 7.8E-01     6 F  T
+      15   4          4.9179081263E+02 3.9E-04       5 1.0E+00     5 F  T
+      16   4          4.9179081340E+02 3.6E-05       5 1.0E+00     2 F  T
+      17   4          4.9179081340E+02 9.0E-07       5 1.0E+00     1 F  T
+      18   4          4.9179081340E+02 3.4E-09       5
+=1
+ 
+ ** Optimal solution. Reduced gradient less than tolerance.
+ 
+=2
+ IcolU=        2211  is at Upper but Xusr=   27.5032975263490       and Xmax=  1.000000000000000E+015
+ Dmax=   27.5032975263490       and DMaxFrom=        3229  ColType=PostTria
+ DMaxFrom row has RowType=PostTria
+ IcolU=        2220  is at Upper but Xusr=   26.9541164218148       and Xmax=  1.000000000000000E+015
+ Dmax=   26.9541164218148       and DMaxFrom=        3238  ColType=PostTria
+ DMaxFrom row has RowType=PostTria
+ IcolU=        2249  is at Upper but Xusr=   10.5889101425600       and Xmax=  1.000000000000000E+015
+ Dmax=   10.5889101425600       and DMaxFrom=        3267  ColType=PostTria
+ DMaxFrom row has RowType=PostTria
+ IcolU=        2250  is at Upper but Xusr=   16.1002028433200       and Xmax=  1.000000000000000E+015
+ Dmax=   16.1002028433200       and DMaxFrom=        3268  ColType=PostTria
+ DMaxFrom row has RowType=PostTria
+ IcolU=        2252  is at Upper but Xusr=   11.1913117854800       and Xmax=  1.000000000000000E+015
+ Dmax=   11.1913117854800       and DMaxFrom=        3270  ColType=PostTria
+ DMaxFrom row has RowType=PostTria
+ IcolU=        2253  is at Upper but Xusr=   10.0742368942400       and Xmax=  1.000000000000000E+015
+ Dmax=   10.0742368942400       and DMaxFrom=        3271  ColType=PostTria
+ DMaxFrom row has RowType=PostTria
+ IcolU=        2333  is at Upper but Xusr=   33.3308186512910       and Xmax=  1.000000000000000E+015
+ Dmax=   33.3308186512910       and DMaxFrom=        3351  ColType=PostTria
+ DMaxFrom row has RowType=PostTria
+ IcolU=        2334  is at Upper but Xusr=   35.8309067676382       and Xmax=  1.000000000000000E+015
+ Dmax=   35.8309067676382       and DMaxFrom=        3352  ColType=PostTria
+ DMaxFrom row has RowType=PostTria
+ IcolU=        2335  is at Upper but Xusr=   34.3621803031431       and Xmax=  1.000000000000000E+015
+ Dmax=   34.3621803031431       and DMaxFrom=        3353  ColType=PostTria
+ DMaxFrom row has RowType=PostTria
+ IcolU=        2337  is at Upper but Xusr=   30.7186783928616       and Xmax=  1.000000000000000E+015
+ Dmax=   30.7186783928616       and DMaxFrom=        3355  ColType=PostTria
+ DMaxFrom row has RowType=PostTria
+ IcolU=        2340  is at Upper but Xusr=   30.4138483719287       and Xmax=  1.000000000000000E+015
+ Dmax=   30.4138483719287       and DMaxFrom=        3358  ColType=PostTria
+ DMaxFrom row has RowType=PostTria
+ IcolU=        2379  is at Lower but Xusr=   15.4170800000000       and Xmin=  0.000000000000000E+000
+ Dmin=   15.4170800000000       and DMinFrom=        3397  ColType=PostTria
+ DminFrom row has RowType=PostTria
+ IcolU=        2380  is at Lower but Xusr=   15.4494400000000       and Xmin=  0.000000000000000E+000
+ Dmin=   15.4494400000000       and DMinFrom=        3398  ColType=PostTria
+ DminFrom row has RowType=PostTria
+ IcolU=        2381  is at Lower but Xusr=   15.5141600000000       and Xmin=  0.000000000000000E+000
+ Dmin=   15.5141600000000       and DMinFrom=        3399  ColType=PostTria
+ DminFrom row has RowType=PostTria
+ IcolU=        2382  is at Lower but Xusr=   15.3523600000000       and Xmin=  0.000000000000000E+000
+ Dmin=   15.3523600000000       and DMinFrom=        3400  ColType=PostTria
+ DminFrom row has RowType=PostTria
+ IcolU=        2383  is at Lower but Xusr=   15.3361800000000       and Xmin=  0.000000000000000E+000
+ Dmin=   15.3361800000000       and DMinFrom=        3401  ColType=PostTria
+ DminFrom row has RowType=PostTria
+ IcolU=        2384  is at Lower but Xusr=   15.3361800000000       and Xmin=  0.000000000000000E+000
+ Dmin=   15.3361800000000       and DMinFrom=        3402  ColType=PostTria
+ DminFrom row has RowType=PostTria
+ IcolU=        2385  is at Lower but Xusr=   15.3361800000000       and Xmin=  0.000000000000000E+000
+ Dmin=   15.3361800000000       and DMinFrom=        3403  ColType=PostTria
+ DminFrom row has RowType=PostTria
+ IcolU=        2386  is at Lower but Xusr=   15.3361800000000       and Xmin=  0.000000000000000E+000
+ Dmin=   15.3361800000000       and DMinFrom=        3404  ColType=PostTria
+ DminFrom row has RowType=PostTria
+ IcolU=        2403  is at Upper but Xusr=   28.5686789924830       and Xmax=  1.000000000000000E+015
+ Dmax=   28.5686789924830       and DMaxFrom=        3421  ColType=PostTria
+ DMaxFrom row has RowType=PostTria
+ IcolU=        2405  is at Upper but Xusr=   28.7170040949440       and Xmax=  1.000000000000000E+015
+ Dmax=   28.7170040949440       and DMaxFrom=        3423  ColType=PostTria
+ DMaxFrom row has RowType=PostTria
+ IcolU=        2407  is at Upper but Xusr=   28.5276818264413       and Xmax=  1.000000000000000E+015
+ Dmax=   28.5276818264413       and DMaxFrom=        3425  ColType=PostTria
+ DMaxFrom row has RowType=PostTria
+ IcolU=        2438  is at Upper but Xusr=   15.3783480393832       and Xmax=  1.000000000000000E+015
+ Dmax=   15.3783480393832       and DMaxFrom=        3456  ColType=PostTria
+ DMaxFrom row has RowType=PostTria
+ IcolU=        2440  is at Upper but Xusr=   15.6422798757383       and Xmax=  1.000000000000000E+015
+ Dmax=   15.6422798757383       and DMaxFrom=        3458  ColType=PostTria
+ DMaxFrom row has RowType=PostTria
+ IcolU=        2441  is at Upper but Xusr=   16.4660235006746       and Xmax=  1.000000000000000E+015
+ Dmax=   16.4660235006746       and DMaxFrom=        3459  ColType=PostTria
+ DMaxFrom row has RowType=PostTria
+ IcolU=        2442  is at Upper but Xusr=   15.7121241975255       and Xmax=  1.000000000000000E+015
+ Dmax=   15.7121241975255       and DMaxFrom=        3460  ColType=PostTria
+ DMaxFrom row has RowType=PostTria
+ IcolU=        2445  is at Upper but Xusr=   15.3714981228785       and Xmax=  1.000000000000000E+015
+ Dmax=   15.3714981228785       and DMaxFrom=        3463  ColType=PostTria
+ DMaxFrom row has RowType=PostTria
+ IcolU=        2447  is at Upper but Xusr=   15.3581476768085       and Xmax=  1.000000000000000E+015
+ Dmax=   15.3581476768085       and DMaxFrom=        3465  ColType=PostTria
+ DMaxFrom row has RowType=PostTria
+ IcolU=        2449  is at Upper but Xusr=   15.3301222414773       and Xmax=  1.000000000000000E+015
+ Dmax=   15.3301222414773       and DMaxFrom=        3467  ColType=PostTria
+ DMaxFrom row has RowType=PostTria
+ IcolU=        2452  is at Upper but Xusr=   15.9400297110431       and Xmax=  1.000000000000000E+015
+ Dmax=   15.9400297110431       and DMaxFrom=        3470  ColType=PostTria
+ DMaxFrom row has RowType=PostTria
+ IcolU=        2454  is at Upper but Xusr=   16.7719077248246       and Xmax=  1.000000000000000E+015
+ Dmax=   16.7719077248246       and DMaxFrom=        3472  ColType=PostTria
+ DMaxFrom row has RowType=PostTria
+ IcolU=        2456  is at Upper but Xusr=   15.6362956407436       and Xmax=  1.000000000000000E+015
+ Dmax=   15.6362956407436       and DMaxFrom=        3474  ColType=PostTria
+ DMaxFrom row has RowType=PostTria
+ IcolU=        2457  is at Upper but Xusr=   15.6073012259003       and Xmax=  1.000000000000000E+015
+ Dmax=   15.6073012259003       and DMaxFrom=        3475  ColType=PostTria
+ DMaxFrom row has RowType=PostTria
+ IcolU=        2458  is at Upper but Xusr=   15.5841690289717       and Xmax=  1.000000000000000E+015
+ Dmax=   15.5841690289717       and DMaxFrom=        3476  ColType=PostTria
+ DMaxFrom row has RowType=PostTria
+ IcolU=        2465  is at Upper but Xusr=   27.5502069381620       and Xmax=  1.000000000000000E+015
+ Dmax=   27.5502069381620       and DMaxFrom=        3483  ColType=PostTria
+ DMaxFrom row has RowType=PostTria
+ IcolU=        2471  is at Upper but Xusr=   26.4151710166406       and Xmax=  1.000000000000000E+015
+ Dmax=   26.4151710166406       and DMaxFrom=        3489  ColType=PostTria
+ DMaxFrom row has RowType=PostTria
+ **** ReportSta has reported          36  value errors.
+=1
+ 
+ CONOPT time Total                            0.135 seconds
+   of which: Function evaluations             0.003 =  2.2%
+             1st Derivative evaluations       0.010 =  7.4%
+             2nd Derivative evaluations       0.001 =  0.7%
+             Directional 2nd Deriv(Hess)      0.007 =  5.2%
+             Interval derivative evals        0.003 =  2.2%
+ 
+=2
+ 
+ Memory: Max used =      4.31 Mbytes
+  Total Allocated =      6.31 Mbytes
+ 
