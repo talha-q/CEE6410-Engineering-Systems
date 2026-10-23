@@ -1,4 +1,4 @@
-GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/23/26 16:38:15 Page 1
+GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/23/26 17:03:06 Page 1
 Watershed Area of Suitable Habitat (WASH) model and an application on the Lower Bear River Watershed
 C o m p i l a t i o n
 
@@ -215,28 +215,29 @@ C o m p i l a t i o n
  213  *Difficulting loading last two parameters (minrv and maxrv). Maxrv is
  214  *on a different worksheet (Vegetation). No minrv in the workbook.
  215  *$CALL GDXXRW.EXE input=WASH_1yr_InputData.xlsx output=WASH-Data.gdx  Set=t rng=Month!A1:A12 Rdim=1  Set=s rng=SubInd!A1:A100 Rdim=1 set=y rng=FishSpp!A1:A10 Rdim=1 set=n rng=VegSpp!A1:A10 Rdim=1 Set=j rng=Nodes!A1:A100 Rdim=1 Set=wt rng=Wetlands!A1:A100 Rdim=1 Set=dem rng=Demand!A1:A100 Rdim=1  set=NodeNotDemandSite  rng=NodesNotDemand!A1:A100 Rdim=1 set=NodeNotHeadwater  rng=NodeNotHeadwater!A1:A100 Rdim=1  Set=v rng=Reservoirs!A1:A100 Rdim=1 Set=rsi_indx rng=rsiIndex!A1:A10 Rdim=1  Set=fci_indx rng=fciIndex!A1:A10 Rdim=1 par=LinkID  rng=LinkName!A1 Rdim=2   par=rsi_par rng=rsiEQ!A1 Rdim=3 Cdim=1  par=fci_par rng=fciEQ!A1 Rdim=3 Cdim=1 par=envSiteExist rng=EnvSite!A1 Rdim=1 Cdim=1  par=DiversionExist rng=Diversions!A1 Rdim=1 Cdim=1   par=returnFlowExist rng=ReturnFlow!A1 Rdim=1 Cdim=1 par=WetlandsExist rng=WetlandsSites!A1 Rdim=1 Cdim=1 par=LinktoReservoir rng=LinktoReservoir!A1 Rdim=1 Cdim=1 par=LinkOutReservoir rng=LinkOutReservoir!A1 Rdim=1 Cdim=1   Set=RA_par_indx rng=R_indx!A1 Rdim=1  Set=sf_par_indx rng=sf_indx!A1:A10 Rdim=1  Set=wf_par_indx rng=wf_indx!A1:A10 Rdim=1 Set=wsi_par_indx rng=wsi_indx!A1:A10 Rdim=1 par=reachGain rng=HeadFlow!A1 Rdim=1 Cdim=1   par=wght rng=weights!A1 Cdim=1 Rdim=3  par=aw rng=AW!A1 Rdim=3  par=lss rng=lss!A1 Rdim=2 Cdim=1 par=evap rng=evap!A1 Rdim=1 Cdim=1  par=linkEvap  rng=linkEvap!A1  Rdim=2  Cdim=1  par=RA_par rng=ResElevVol!A1 Rdim=1 Cdim=1  par=Qsim  rng=QSim!A1 Rdim=2 Cdim=1   par=Qmin  rng=Qmin!A1 Rdim=2 Cdim=1  par=Qmax  rng=Qmax!A1 Rdim=2 Cdim=1  par=Cons rng=Cons!A1 Rdim=1 Cdim=1 par=lng rng=Length!A1 Rdim=2   par=minstor rng=inactive!A1 Rdim=1  par=maxstor rng=capacity!A1 Rdim=1  par=dReqBase rng=demandReq!A1 Rdim=1 Cdim=1 par=dCap rng=divCap!A1 Rdim=2  par=instreamReq   rng=Instream!A1 Rdim=2 Cdim=1  par=cst rng=UnitCost!A1 Rdim=1  par=Linkexist rng=Connect!A1 Rdim=1 Cdim=1  par=sf_par rng=StageFlow!A1 Rdim=2 Cdim=1 par=wf_par rng=WidthFlow!A1 Rdim=2 Cdim=1   par=wsi_par rng=wp!A1 Rdim=3 Cdim=1  par=b rng=Budget!A1 Rdim=0   par=InitSTOR rng=InStor!A1 Rdim=1   par=InitD rng=InitD!A1 Rdim=2  par=InitC rng=InitC!A1 Rdim=2  par=CMax   rng=CMax!A1 Rdim=2   par=SimLink  rng=SimLinks!A1 Rdim=2  par=LinkExistSim   rng=Connect_sim!A1 Cdim=1  Rdim=1  set= MassBalanceNodes rng=MassBalanceNodes!A1  Rdim=1  Set=run  rng=Runs!A1 Rdim=1   par=DValue  rng=DemandRuns!A1  Rdim=1    set=Qrun  rng=Qrun!A1  Rdim=1   par=QLoop   rng=QRunValues!A1  Rdim=1  par=g rng=NaturalGrowth!A1  Rdim=3  Cdim=1   par=maxrv  rng=RevegMax!A1 Rdim=3 Cdim=1   par=minrv  rng=RevegMin!A1 Rdim=3 Cdim=1
- 217   
+ 216  *$CALL GDXXRW.EXE input=WASH_1yr_InputData.xlsx output=WASH-Data.gdx  Set=t rng=Month!A1:A12 Rdim=1  Set=s rng=SubInd!A1:A100 Rdim=1 set=y rng=FishSpp!A1:A10 Rdim=1 set=n rng=VegSpp!A1:A10 Rdim=1 Set=j rng=Nodes!A1:A100 Rdim=1 Set=wt rng=Wetlands!A1:A100 Rdim=1 Set=dem rng=Demand!A1:A100 Rdim=1  set=NodeNotDemandSite  rng=NodesNotDemand!A1:A100 Rdim=1 set=NodeNotHeadwater  rng=NodeNotHeadwater!A1:A100 Rdim=1  Set=v rng=Reservoirs!A1:A100 Rdim=1 Set=rsi_indx rng=rsiIndex!A1:A10 Rdim=1  Set=fci_indx rng=fciIndex!A1:A10 Rdim=1 par=LinkID  rng=LinkName!A1 Rdim=2   par=rsi_par rng=rsiEQ!A1 Rdim=3 Cdim=1  par=fci_par rng=fciEQ!A1 Rdim=3 Cdim=1 par=envSiteExist rng=EnvSite!A1 Rdim=1 Cdim=1  par=DiversionExist rng=Diversions!A1 Rdim=1 Cdim=1   par=returnFlowExist rng=ReturnFlow!A1 Rdim=1 Cdim=1 par=WetlandsExist rng=WetlandsSites!A1 Rdim=1 Cdim=1 par=LinktoReservoir rng=LinktoReservoir!A1 Rdim=1 Cdim=1 par=LinkOutReservoir rng=LinkOutReservoir!A1 Rdim=1 Cdim=1   Set=RA_par_indx rng=R_indx!A1 Rdim=1  Set=sf_par_indx rng=sf_indx!A1:A10 Rdim=1  Set=wf_par_indx rng=wf_indx!A1:A10 Rdim=1 Set=wsi_par_indx rng=wsi_indx!A1:A10 Rdim=1 par=reachGain rng=HeadFlow!A1 Rdim=1 Cdim=1   par=wght rng=weights!A1 Cdim=1 Rdim=3  par=aw rng=AW!A1 Rdim=3  par=lss rng=lss!A1 Rdim=2 Cdim=1 par=evap rng=evap!A1 Rdim=1 Cdim=1  par=linkEvap  rng=linkEvap!A1  Rdim=2  Cdim=1  par=RA_par rng=ResElevVol!A1 Rdim=1 Cdim=1  par=Qsim  rng=QSim!A1 Rdim=2 Cdim=1   par=Qmin  rng=Qmin!A1 Rdim=2 Cdim=1  par=Qmax  rng=Qmax!A1 Rdim=2 Cdim=1  par=Cons rng=Cons!A1 Rdim=1 Cdim=1 par=lng rng=Length!A1 Rdim=2   par=minstor rng=inactive!A1 Rdim=1  par=maxstor rng=capacity!A1 Rdim=1  par=dReqBase rng=demandReq!A1 Rdim=1 Cdim=1 par=dCap rng=divCap!A1 Rdim=2  par=instreamReq   rng=Instream!A1 Rdim=2 Cdim=1  par=cst rng=UnitCost!A1 Rdim=1  par=Linkexist rng=Connect!A1 Rdim=1 Cdim=1  par=sf_par rng=StageFlow!A1 Rdim=2 Cdim=1 par=wf_par rng=WidthFlow!A1 Rdim=2 Cdim=1   par=wsi_par rng=wp!A1 Rdim=3 Cdim=1  par=b rng=Budget!A1 Rdim=0   par=InitSTOR rng=InStor!A1 Rdim=1   par=InitD rng=InitD!A1 Rdim=2  par=InitC rng=InitC!A1 Rdim=2  par=CMax   rng=CMax!A1 Rdim=2   par=SimLink  rng=SimLinks!A1 Rdim=2  par=LinkExistSim   rng=Connect_sim!A1 Cdim=1  Rdim=1  set= MassBalanceNodes rng=MassBalanceNodes!A1  Rdim=1  Set=run  rng=Runs!A1 Rdim=1   par=DValue  rng=DemandRuns!A1  Rdim=1    set=Qrun  rng=Qrun!A1  Rdim=1   par=QLoop   rng=QRunValues!A1  Rdim=1  par=g rng=NaturalGrowth!A1  Rdim=3  Cdim=1   par=maxrv  rng=Revegetate!A1 Rdim=3 Cdim=1   par=minrv
  218   
  219   
- 220  *$CALL GDXXRW.EXE input=WASH_5yr_InputData.xlsx output=WASH-Data.gdx  Set=t rng=Month!A1:A100 Rdim=1  Set=s rng=SubInd!A1:A100 Rdim=1 set=y rng=FishSpp!A1:A10 Rdim=1 set=n rng=VegSpp!A1:A10 Rdim=1 Set=j rng=Nodes!A1:A100 Rdim=1 Set=dem rng=Demand!A1:A100 Rdim=1 Set=v rng=Reservoirs!A1:A100 Rdim=1 Set=rsi_indx rng=rsiIndex!A1:A10 Rdim=1  Set=fci_indx rng=fciIndex!A1:A10 Rdim=1 par=LinkID  rng=LinkName!A1 Rdim=2   par=rsi_par rng=rsiEQ!A1 Rdim=3 Cdim=1  par=fci_par rng=fciEQ!A1 Rdim=3 Cdim=1 par=envSiteExist rng=EnvSite!A1 Rdim=1 Cdim=1  par=DiversionExist rng=Diversions!A1 Rdim=1 Cdim=1   par=returnFlowExist rng=ReturnFlow!A1 Rdim=1 Cdim=1 par=WetlandsExist rng=WetlandsSites!A1 Rdim=1 Cdim=1 par=LinktoReservoir rng=LinktoReservoir!A1 Rdim=1 Cdim=1 par=LinkOutReservoir rng=LinkOutReservoir!A1 Rdim=1 Cdim=1   Set=RA_par_indx rng=R_indx!A1 Rdim=1  Set=sf_par_indx rng=sf_indx!A1:A10 Rdim=1  Set=wf_par_indx rng=wf_indx!A1:A10 Rdim=1 Set=wsi_par_indx rng=wsi_indx!A1:A10 Rdim=1 par=reachGain rng=HeadFlow!A1 Rdim=1 Cdim=1   par=wght rng=weights!A1 Cdim=1 Rdim=3  par=aw rng=AW!A1 Rdim=3  par=lss rng=lss!A1 Rdim=2 Cdim=1 par=evap rng=evap!A1 Rdim=1 Cdim=1  par=linkEvap  rng=linkEvap!A1  Rdim=2  Cdim=1  par=RA_par rng=ResElevVol!A1 Rdim=1 Cdim=1  par=Qsim  rng=QSim!A1 Rdim=2 Cdim=1   par=Qmin  rng=Qmin!A1 Rdim=2 Cdim=1  par=Qmax  rng=Qmax!A1 Rdim=2 Cdim=1  par=Cons rng=Cons!A1 Rdim=1 Cdim=1 par=lng rng=Length!A1 Rdim=2   par=minstor rng=inactive!A1 Rdim=1  par=maxstor rng=capacity!A1 Rdim=1  par=dReqBase rng=demandReq!A1 Rdim=1 Cdim=1 par=dCap rng=divCap!A1 Rdim=2  par=instreamReq   rng=Instream!A1 Rdim=2 Cdim=1  par=cst rng=UnitCost!A1 Rdim=1  par=Linkexist rng=Connect!A1 Rdim=1 Cdim=1  par=sf_par rng=StageFlow!A1 Rdim=2 Cdim=1 par=wf_par rng=WidthFlow!A1 Rdim=2 Cdim=1   par=wsi_par rng=wp!A1 Rdim=3 Cdim=1  par=b rng=Budget!A1 Rdim=0   par=InitSTOR rng=InStor!A1 Rdim=1   par=InitD rng=InitD!A1 Rdim=2  par=InitC rng=InitC!A1 Rdim=2  par=CMax   rng=Cmax!A1 Rdim=2   par=SimLink  rng=SimLinks!A1 Rdim=2  par=LinkExistSim   rng=Connect_sim!A1 Cdim=1  Rdim=1  set= MassBalanceNodes rng=MassBalanceNodes!A1  Rdim=1  Set=run  rng=Runs!A1 Rdim=1   par=DValue  rng=DemandRuns!A1  Rdim=1    set=Qrun  rng=Qrun!A1  Rdim=1   par=QLoop   rng=QRunValues!A1  Rdim=1  par=g rng=NaturalGrowth!A1  Rdim=3  Cdim=1   par=h   rng=h!A1   Rdim=3
- 221   
+ 220   
+ 221  *$CALL GDXXRW.EXE input=WASH_5yr_InputData.xlsx output=WASH-Data.gdx  Set=t rng=Month!A1:A100 Rdim=1  Set=s rng=SubInd!A1:A100 Rdim=1 set=y rng=FishSpp!A1:A10 Rdim=1 set=n rng=VegSpp!A1:A10 Rdim=1 Set=j rng=Nodes!A1:A100 Rdim=1 Set=dem rng=Demand!A1:A100 Rdim=1 Set=v rng=Reservoirs!A1:A100 Rdim=1 Set=rsi_indx rng=rsiIndex!A1:A10 Rdim=1  Set=fci_indx rng=fciIndex!A1:A10 Rdim=1 par=LinkID  rng=LinkName!A1 Rdim=2   par=rsi_par rng=rsiEQ!A1 Rdim=3 Cdim=1  par=fci_par rng=fciEQ!A1 Rdim=3 Cdim=1 par=envSiteExist rng=EnvSite!A1 Rdim=1 Cdim=1  par=DiversionExist rng=Diversions!A1 Rdim=1 Cdim=1   par=returnFlowExist rng=ReturnFlow!A1 Rdim=1 Cdim=1 par=WetlandsExist rng=WetlandsSites!A1 Rdim=1 Cdim=1 par=LinktoReservoir rng=LinktoReservoir!A1 Rdim=1 Cdim=1 par=LinkOutReservoir rng=LinkOutReservoir!A1 Rdim=1 Cdim=1   Set=RA_par_indx rng=R_indx!A1 Rdim=1  Set=sf_par_indx rng=sf_indx!A1:A10 Rdim=1  Set=wf_par_indx rng=wf_indx!A1:A10 Rdim=1 Set=wsi_par_indx rng=wsi_indx!A1:A10 Rdim=1 par=reachGain rng=HeadFlow!A1 Rdim=1 Cdim=1   par=wght rng=weights!A1 Cdim=1 Rdim=3  par=aw rng=AW!A1 Rdim=3  par=lss rng=lss!A1 Rdim=2 Cdim=1 par=evap rng=evap!A1 Rdim=1 Cdim=1  par=linkEvap  rng=linkEvap!A1  Rdim=2  Cdim=1  par=RA_par rng=ResElevVol!A1 Rdim=1 Cdim=1  par=Qsim  rng=QSim!A1 Rdim=2 Cdim=1   par=Qmin  rng=Qmin!A1 Rdim=2 Cdim=1  par=Qmax  rng=Qmax!A1 Rdim=2 Cdim=1  par=Cons rng=Cons!A1 Rdim=1 Cdim=1 par=lng rng=Length!A1 Rdim=2   par=minstor rng=inactive!A1 Rdim=1  par=maxstor rng=capacity!A1 Rdim=1  par=dReqBase rng=demandReq!A1 Rdim=1 Cdim=1 par=dCap rng=divCap!A1 Rdim=2  par=instreamReq   rng=Instream!A1 Rdim=2 Cdim=1  par=cst rng=UnitCost!A1 Rdim=1  par=Linkexist rng=Connect!A1 Rdim=1 Cdim=1  par=sf_par rng=StageFlow!A1 Rdim=2 Cdim=1 par=wf_par rng=WidthFlow!A1 Rdim=2 Cdim=1   par=wsi_par rng=wp!A1 Rdim=3 Cdim=1  par=b rng=Budget!A1 Rdim=0   par=InitSTOR rng=InStor!A1 Rdim=1   par=InitD rng=InitD!A1 Rdim=2  par=InitC rng=InitC!A1 Rdim=2  par=CMax   rng=Cmax!A1 Rdim=2   par=SimLink  rng=SimLinks!A1 Rdim=2  par=LinkExistSim   rng=Connect_sim!A1 Cdim=1  Rdim=1  set= MassBalanceNodes rng=MassBalanceNodes!A1  Rdim=1  Set=run  rng=Runs!A1 Rdim=1   par=DValue  rng=DemandRuns!A1  Rdim=1    set=Qrun  rng=Qrun!A1  Rdim=1   par=QLoop   rng=QRunValues!A1  Rdim=1  par=g rng=NaturalGrowth!A1  Rdim=3  Cdim=1   par=h   rng=h!A1   Rdim=3
  222   
- 223  *$CALL GDXXRW.EXE input=WASH_1site_InputData.xlsx output=WASH-Data_1site.gdx  Set=t rng=Month!A1:A12 Rdim=1  Set=s rng=SubInd!A1:A100 Rdim=1 set=y rng=FishSpp!A1:A10 Rdim=1 set=n rng=VegSpp!A1:A10 Rdim=1 Set=j rng=Nodes!A1:A100 Rdim=1 Set=wt rng=Wetlands!A1:A100 Rdim=1 Set=dem rng=Demand!A1:A100 Rdim=1  set=NodeNotDemandSite  rng=NodesNotDemand!A1:A100 Rdim=1 set=NodeNotHeadwater  rng=NodeNotHeadwater!A1:A100 Rdim=1  Set=v rng=Reservoirs!A1:A100 Rdim=1 Set=rsi_indx rng=rsiIndex!A1:A10 Rdim=1  Set=fci_indx rng=fciIndex!A1:A10 Rdim=1 par=LinkID  rng=LinkName!A1 Rdim=2   par=rsi_par rng=rsiEQ!A1 Rdim=3 Cdim=1  par=fci_par rng=fciEQ!A1 Rdim=3 Cdim=1 par=envSiteExist rng=EnvSite!A1 Rdim=1 Cdim=1  par=DiversionExist rng=Diversions!A1 Rdim=1 Cdim=1   par=returnFlowExist rng=ReturnFlow!A1 Rdim=1 Cdim=1 par=WetlandsExist rng=WetlandsSites!A1 Rdim=1 Cdim=1 par=LinktoReservoir rng=LinktoReservoir!A1 Rdim=1 Cdim=1 par=LinkOutReservoir rng=LinkOutReservoir!A1 Rdim=1 Cdim=1   Set=RA_par_indx rng=R_indx!A1 Rdim=1  Set=sf_par_indx rng=sf_indx!A1:A10 Rdim=1  Set=wf_par_indx rng=wf_indx!A1:A10 Rdim=1 Set=wsi_par_indx rng=wsi_indx!A1:A10 Rdim=1 par=reachGain rng=HeadFlow!A1 Rdim=1 Cdim=1   par=wght rng=weights!A1 Cdim=1 Rdim=3  par=aw rng=AW!A1 Rdim=3  par=lss rng=lss!A1 Rdim=2 Cdim=1 par=evap rng=evap!A1 Rdim=1 Cdim=1  par=linkEvap  rng=linkEvap!A1  Rdim=2  Cdim=1  par=RA_par rng=ResElevVol!A1 Rdim=1 Cdim=1  par=Qsim  rng=QSim!A1 Rdim=2 Cdim=1   par=Qmin  rng=Qmin!A1 Rdim=2 Cdim=1  par=Qmax  rng=Qmax!A1 Rdim=2 Cdim=1  par=Cons rng=Cons!A1 Rdim=1 Cdim=1 par=lng rng=Length!A1 Rdim=2   par=minstor rng=inactive!A1 Rdim=1  par=maxstor rng=capacity!A1 Rdim=1  par=dReqBase rng=demandReq!A1 Rdim=1 Cdim=1 par=dCap rng=divCap!A1 Rdim=2  par=instreamReq   rng=Instream!A1 Rdim=2 Cdim=1  par=cst rng=UnitCost!A1 Rdim=1  par=Linkexist rng=Connect!A1 Rdim=1 Cdim=1  par=sf_par rng=StageFlow!A1 Rdim=2 Cdim=1 par=wf_par rng=WidthFlow!A1 Rdim=2 Cdim=1   par=wsi_par rng=wp!A1 Rdim=3 Cdim=1  par=b rng=Budget!A1 Rdim=0  par=rv rng=Revegetate!A1 Rdim=3 Cdim=1  par=InitSTOR rng=InStor!A1 Rdim=1   par=InitD rng=InitD!A1 Rdim=2  par=InitC rng=InitC!A1 Rdim=2  par=CMax   rng=Cmax!A1 Rdim=2   par=SimLink  rng=SimLinks!A1 Rdim=2  par=LinkExistSim   rng=Connect_sim!A1 Cdim=1  Rdim=1  set= MassBalanceNodes rng=MassBalanceNodes!A1  Rdim=1  Set=run  rng=Runs!A1 Rdim=1   par=DValue  rng=DemandRuns!A1  Rdim=1    set=Qrun  rng=Qrun!A1  Rdim=1   par=QLoop   rng=QRunValues!A1  Rdim=1  par=g rng=NaturalGrowth!A1  Rdim=3  Cdim=1
- 224   
+ 223   
+ 224  *$CALL GDXXRW.EXE input=WASH_1site_InputData.xlsx output=WASH-Data_1site.gdx  Set=t rng=Month!A1:A12 Rdim=1  Set=s rng=SubInd!A1:A100 Rdim=1 set=y rng=FishSpp!A1:A10 Rdim=1 set=n rng=VegSpp!A1:A10 Rdim=1 Set=j rng=Nodes!A1:A100 Rdim=1 Set=wt rng=Wetlands!A1:A100 Rdim=1 Set=dem rng=Demand!A1:A100 Rdim=1  set=NodeNotDemandSite  rng=NodesNotDemand!A1:A100 Rdim=1 set=NodeNotHeadwater  rng=NodeNotHeadwater!A1:A100 Rdim=1  Set=v rng=Reservoirs!A1:A100 Rdim=1 Set=rsi_indx rng=rsiIndex!A1:A10 Rdim=1  Set=fci_indx rng=fciIndex!A1:A10 Rdim=1 par=LinkID  rng=LinkName!A1 Rdim=2   par=rsi_par rng=rsiEQ!A1 Rdim=3 Cdim=1  par=fci_par rng=fciEQ!A1 Rdim=3 Cdim=1 par=envSiteExist rng=EnvSite!A1 Rdim=1 Cdim=1  par=DiversionExist rng=Diversions!A1 Rdim=1 Cdim=1   par=returnFlowExist rng=ReturnFlow!A1 Rdim=1 Cdim=1 par=WetlandsExist rng=WetlandsSites!A1 Rdim=1 Cdim=1 par=LinktoReservoir rng=LinktoReservoir!A1 Rdim=1 Cdim=1 par=LinkOutReservoir rng=LinkOutReservoir!A1 Rdim=1 Cdim=1   Set=RA_par_indx rng=R_indx!A1 Rdim=1  Set=sf_par_indx rng=sf_indx!A1:A10 Rdim=1  Set=wf_par_indx rng=wf_indx!A1:A10 Rdim=1 Set=wsi_par_indx rng=wsi_indx!A1:A10 Rdim=1 par=reachGain rng=HeadFlow!A1 Rdim=1 Cdim=1   par=wght rng=weights!A1 Cdim=1 Rdim=3  par=aw rng=AW!A1 Rdim=3  par=lss rng=lss!A1 Rdim=2 Cdim=1 par=evap rng=evap!A1 Rdim=1 Cdim=1  par=linkEvap  rng=linkEvap!A1  Rdim=2  Cdim=1  par=RA_par rng=ResElevVol!A1 Rdim=1 Cdim=1  par=Qsim  rng=QSim!A1 Rdim=2 Cdim=1   par=Qmin  rng=Qmin!A1 Rdim=2 Cdim=1  par=Qmax  rng=Qmax!A1 Rdim=2 Cdim=1  par=Cons rng=Cons!A1 Rdim=1 Cdim=1 par=lng rng=Length!A1 Rdim=2   par=minstor rng=inactive!A1 Rdim=1  par=maxstor rng=capacity!A1 Rdim=1  par=dReqBase rng=demandReq!A1 Rdim=1 Cdim=1 par=dCap rng=divCap!A1 Rdim=2  par=instreamReq   rng=Instream!A1 Rdim=2 Cdim=1  par=cst rng=UnitCost!A1 Rdim=1  par=Linkexist rng=Connect!A1 Rdim=1 Cdim=1  par=sf_par rng=StageFlow!A1 Rdim=2 Cdim=1 par=wf_par rng=WidthFlow!A1 Rdim=2 Cdim=1   par=wsi_par rng=wp!A1 Rdim=3 Cdim=1  par=b rng=Budget!A1 Rdim=0  par=rv rng=Revegetate!A1 Rdim=3 Cdim=1  par=InitSTOR rng=InStor!A1 Rdim=1   par=InitD rng=InitD!A1 Rdim=2  par=InitC rng=InitC!A1 Rdim=2  par=CMax   rng=Cmax!A1 Rdim=2   par=SimLink  rng=SimLinks!A1 Rdim=2  par=LinkExistSim   rng=Connect_sim!A1 Cdim=1  Rdim=1  set= MassBalanceNodes rng=MassBalanceNodes!A1  Rdim=1  Set=run  rng=Runs!A1 Rdim=1   par=DValue  rng=DemandRuns!A1  Rdim=1    set=Qrun  rng=Qrun!A1  Rdim=1   par=QLoop   rng=QRunValues!A1  Rdim=1  par=g rng=NaturalGrowth!A1  Rdim=3  Cdim=1
  225   
  226   
- 227  *$CALL GDXXRW.EXE input=Morton_InputData.xlsx  output=WASH-Data.gdx  Set=t rng=Month!A1:A12 Rdim=1  Set=s rng=SubInd!A1:A100 Rdim=1 set=y rng=FishSpp!A1:A10 Rdim=1 set=n rng=VegSpp!A1:A10 Rdim=1 Set=j rng=Nodes!A1:A100 Rdim=1 Set=wt rng=Wetlands!A1:A100 Rdim=1 Set=dem rng=Demand!A1:A100 Rdim=1  set=NodeNotDemandSite  rng=NodesNotDemand!A1:A100 Rdim=1 set=NodeNotHeadwater  rng=NodeNotHeadwater!A1:A100 Rdim=1  Set=v rng=Reservoirs!A1:A100 Rdim=1 Set=rsi_indx rng=rsiIndex!A1:A10 Rdim=1  Set=fci_indx rng=fciIndex!A1:A10 Rdim=1 par=LinkID  rng=LinkName!A1 Rdim=2   par=rsi_par rng=rsiEQ!A1 Rdim=3 Cdim=1  par=fci_par rng=fciEQ!A1 Rdim=3 Cdim=1 par=envSiteExist rng=EnvSite!A1 Rdim=1 Cdim=1  par=DiversionExist rng=Diversions!A1 Rdim=1 Cdim=1   par=returnFlowExist rng=ReturnFlow!A1 Rdim=1 Cdim=1 par=WetlandsExist rng=WetlandsSites!A1 Rdim=1 Cdim=1 par=LinktoReservoir rng=LinktoReservoir!A1 Rdim=1 Cdim=1 par=LinkOutReservoir rng=LinkOutReservoir!A1 Rdim=1 Cdim=1   Set=RA_par_indx rng=R_indx!A1 Rdim=1  Set=sf_par_indx rng=sf_indx!A1:A10 Rdim=1  Set=wf_par_indx rng=wf_indx!A1:A10 Rdim=1 Set=wsi_par_indx rng=wsi_indx!A1:A10 Rdim=1 par=reachGain rng=HeadFlow!A1 Rdim=1 Cdim=1   par=wght rng=weights!A1 Cdim=1 Rdim=3  par=aw rng=AW!A1 Rdim=3  par=lss rng=lss!A1 Rdim=2 Cdim=1 par=evap rng=evap!A1 Rdim=1 Cdim=1  par=linkEvap  rng=linkEvap!A1  Rdim=2  Cdim=1  par=RA_par rng=ResElevVol!A1 Rdim=1 Cdim=1  par=Qsim  rng=QSim!A1 Rdim=2 Cdim=1   par=Qmin  rng=Qmin!A1 Rdim=2 Cdim=1  par=Qmax  rng=Qmax!A1 Rdim=2 Cdim=1  par=Cons rng=Cons!A1 Rdim=1 Cdim=1 par=lng rng=Length!A1 Rdim=2   par=minstor rng=inactive!A1 Rdim=1  par=maxstor rng=capacity!A1 Rdim=1  par=dReqBase rng=demandReq!A1 Rdim=1 Cdim=1 par=dCap rng=divCap!A1 Rdim=2  par=instreamReq   rng=Instream!A1 Rdim=2 Cdim=1  par=cst rng=UnitCost!A1 Rdim=1  par=Linkexist rng=Connect!A1 Rdim=1 Cdim=1  par=sf_par rng=StageFlow!A1 Rdim=2 Cdim=1 par=wf_par rng=WidthFlow!A1 Rdim=2 Cdim=1   par=wsi_par rng=wp!A1 Rdim=3 Cdim=1  par=b rng=Budget!A1 Rdim=0  par=rv rng=Revegetate!A1 Rdim=3 Cdim=1  par=InitSTOR rng=InStor!A1 Rdim=1   par=InitD rng=InitD!A1 Rdim=2  par=InitC rng=InitC!A1 Rdim=2  par=CMax   rng=MaxVegCover!A1 Rdim=3  Cdim=1 par=SimLink  rng=SimLinks!A1 Rdim=2  par=LinkExistSim   rng=Connect_sim!A1 Cdim=1  Rdim=1  set= MassBalanceNodes rng=MassBalanceNodes!A1  Rdim=1  Set=run  rng=Runs!A1 Rdim=1   par=DValue  rng=DemandRuns!A1  Rdim=1    set=Qrun  rng=Qrun!A1  Rdim=1   par=QLoop   rng=QRunValues!A1  Rdim=1  par=g rng=NaturalGrowth!A1  Rdim=3  Cdim=1
- 228   
+ 227   
+ 228  *$CALL GDXXRW.EXE input=Morton_InputData.xlsx  output=WASH-Data.gdx  Set=t rng=Month!A1:A12 Rdim=1  Set=s rng=SubInd!A1:A100 Rdim=1 set=y rng=FishSpp!A1:A10 Rdim=1 set=n rng=VegSpp!A1:A10 Rdim=1 Set=j rng=Nodes!A1:A100 Rdim=1 Set=wt rng=Wetlands!A1:A100 Rdim=1 Set=dem rng=Demand!A1:A100 Rdim=1  set=NodeNotDemandSite  rng=NodesNotDemand!A1:A100 Rdim=1 set=NodeNotHeadwater  rng=NodeNotHeadwater!A1:A100 Rdim=1  Set=v rng=Reservoirs!A1:A100 Rdim=1 Set=rsi_indx rng=rsiIndex!A1:A10 Rdim=1  Set=fci_indx rng=fciIndex!A1:A10 Rdim=1 par=LinkID  rng=LinkName!A1 Rdim=2   par=rsi_par rng=rsiEQ!A1 Rdim=3 Cdim=1  par=fci_par rng=fciEQ!A1 Rdim=3 Cdim=1 par=envSiteExist rng=EnvSite!A1 Rdim=1 Cdim=1  par=DiversionExist rng=Diversions!A1 Rdim=1 Cdim=1   par=returnFlowExist rng=ReturnFlow!A1 Rdim=1 Cdim=1 par=WetlandsExist rng=WetlandsSites!A1 Rdim=1 Cdim=1 par=LinktoReservoir rng=LinktoReservoir!A1 Rdim=1 Cdim=1 par=LinkOutReservoir rng=LinkOutReservoir!A1 Rdim=1 Cdim=1   Set=RA_par_indx rng=R_indx!A1 Rdim=1  Set=sf_par_indx rng=sf_indx!A1:A10 Rdim=1  Set=wf_par_indx rng=wf_indx!A1:A10 Rdim=1 Set=wsi_par_indx rng=wsi_indx!A1:A10 Rdim=1 par=reachGain rng=HeadFlow!A1 Rdim=1 Cdim=1   par=wght rng=weights!A1 Cdim=1 Rdim=3  par=aw rng=AW!A1 Rdim=3  par=lss rng=lss!A1 Rdim=2 Cdim=1 par=evap rng=evap!A1 Rdim=1 Cdim=1  par=linkEvap  rng=linkEvap!A1  Rdim=2  Cdim=1  par=RA_par rng=ResElevVol!A1 Rdim=1 Cdim=1  par=Qsim  rng=QSim!A1 Rdim=2 Cdim=1   par=Qmin  rng=Qmin!A1 Rdim=2 Cdim=1  par=Qmax  rng=Qmax!A1 Rdim=2 Cdim=1  par=Cons rng=Cons!A1 Rdim=1 Cdim=1 par=lng rng=Length!A1 Rdim=2   par=minstor rng=inactive!A1 Rdim=1  par=maxstor rng=capacity!A1 Rdim=1  par=dReqBase rng=demandReq!A1 Rdim=1 Cdim=1 par=dCap rng=divCap!A1 Rdim=2  par=instreamReq   rng=Instream!A1 Rdim=2 Cdim=1  par=cst rng=UnitCost!A1 Rdim=1  par=Linkexist rng=Connect!A1 Rdim=1 Cdim=1  par=sf_par rng=StageFlow!A1 Rdim=2 Cdim=1 par=wf_par rng=WidthFlow!A1 Rdim=2 Cdim=1   par=wsi_par rng=wp!A1 Rdim=3 Cdim=1  par=b rng=Budget!A1 Rdim=0  par=rv rng=Revegetate!A1 Rdim=3 Cdim=1  par=InitSTOR rng=InStor!A1 Rdim=1   par=InitD rng=InitD!A1 Rdim=2  par=InitC rng=InitC!A1 Rdim=2  par=CMax   rng=MaxVegCover!A1 Rdim=3  Cdim=1 par=SimLink  rng=SimLinks!A1 Rdim=2  par=LinkExistSim   rng=Connect_sim!A1 Cdim=1  Rdim=1  set= MassBalanceNodes rng=MassBalanceNodes!A1  Rdim=1  Set=run  rng=Runs!A1 Rdim=1   par=DValue  rng=DemandRuns!A1  Rdim=1    set=Qrun  rng=Qrun!A1  Rdim=1   par=QLoop   rng=QRunValues!A1  Rdim=1  par=g rng=NaturalGrowth!A1  Rdim=3  Cdim=1
  229   
- 230  *For WASH Sensitivity Analysis
- 231  *$CALL GDXXRW.EXE input=SensitivityInput_Confluence_08312016.xlsx output=WASH-Data.gdx  Set=t rng=Month!A1:A12 Rdim=1  Set=s rng=SubInd!A1:A100 Rdim=1 set=y rng=FishSpp!A1:A10 Rdim=1 set=n rng=VegSpp!A1:A10 Rdim=1 Set=j rng=Nodes!A1:A100 Rdim=1 Set=wt rng=Wetlands!A1:A100 Rdim=1 Set=dem rng=Demand!A1:A100 Rdim=1  set=NodeNotDemandSite  rng=NodesNotDemand!A1:A100 Rdim=1 set=NodeNotHeadwater  rng=NodeNotHeadwater!A1:A100 Rdim=1  Set=v rng=Reservoirs!A1:A100 Rdim=1 Set=rsi_indx rng=rsiIndex!A1:A10 Rdim=1  Set=fci_indx rng=fciIndex!A1:A10 Rdim=1 par=LinkID  rng=LinkName!A1 Rdim=2   par=rsi_par rng=rsiEQ!A1 Rdim=3 Cdim=1  par=fci_par rng=fciEQ!A1 Rdim=3 Cdim=1 par=envSiteExist rng=EnvSite!A1 Rdim=1 Cdim=1  par=DiversionExist rng=Diversions!A1 Rdim=1 Cdim=1   par=returnFlowExist rng=ReturnFlow!A1 Rdim=1 Cdim=1 par=WetlandsExist rng=WetlandsSites!A1 Rdim=1 Cdim=1 par=LinktoReservoir rng=LinktoReservoir!A1 Rdim=1 Cdim=1 par=LinkOutReservoir rng=LinkOutReservoir!A1 Rdim=1 Cdim=1   Set=RA_par_indx rng=R_indx!A1 Rdim=1  Set=sf_par_indx rng=sf_indx!A1:A10 Rdim=1  Set=wf_par_indx rng=wf_indx!A1:A10 Rdim=1 Set=wsi_par_indx rng=wsi_indx!A1:A10 Rdim=1 par=reachGain rng=HeadFlow!A1 Rdim=1 Cdim=1   par=wght rng=weights!A1 Cdim=1 Rdim=3  par=aw rng=AW!A1 Rdim=3  par=lss rng=lss!A1 Rdim=2 Cdim=1 par=evap rng=evap!A1 Rdim=1 Cdim=1  par=linkEvap  rng=linkEvap!A1  Rdim=2  Cdim=1  par=RA_par rng=ResElevVol!A1 Rdim=1 Cdim=1  par=Qsim  rng=QSim!A1 Rdim=2 Cdim=1   par=Qmin  rng=Qmin!A1 Rdim=2 Cdim=1  par=Qmax  rng=Qmax!A1 Rdim=2 Cdim=1  par=Cons rng=Cons!A1 Rdim=1 Cdim=1 par=lng rng=Length!A1 Rdim=2   par=minstor rng=inactive!A1 Rdim=1  par=maxstor rng=capacity!A1 Rdim=1  par=dReqBase rng=demandReq!A1 Rdim=1 Cdim=1 par=dCap rng=divCap!A1 Rdim=2  par=instreamReq   rng=Instream!A1 Rdim=2 Cdim=1  par=cst rng=UnitCost!A1 Rdim=1  par=Linkexist rng=Connect!A1 Rdim=1 Cdim=1  par=sf_par rng=StageFlow!A1 Rdim=2 Cdim=1 par=wf_par rng=WidthFlow!A1 Rdim=2 Cdim=1   par=wsi_par rng=wp!A1 Rdim=3 Cdim=1  par=b rng=Budget!A1 Rdim=0  par=rv rng=Revegetate!A1 Rdim=3 Cdim=1  par=InitSTOR rng=InStor!A1 Rdim=1   par=InitD rng=InitD!A1 Rdim=2  par=InitC rng=InitC!A1 Rdim=2  par=CMax   rng=MaxVegCover!A1 Rdim=3  Cdim=1 par=SimLink  rng=SimLinks!A1 Rdim=2  par=LinkExistSim   rng=Connect_sim!A1 Cdim=1  Rdim=1  set= MassBalanceNodes rng=MassBalanceNodes!A1  Rdim=1  Set=run  rng=Runs!A1 Rdim=1   par=DValue  rng=DemandRuns!A1  Rdim=1  set=Qrun  rng=Qrun!A1  Rdim=1   par=QLoop   rng=QRunValues!A1  Rdim=1
- 232   
- 233  *Write the input data into a GDX file
+ 230   
+ 231  *For WASH Sensitivity Analysis
+ 232  *$CALL GDXXRW.EXE input=SensitivityInput_Confluence_08312016.xlsx output=WASH-Data.gdx  Set=t rng=Month!A1:A12 Rdim=1  Set=s rng=SubInd!A1:A100 Rdim=1 set=y rng=FishSpp!A1:A10 Rdim=1 set=n rng=VegSpp!A1:A10 Rdim=1 Set=j rng=Nodes!A1:A100 Rdim=1 Set=wt rng=Wetlands!A1:A100 Rdim=1 Set=dem rng=Demand!A1:A100 Rdim=1  set=NodeNotDemandSite  rng=NodesNotDemand!A1:A100 Rdim=1 set=NodeNotHeadwater  rng=NodeNotHeadwater!A1:A100 Rdim=1  Set=v rng=Reservoirs!A1:A100 Rdim=1 Set=rsi_indx rng=rsiIndex!A1:A10 Rdim=1  Set=fci_indx rng=fciIndex!A1:A10 Rdim=1 par=LinkID  rng=LinkName!A1 Rdim=2   par=rsi_par rng=rsiEQ!A1 Rdim=3 Cdim=1  par=fci_par rng=fciEQ!A1 Rdim=3 Cdim=1 par=envSiteExist rng=EnvSite!A1 Rdim=1 Cdim=1  par=DiversionExist rng=Diversions!A1 Rdim=1 Cdim=1   par=returnFlowExist rng=ReturnFlow!A1 Rdim=1 Cdim=1 par=WetlandsExist rng=WetlandsSites!A1 Rdim=1 Cdim=1 par=LinktoReservoir rng=LinktoReservoir!A1 Rdim=1 Cdim=1 par=LinkOutReservoir rng=LinkOutReservoir!A1 Rdim=1 Cdim=1   Set=RA_par_indx rng=R_indx!A1 Rdim=1  Set=sf_par_indx rng=sf_indx!A1:A10 Rdim=1  Set=wf_par_indx rng=wf_indx!A1:A10 Rdim=1 Set=wsi_par_indx rng=wsi_indx!A1:A10 Rdim=1 par=reachGain rng=HeadFlow!A1 Rdim=1 Cdim=1   par=wght rng=weights!A1 Cdim=1 Rdim=3  par=aw rng=AW!A1 Rdim=3  par=lss rng=lss!A1 Rdim=2 Cdim=1 par=evap rng=evap!A1 Rdim=1 Cdim=1  par=linkEvap  rng=linkEvap!A1  Rdim=2  Cdim=1  par=RA_par rng=ResElevVol!A1 Rdim=1 Cdim=1  par=Qsim  rng=QSim!A1 Rdim=2 Cdim=1   par=Qmin  rng=Qmin!A1 Rdim=2 Cdim=1  par=Qmax  rng=Qmax!A1 Rdim=2 Cdim=1  par=Cons rng=Cons!A1 Rdim=1 Cdim=1 par=lng rng=Length!A1 Rdim=2   par=minstor rng=inactive!A1 Rdim=1  par=maxstor rng=capacity!A1 Rdim=1  par=dReqBase rng=demandReq!A1 Rdim=1 Cdim=1 par=dCap rng=divCap!A1 Rdim=2  par=instreamReq   rng=Instream!A1 Rdim=2 Cdim=1  par=cst rng=UnitCost!A1 Rdim=1  par=Linkexist rng=Connect!A1 Rdim=1 Cdim=1  par=sf_par rng=StageFlow!A1 Rdim=2 Cdim=1 par=wf_par rng=WidthFlow!A1 Rdim=2 Cdim=1   par=wsi_par rng=wp!A1 Rdim=3 Cdim=1  par=b rng=Budget!A1 Rdim=0  par=rv rng=Revegetate!A1 Rdim=3 Cdim=1  par=InitSTOR rng=InStor!A1 Rdim=1   par=InitD rng=InitD!A1 Rdim=2  par=InitC rng=InitC!A1 Rdim=2  par=CMax   rng=MaxVegCover!A1 Rdim=3  Cdim=1 par=SimLink  rng=SimLinks!A1 Rdim=2  par=LinkExistSim   rng=Connect_sim!A1 Cdim=1  Rdim=1  set= MassBalanceNodes rng=MassBalanceNodes!A1  Rdim=1  Set=run  rng=Runs!A1 Rdim=1   par=DValue  rng=DemandRuns!A1  Rdim=1  set=Qrun  rng=Qrun!A1  Rdim=1   par=QLoop   rng=QRunValues!A1  Rdim=1
+ 233   
+ 234  *Write the input data into a GDX file
 GDXIN   C:\Users\talha\Downloads\Courses\CEE 6410 Civil Engineering Systems Analysis\Assignments\CEE6410Github\CEE6410-Engineering-Systems\I. Mixed Integer Problem\WASH-master\InputDataModel\WASH-Data.gdx
- 235   
  236   
  237   
- 238  *Load parameters and input data from the GDX file into the model
+ 238   
+ 239  *Load parameters and input data from the GDX file into the model
 --- LOAD  s = 2:s
 --- LOAD  j = 5:j
 --- LOAD  dem = 7:dem
@@ -295,288 +296,288 @@ GDXIN   C:\Users\talha\Downloads\Courses\CEE 6410 Civil Engineering Systems Anal
 --- LOAD  Qrun = 58:Qrun
 --- LOAD  QLoop = 59:QLoop
 --- LOAD  maxrv = 61:maxrv
- 297  *$LOAD minrv
- 298  *$LOAD h
- 299   
- 300  *Close GDX file
- 302   
- 303  *Set min vegetation removal to zero (could not load from GDX) - DER 9/25/2018
- 304  minrv(j,k,t,n) = 0;
- 305   
- 306  * Display the input data values in the listing file. Go through these values to Check if the GDXXRW function reads and loads the parameters correctly into the model
- 307  Display s,j,dem, InitC, InitD, InitStor,b, wght ;
- 308  Display v,t,y, n, envSiteExist, linkexist              ;
- 309  Display DiversionExist, returnFlowExist, WetlandsExist      ;
- 310  Display LinktoReservoir, LinkOutReservoir, reachGain    ;
- 311  Display aw, lss, evap, linkEvap, RA_par_indx, RA_par       ;
- 312  Display cons,lng, minstor, maxstor, dReqBase, dCap, instreamReq, cst ;
- 313  Display sf_par_indx, sf_par, wf_par_indx, wf_par, wsi_par_indx, wsi_par, rsi_indx;
- 314  Display  fci_indx, fci_par, rsi_par, LinkID, Qmin, Qmax, QSim, CMax, SimLink, LinkExistSim, MassBalanceNodes, g ;
- 315  Display Run, DValue  ;
- 316  Display Qrun, QLoop, maxrv, minrv       ;
- 317   
+ 298  *$LOAD minrv
+ 299  *$LOAD h
+ 300   
+ 301  *Close GDX file
+ 303   
+ 304  *Set min vegetation removal to zero (could not load from GDX) - DER 9/25/2018
+ 305  minrv(j,k,t,n) = 0;
+ 306   
+ 307  * Display the input data values in the listing file. Go through these values to Check if the GDXXRW function reads and loads the parameters correctly into the model
+ 308  Display s,j,dem, InitC, InitD, InitStor,b, wght ;
+ 309  Display v,t,y, n, envSiteExist, linkexist              ;
+ 310  Display DiversionExist, returnFlowExist, WetlandsExist      ;
+ 311  Display LinktoReservoir, LinkOutReservoir, reachGain    ;
+ 312  Display aw, lss, evap, linkEvap, RA_par_indx, RA_par       ;
+ 313  Display cons,lng, minstor, maxstor, dReqBase, dCap, instreamReq, cst ;
+ 314  Display sf_par_indx, sf_par, wf_par_indx, wf_par, wsi_par_indx, wsi_par, rsi_indx;
+ 315  Display  fci_indx, fci_par, rsi_par, LinkID, Qmin, Qmax, QSim, CMax, SimLink, LinkExistSim, MassBalanceNodes, g ;
+ 316  Display Run, DValue  ;
+ 317  Display Qrun, QLoop, maxrv, minrv       ;
  318   
- 319  *===================
- 320  *Define Variables
- 321  *===================
- 322   
- 323  VARIABLES
- 324           Z             Objective function value of WASH that the model will try to maximize [Mm^2]
- 325           Rsum          Sum of R values
- 326           Ind(s,j,k,t)  Describes the summation of the model sub-indicators before applying any weights [Mm^2]
- 327           Q(j,k,t)      Flow in links [Mm^3 per month]
- 328           D(j,k,t)      Water depth in links [m]
- 329           A(j,k,t)      River channel surface area in links [Mm^2]
- 330           WD(j,k,t)     River channel width [m]
- 331           C(j,k,t,n)    Vegetation cover of ripairn vegentation species n at environmental sites [Mm^2]
- 332           RR(v,t)       Reservoir monthly releases volume [Mm^3 per month]
- 333           STOR(v,t)     Reservoir monthly storage volume [Mm^3]
- 334           RA(v,t)       Reservoir surface area as a function of reservoir storage [Mm^2]
- 335           Shortage(dem,t) Demand shortage at each demand site [Mm^2]
- 336           RV(j,k,t,n)     Defines revegetation areas of species n at environmental sites   [Mm^2]
- 337   
- 338           WSI(j,k,t)    Wetlands Suitability index   [unitless 0: poor -1: excellent]
- 339           RSI(j,k,t,y)  Riverine Suitability Index   [unitless 0: poor -1: excellent]
- 340           FCI(j,k,t,n)  Floodplain Suitability Index [unitless 0: poor -1: excellent]
- 341   
- 342           R(j,k,t)      Riverine habitat sub-indicator    [Mm^2]
- 343           F(j,k,t)      Floodplain connectivity habitat sub-indicator  [Mm^2]
- 344           W(j,k,t)      Wetlands habitat sub-indicator  [Mm^2]
- 345  ;
- 346   
- 347  *===============================================================
- 348  *Define initial values and bounds for the decision varaibles
- 349  *===============================================================
- 350   
- 351  *-----------------
- 352  * Initial values
- 353  *-----------------
- 354   
- 355  C.L(j,k,t,n)$envSiteExist(j,k)  =InitC(j,k);
- 356   
- 357  *---------------------
- 358  * Bounds on Variables
- 359  *---------------------
- 360  * Constraints on Flow:        (COMMENT OUT for Model Simulation)
- 361   
- 362  Q.UP(j,k,t)$LinkExist(j,k)= Qmax(j,k,t)$LinkExist(j,k) ;
- 363   
+ 319   
+ 320  *===================
+ 321  *Define Variables
+ 322  *===================
+ 323   
+ 324  VARIABLES
+ 325           Z             Objective function value of WASH that the model will try to maximize [Mm^2]
+ 326           Rsum          Sum of R values
+ 327           Ind(s,j,k,t)  Describes the summation of the model sub-indicators before applying any weights [Mm^2]
+ 328           Q(j,k,t)      Flow in links [Mm^3 per month]
+ 329           D(j,k,t)      Water depth in links [m]
+ 330           A(j,k,t)      River channel surface area in links [Mm^2]
+ 331           WD(j,k,t)     River channel width [m]
+ 332           C(j,k,t,n)    Vegetation cover of ripairn vegentation species n at environmental sites [Mm^2]
+ 333           RR(v,t)       Reservoir monthly releases volume [Mm^3 per month]
+ 334           STOR(v,t)     Reservoir monthly storage volume [Mm^3]
+ 335           RA(v,t)       Reservoir surface area as a function of reservoir storage [Mm^2]
+ 336           Shortage(dem,t) Demand shortage at each demand site [Mm^2]
+ 337           RV(j,k,t,n)     Defines revegetation areas of species n at environmental sites   [Mm^2]
+ 338   
+ 339           WSI(j,k,t)    Wetlands Suitability index   [unitless 0: poor -1: excellent]
+ 340           RSI(j,k,t,y)  Riverine Suitability Index   [unitless 0: poor -1: excellent]
+ 341           FCI(j,k,t,n)  Floodplain Suitability Index [unitless 0: poor -1: excellent]
+ 342   
+ 343           R(j,k,t)      Riverine habitat sub-indicator    [Mm^2]
+ 344           F(j,k,t)      Floodplain connectivity habitat sub-indicator  [Mm^2]
+ 345           W(j,k,t)      Wetlands habitat sub-indicator  [Mm^2]
+ 346  ;
+ 347   
+ 348  *===============================================================
+ 349  *Define initial values and bounds for the decision varaibles
+ 350  *===============================================================
+ 351   
+ 352  *-----------------
+ 353  * Initial values
+ 354  *-----------------
+ 355   
+ 356  C.L(j,k,t,n)$envSiteExist(j,k)  =InitC(j,k);
+ 357   
+ 358  *---------------------
+ 359  * Bounds on Variables
+ 360  *---------------------
+ 361  * Constraints on Flow:        (COMMENT OUT for Model Simulation)
+ 362   
+ 363  Q.UP(j,k,t)$LinkExist(j,k)= Qmax(j,k,t)$LinkExist(j,k) ;
  364   
- 365  * Constraints on vegetation cover
- 366  C.UP(j,k,t,n)$envSiteExist(j,k) = CMax(j,k);
- 367   
- 368  * Contraints on other variables
- 369  Positive Variable  A, RV, WD, STOR, RA;
- 370   
+ 365   
+ 366  * Constraints on vegetation cover
+ 367  C.UP(j,k,t,n)$envSiteExist(j,k) = CMax(j,k);
+ 368   
+ 369  * Contraints on other variables
+ 370  Positive Variable  A, RV, WD, STOR, RA;
  371   
  372   
- 373  * To run the model as one instance without looping over demand  (comment out for demand loop)
- 374  dReq(dem,t) =    dreqBase(dem,t) ;
- 375   
- 376  *----------------------------------------------------------------------------
- 377  * For Simulation: comment out the Q.UP line and use this line Q.FX instead
- 378  *----------------------------------------------------------------------------
- 379   
- 380  *Q.FX(j,k,t)$SimLink(j,k)= QSim(j,k,t)$SimLink(j,k);
- 381   
+ 373   
+ 374  * To run the model as one instance without looping over demand  (comment out for demand loop)
+ 375  dReq(dem,t) =    dreqBase(dem,t) ;
+ 376   
+ 377  *----------------------------------------------------------------------------
+ 378  * For Simulation: comment out the Q.UP line and use this line Q.FX instead
+ 379  *----------------------------------------------------------------------------
+ 380   
+ 381  *Q.FX(j,k,t)$SimLink(j,k)= QSim(j,k,t)$SimLink(j,k);
  382   
  383   
  384   
  385   
- 386  *============================
- 387  *Declare model equations
- 388  *============================
- 389   
- 390  EQUATIONS
- 391  *-------------------
- 392  *Objective Function
- 393  *-------------------
- 394           EQ1               Z     Objective function: Watershed Area of Suitable Habitat [Mm^2] and is calculated as the is composed of the weighted sum of the three sub-indicators (Ind): riparian [R] floodplain [F] and wetlands [W]
- 395           EQ1a(s,j,k,t)     IND   Mapping the three perfomance indicators R and F and W variables into the s index [Mm^2]
- 396   
- 397           EQ2(j,k,t)        R     Riverine Habitat sub-indicator [Mm^2]
- 398           EQ2a(j,k,t,y)     rsi   Riversine Suitability Index [unitless:0-1] as a function of flow for BCT
- 399           EQ2b(j,k,t,y)     rsi   Riversine Suitability Index [unitless:0-1] as a function of flow for Browb Trout
- 400   
+ 386   
+ 387  *============================
+ 388  *Declare model equations
+ 389  *============================
+ 390   
+ 391  EQUATIONS
+ 392  *-------------------
+ 393  *Objective Function
+ 394  *-------------------
+ 395           EQ1               Z     Objective function: Watershed Area of Suitable Habitat [Mm^2] and is calculated as the is composed of the weighted sum of the three sub-indicators (Ind): riparian [R] floodplain [F] and wetlands [W]
+ 396           EQ1a(s,j,k,t)     IND   Mapping the three perfomance indicators R and F and W variables into the s index [Mm^2]
+ 397   
+ 398           EQ2(j,k,t)        R     Riverine Habitat sub-indicator [Mm^2]
+ 399           EQ2a(j,k,t,y)     rsi   Riversine Suitability Index [unitless:0-1] as a function of flow for BCT
+ 400           EQ2b(j,k,t,y)     rsi   Riversine Suitability Index [unitless:0-1] as a function of flow for Browb Trout
  401   
  402   
- 403           EQ3(j,k,t)        F     Floodplain habitat [Mm^2]
- 404           EQ3a(j,k,t,n)     fci   floodplains suiability index [unitless:0-1] as a function of flow
- 405   
- 406           EQ4(j,k,t)        W     Impounded Wetland habitat [Mm^2]
- 407           EQ4a(j,k,t)       wsi   Wetlands suitability index [unitless:0-1] as a function of flow
- 408   
- 409  *-------------------
- 410  *Model Constraints
- 411  *-------------------
- 412   
- 413           EQ5(v,t)          Mass balance at reservoirs
- 414           EQ5a(v,t)         Reservoir area-storage relationships
- 415           EQ5b(v,t)         Reservoir releases equation that sums all flows leaving a reservoir
- 416           EQ5c(v)           Storage balance for the last time step to be equal to inital storage
- 417           EQ5d(v,t)        Initilize reservoir storage
- 418   
- 419           EQ6(j,t)          Mass balance equations at each node   - applies to all sites except demand sites
- 420           EQ7(dem,t)        Mass balance at demand sites
- 421           EQ7a(dem,t)       Demand Shortage equation
- 422   
- 423           EQ8(j,k,t)        Stage-flow relationships
- 424           EQ9(j,k,t)        Width-flow relationships
- 425           EQ10(j,k,t)       Channel surface area   [Mm^2]
- 426   
- 427           EQ11(j,k,t,n)     Vegetation cover mass balance
- 428           EQ11a(j,k,t,n)    Constrains revegetation to growing season
- 429           EQ11b(j,k,t,n)    Constrains revegetation to growing season
- 430           EQ12(v,t)         Constrain reservoir storage to not go below inactive zone
- 431           EQ12a(v,t)        Constrain rReservoir storage to not exceed reservoir capacity
- 432   
- 433           EQ13(dem,t)       Diversion flow volume to demand sites must meet demand delievery requirements
- 434           EQ14(k,dem,t)     Diversions flow volume must not exceed diversion capacity
- 435   
- 436           EQ15(j,k,t)       Regulatory minimum instream flow requirements for ecological or hydropower or water rights purposes
- 437           EQ16              All management actions should not exceed set budget
- 438   
- 439  ;
- 440   
+ 403   
+ 404           EQ3(j,k,t)        F     Floodplain habitat [Mm^2]
+ 405           EQ3a(j,k,t,n)     fci   floodplains suiability index [unitless:0-1] as a function of flow
+ 406   
+ 407           EQ4(j,k,t)        W     Impounded Wetland habitat [Mm^2]
+ 408           EQ4a(j,k,t)       wsi   Wetlands suitability index [unitless:0-1] as a function of flow
+ 409   
+ 410  *-------------------
+ 411  *Model Constraints
+ 412  *-------------------
+ 413   
+ 414           EQ5(v,t)          Mass balance at reservoirs
+ 415           EQ5a(v,t)         Reservoir area-storage relationships
+ 416           EQ5b(v,t)         Reservoir releases equation that sums all flows leaving a reservoir
+ 417           EQ5c(v)           Storage balance for the last time step to be equal to inital storage
+ 418           EQ5d(v,t)        Initilize reservoir storage
+ 419   
+ 420           EQ6(j,t)          Mass balance equations at each node   - applies to all sites except demand sites
+ 421           EQ7(dem,t)        Mass balance at demand sites
+ 422           EQ7a(dem,t)       Demand Shortage equation
+ 423   
+ 424           EQ8(j,k,t)        Stage-flow relationships
+ 425           EQ9(j,k,t)        Width-flow relationships
+ 426           EQ10(j,k,t)       Channel surface area   [Mm^2]
+ 427   
+ 428           EQ11(j,k,t,n)     Vegetation cover mass balance
+ 429           EQ11a(j,k,t,n)    Constrains revegetation to growing season
+ 430           EQ11b(j,k,t,n)    Constrains revegetation to growing season
+ 431           EQ12(v,t)         Constrain reservoir storage to not go below inactive zone
+ 432           EQ12a(v,t)        Constrain rReservoir storage to not exceed reservoir capacity
+ 433   
+ 434           EQ13(dem,t)       Diversion flow volume to demand sites must meet demand delievery requirements
+ 435           EQ14(k,dem,t)     Diversions flow volume must not exceed diversion capacity
+ 436   
+ 437           EQ15(j,k,t)       Regulatory minimum instream flow requirements for ecological or hydropower or water rights purposes
+ 438           EQ16              All management actions should not exceed set budget
+ 439   
+ 440  ;
  441   
- 442  *============================
- 443  *Define Model Equations
- 444  *============================
- 445   
- 446  EQ1..                                         Z =e= sum((s,j,k,t)$envSiteExist(j,k), wght(s,j,k,t) * IND(s,j,k,t))            ;
- 447   
+ 442   
+ 443  *============================
+ 444  *Define Model Equations
+ 445  *============================
+ 446   
+ 447  EQ1..                                         Z =e= sum((s,j,k,t)$envSiteExist(j,k), wght(s,j,k,t) * IND(s,j,k,t))            ;
  448   
- 449  EQ1a(s,j,k,t)$envSiteExist(j,k)..             IND(s,j,k,t)$envSiteExist(j,k) =e= R(j,k,t)$(ord(s) eq 1) + F(j,k,t)$(ord(s) eq 2) +  W(j,k,t)$(ord(s) eq 3)  ;
- 450   
+ 449   
+ 450  EQ1a(s,j,k,t)$envSiteExist(j,k)..             IND(s,j,k,t)$envSiteExist(j,k) =e= R(j,k,t)$(ord(s) eq 1) + F(j,k,t)$(ord(s) eq 2) +  W(j,k,t)$(ord(s) eq 3)  ;
  451   
  452   
- 453  EQ2(j,k,t)$(envSiteExist(j,k)and wght("riverine",j,k,t) )..               R(j,k,t)  =e=  prod((y), rsi(j,k,t,y) * A(j,k,t))                 ;
- 454   
- 455  EQ2a(j,k,t,y)$(envSiteExist(j,k)and wght("riverine",j,k,t) and rsi_par(j,k,t,"Func_typ") eq 1 )..            rsi(j,k,t,y) =e= (rsi_par(j,k,t,"rsi_par1")+((rsi_par(j,k,t,"rsi_par2") - rsi_par(j,k,t,"rsi_par1")) / (1+exp((rsi_par(j,k,t,"rsi_par3") - D(j,k,t) )/rsi_par(j,k,t,"rsi_par4") ))))     ;
- 456  EQ2b(j,k,t,y)$(envSiteExist(j,k)and wght("riverine",j,k,t) and rsi_par(j,k,t,"Func_typ") eq 2 )..            rsi(j,k,t,y) =e= 1-(exp((-rsi_par(j,k,t,"rsi_par4"))*D(j,k,t))) ;
- 457   
+ 453   
+ 454  EQ2(j,k,t)$(envSiteExist(j,k)and wght("riverine",j,k,t) )..               R(j,k,t)  =e=  prod((y), rsi(j,k,t,y) * A(j,k,t))                 ;
+ 455   
+ 456  EQ2a(j,k,t,y)$(envSiteExist(j,k)and wght("riverine",j,k,t) and rsi_par(j,k,t,"Func_typ") eq 1 )..            rsi(j,k,t,y) =e= (rsi_par(j,k,t,"rsi_par1")+((rsi_par(j,k,t,"rsi_par2") - rsi_par(j,k,t,"rsi_par1")) / (1+exp((rsi_par(j,k,t,"rsi_par3") - D(j,k,t) )/rsi_par(j,k,t,"rsi_par4") ))))     ;
+ 457  EQ2b(j,k,t,y)$(envSiteExist(j,k)and wght("riverine",j,k,t) and rsi_par(j,k,t,"Func_typ") eq 2 )..            rsi(j,k,t,y) =e= 1-(exp((-rsi_par(j,k,t,"rsi_par4"))*D(j,k,t))) ;
  458   
  459   
  460   
- 461  EQ3(j,k,t)$( envSiteExist(j,k)and wght("floodplain",j,k,t) )..             F(j,k,t) =e= sum((n),fci(j,k,t,n) * C(j,k,t,n))                    ;
- 462  EQ3a(j,k,t,n)$( envSiteExist(j,k)and wght("floodplain",j,k,t) )..          fci(j,k,t,n) =e= (fci_par(j,k,t,"fci_par1")+((fci_par(j,k,t,"fci_par2") - fci_par(j,k,t,"fci_par1")) / (1+exp((fci_par(j,k,t,"fci_par3") - Q(j,k,t) )/fci_par(j,k,t,"fci_par4") ))))     ;
- 463   
+ 461   
+ 462  EQ3(j,k,t)$( envSiteExist(j,k)and wght("floodplain",j,k,t) )..             F(j,k,t) =e= sum((n),fci(j,k,t,n) * C(j,k,t,n))                    ;
+ 463  EQ3a(j,k,t,n)$( envSiteExist(j,k)and wght("floodplain",j,k,t) )..          fci(j,k,t,n) =e= (fci_par(j,k,t,"fci_par1")+((fci_par(j,k,t,"fci_par2") - fci_par(j,k,t,"fci_par1")) / (1+exp((fci_par(j,k,t,"fci_par3") - Q(j,k,t) )/fci_par(j,k,t,"fci_par4") ))))     ;
  464   
- 465  EQ4(j,k,t)$(WetlandsExist(j,k) and wght("wetlands",j,k,t) )..              W(j,k,t) =e= wsi(j,k,t) * aw(j,k,t)                        ;
- 466  EQ4a(j,k,t)$(WetlandsExist(j,k) and wght("wetlands",j,k,t))..              wsi(j,k,t) =e=   wsi_par(j,k,t,"wsi_par1") * Q(j,k,t) + wsi_par(j,k,t,"wsi_par2")         ;
- 467   
- 468  * Model Constraints
- 469   
+ 465   
+ 466  EQ4(j,k,t)$(WetlandsExist(j,k) and wght("wetlands",j,k,t) )..              W(j,k,t) =e= wsi(j,k,t) * aw(j,k,t)                        ;
+ 467  EQ4a(j,k,t)$(WetlandsExist(j,k) and wght("wetlands",j,k,t))..              wsi(j,k,t) =e=   wsi_par(j,k,t,"wsi_par1") * Q(j,k,t) + wsi_par(j,k,t,"wsi_par2")         ;
+ 468   
+ 469  * Model Constraints
  470   
- 471  EQ5(v,t)..                                    STOR(v,t+1) =e= InitSTOR(v)$(ord(t) eq 1)+ STOR(v,t)$(ord(t) gt 1)+sum (j$LinktoReservoir(j,v), Q(j,v,t)*(1-lss(j,v,t))) - RR(v,t) - (evap(v,t)*RA(v,t)) ;
- 472   
- 473  EQ5a(v,t)..                                   RA(v,t) =e= RA_par(v, "RA_par1") *(STOR(v,t)**2) +RA_par(v, "RA_par2")*STOR(v,t) + RA_par(v, "RA_par3")          ;
- 474  EQ5b(v,t)..                                   RR(v,t) =e= sum(j$LinkOutReservoir(v,j), Q(v,j,t) )  ;
- 475  EQ5c(v)..                                     sum(t$(ord(t) eq card(t)),STOR(v,t)) =e= InitSTOR(v) ;
- 476  EQ5d(v,t)..                                   STOR(v,t)$(ord(t) eq 1) =l= InitStor(v)  ;
- 477   
- 478  EQ6(j,t)$(MassBalanceNodes(j))..            reachGain(j,t) + sum(k$linkexist(k,j), (Q(k,j,t) * (1-lss(k,j,t)))) - sum(k$linkexist(k,j), (A(k,j,t) * linkEvap(k,j,t))) =g= sum (k$linkexist(j,k), Q(j,k,t))  ;
- 479   
- 480  EQ7(dem,t)..                                  sum (k$DiversionExist(k,dem),Q(k,dem,t) * (1-lss(k,dem,t))) - sum (k$DiversionExist(k,dem),Q(k,dem,t) * Cons(dem,t)) =g=  sum(k$returnFlowExist(dem,k), Q(dem,k,t))   ;
- 481  EQ7a(dem,t)..                                  Shortage(dem,t) =e=  dReq(dem,t) - sum(k$linkexist(k,dem), Q  (k,dem,t) ) ;
- 482   
+ 471   
+ 472  EQ5(v,t)..                                    STOR(v,t+1) =e= InitSTOR(v)$(ord(t) eq 1)+ STOR(v,t)$(ord(t) gt 1)+sum (j$LinktoReservoir(j,v), Q(j,v,t)*(1-lss(j,v,t))) - RR(v,t) - (evap(v,t)*RA(v,t)) ;
+ 473   
+ 474  EQ5a(v,t)..                                   RA(v,t) =e= RA_par(v, "RA_par1") *(STOR(v,t)**2) +RA_par(v, "RA_par2")*STOR(v,t) + RA_par(v, "RA_par3")          ;
+ 475  EQ5b(v,t)..                                   RR(v,t) =e= sum(j$LinkOutReservoir(v,j), Q(v,j,t) )  ;
+ 476  EQ5c(v)..                                     sum(t$(ord(t) eq card(t)),STOR(v,t)) =e= InitSTOR(v) ;
+ 477  EQ5d(v,t)..                                   STOR(v,t)$(ord(t) eq 1) =l= InitStor(v)  ;
+ 478   
+ 479  EQ6(j,t)$(MassBalanceNodes(j))..            reachGain(j,t) + sum(k$linkexist(k,j), (Q(k,j,t) * (1-lss(k,j,t)))) - sum(k$linkexist(k,j), (A(k,j,t) * linkEvap(k,j,t))) =g= sum (k$linkexist(j,k), Q(j,k,t))  ;
+ 480   
+ 481  EQ7(dem,t)..                                  sum (k$DiversionExist(k,dem),Q(k,dem,t) * (1-lss(k,dem,t))) - sum (k$DiversionExist(k,dem),Q(k,dem,t) * Cons(dem,t)) =g=  sum(k$returnFlowExist(dem,k), Q(dem,k,t))   ;
+ 482  EQ7a(dem,t)..                                  Shortage(dem,t) =e=  dReq(dem,t) - sum(k$linkexist(k,dem), Q  (k,dem,t) ) ;
  483   
- 484  EQ8(j,k,t)$(envSiteExist(j,k) and (wght("riverine",j,k,t)) ) ..                D(j,k,t)=e= sf_par(j,k,"sf_par1")*Q(j,k,t) + sf_par(j,k,"sf_par2")                  ;
- 485  EQ9(j,k,t)$(envSiteExist(j,k) and (wght("riverine",j,k,t)) )..                 WD(j,k,t) =e= wf_par(j,k,"wf_par1")* Q(j,k,t) + wf_par(j,k,"wf_par2")            ;
- 486  EQ10(j,k,t)$(envSiteExist(j,k) and (wght("riverine",j,k,t)) )..                A(j,k,t)=e= (WD(j,k,t)* lng(j,k)) / 1000000          ;
- 487   
- 488  EQ11(j,k,t,n)$envSiteExist(j,k)..             C(j,k,t,n) =e= InitC(j,k)$(ord(t) eq 1) + C(j,k,t-1,n)$(ord(t) gt 1) + RV(j,k,t,n)$(ord(t) gt 1) + g(j,k,t,n)$(ord(t) gt 1) ;
- 489  EQ11a(j,k,t,n)$envSiteExist(j,k)..            RV(j,k,t,n) =l= maxrv(j,k,t,n) ;
- 490  EQ11b(j,k,t,n)$envSiteExist(j,k)..            RV(j,k,t,n) =g= minrv(j,k,t,n) ;
- 491   
+ 484   
+ 485  EQ8(j,k,t)$(envSiteExist(j,k) and (wght("riverine",j,k,t)) ) ..                D(j,k,t)=e= sf_par(j,k,"sf_par1")*Q(j,k,t) + sf_par(j,k,"sf_par2")                  ;
+ 486  EQ9(j,k,t)$(envSiteExist(j,k) and (wght("riverine",j,k,t)) )..                 WD(j,k,t) =e= wf_par(j,k,"wf_par1")* Q(j,k,t) + wf_par(j,k,"wf_par2")            ;
+ 487  EQ10(j,k,t)$(envSiteExist(j,k) and (wght("riverine",j,k,t)) )..                A(j,k,t)=e= (WD(j,k,t)* lng(j,k)) / 1000000          ;
+ 488   
+ 489  EQ11(j,k,t,n)$envSiteExist(j,k)..             C(j,k,t,n) =e= InitC(j,k)$(ord(t) eq 1) + C(j,k,t-1,n)$(ord(t) gt 1) + RV(j,k,t,n)$(ord(t) gt 1) + g(j,k,t,n)$(ord(t) gt 1) ;
+ 490  EQ11a(j,k,t,n)$envSiteExist(j,k)..            RV(j,k,t,n) =l= maxrv(j,k,t,n) ;
+ 491  EQ11b(j,k,t,n)$envSiteExist(j,k)..            RV(j,k,t,n) =g= minrv(j,k,t,n) ;
  492   
- 493  EQ12(v,t)..                                   STOR(v,t) =g= minstor(v)                    ;
- 494  EQ12a(v,t)..                                  STOR(v,t) =l= maxstor(v)                    ;
- 495   
- 496  EQ13(dem,t)..                                 sum(k$DiversionExist(k,dem), Q(k,dem,t)* (1 -lss(k,dem,t))) =g= dReq(dem,t);
- 497   
+ 493   
+ 494  EQ12(v,t)..                                   STOR(v,t) =g= minstor(v)                    ;
+ 495  EQ12a(v,t)..                                  STOR(v,t) =l= maxstor(v)                    ;
+ 496   
+ 497  EQ13(dem,t)..                                 sum(k$DiversionExist(k,dem), Q(k,dem,t)* (1 -lss(k,dem,t))) =g= dReq(dem,t);
  498   
- 499  EQ14(k,dem,t)$DiversionExist(k,dem)..         Q(k,dem,t) =l= dcap(k,dem)                           ;
- 500   
- 501  EQ15(j,k,t)$LinkExist(j,k)..                  Q(j,k,t) =g= instreamReq(j,k,t)                                            ;
- 502   
- 503  EQ16..                                        sum((j,k,t,n)$envSiteExist(j,k), cst(n) * RV(j,k,t,n)) =l= b                ;
- 504   
+ 499   
+ 500  EQ14(k,dem,t)$DiversionExist(k,dem)..         Q(k,dem,t) =l= dcap(k,dem)                           ;
+ 501   
+ 502  EQ15(j,k,t)$LinkExist(j,k)..                  Q(j,k,t) =g= instreamReq(j,k,t)                                            ;
+ 503   
+ 504  EQ16..                                        sum((j,k,t,n)$envSiteExist(j,k), cst(n) * RV(j,k,t,n)) =l= b                ;
  505   
  506   
- 507  *-------------------------------------------------------
- 508  *Control number of rows and columns in the listing file
- 509  *-------------------------------------------------------
- 510  option limrow = 100000  ;
- 511  option limcol = 100000  ;
- 512   
- 513  *Control maximum running time (in seconds)
- 514  option reslim = 100000000  ;
- 515   
- 516  *Set BARON's solution to global
- 517  option optcr = 0 ;
- 518   
+ 507   
+ 508  *-------------------------------------------------------
+ 509  *Control number of rows and columns in the listing file
+ 510  *-------------------------------------------------------
+ 511  option limrow = 100000  ;
+ 512  option limcol = 100000  ;
+ 513   
+ 514  *Control maximum running time (in seconds)
+ 515  option reslim = 100000000  ;
+ 516   
+ 517  *Set BARON's solution to global
+ 518  option optcr = 0 ;
  519   
  520   
- 521  * instruct BARON to return numsol solutions
- 526   
+ 521   
+ 522  * instruct BARON to return numsol solutions
  527   
- 528  *=======================================================================
- 529  * Solve the model
- 530  *=======================================================================
- 531   
- 532  *Define the model and solve all equations listed above
- 533  Model WASH /all/;
- 534   
- 535  *WASH.optfile =1;
- 536  *option nlp=convert;
- 537   
- 538  *sed -n -e "s:^ *\([exbi][0-9][0-9]*\) \(.*\):s/\1/\2/g:gp" dict.txt | sed -n '1!G;h;$p' > mod.txt
- 539  *sed -f mod.txt gams.gms
- 540   
- 541  option nlp = conopt;
- 542   
+ 528   
+ 529  *=======================================================================
+ 530  * Solve the model
+ 531  *=======================================================================
+ 532   
+ 533  *Define the model and solve all equations listed above
+ 534  Model WASH /all/;
+ 535   
+ 536  *WASH.optfile =1;
+ 537  *option nlp=convert;
+ 538   
+ 539  *sed -n -e "s:^ *\([exbi][0-9][0-9]*\) \(.*\):s/\1/\2/g:gp" dict.txt | sed -n '1!G;h;$p' > mod.txt
+ 540  *sed -f mod.txt gams.gms
+ 541   
+ 542  option nlp = conopt;
  543   
- 544  *Solve the model
- 545  Solve WASH maximizing Z using NLP;
- 546   
+ 544   
+ 545  *Solve the model
+ 546  Solve WASH maximizing Z using NLP;
  547   
  548   
- 549  *execute 'call ..\SobolFolder\SobolBatch2.bat'
- 550   
- 551  *execute '=..\SobolFolder\SobolReadWrite.exe'
- 552   
+ 549   
+ 550  *execute 'call ..\SobolFolder\SobolBatch2.bat'
+ 551   
+ 552  *execute '=..\SobolFolder\SobolReadWrite.exe'
  553   
  554   
  555   
- 556  Display WASH.ModelStat, WASH.SolveStat, Z.L, WSI.L, W.L, FCI.L, F.L, RSI.L, R.L, Ind.L, D.l , Q.L, C.L, A.l, WD.L, RR.L, STOR.L, dreq, RV.L, RA.L, evap, wght ;
- 557   
- 558  *execute_unload "testgdx.gdx";
- 559  *Convert and display results in U.S. units:
- 560   
+ 556   
+ 557  Display WASH.ModelStat, WASH.SolveStat, Z.L, WSI.L, W.L, FCI.L, F.L, RSI.L, R.L, Ind.L, D.l , Q.L, C.L, A.l, WD.L, RR.L, STOR.L, dreq, RV.L, RA.L, evap, wght ;
+ 558   
+ 559  *execute_unload "testgdx.gdx";
+ 560  *Convert and display results in U.S. units:
  561   
- 562  **Unit Coversion
- 563  Z.L  = Z.L  * Sqkm_ac ;
- 564  Q.L(j,k,t)  = Q.L(j,k,t)  * Mm3mo_cfs;
- 565  R.L(j,k,t)  = R.L(j,k,t)  * Sqkm_ac ;
- 566  F.L(j,k,t)  = F.L(j,k,t)  * Sqkm_ac ;
- 567  W.L(j,k,t)  = W.L(j,k,t)  * Sqkm_ac ;
- 568  RR.L(v,t) = RR.L(v,t) * Mm3mo_cfs;
- 569  STOR.L(v,t) = STOR.L(v,t) * Mm3_acft;
- 570   
- 571  FlowMarginal(j,t)  = EQ6.m(j,t) ;
- 572   
- 573  *=======================================================================
- 574  * Unload results to excel
- 575  *=======================================================================
- 576  * Dump all input data and results to a GAMS gdx file
- 577  Execute_Unload "WASH-CEE6410-solution.gdx";
- 578  * Dump the gdx file to an Excel workbook
- 579  Execute "gdx2xls WASH-CEE6410-solution.gdx"
- 580   
- 581  *===============================================================================================
- 582  *Loop over the objective function to develop a pareto-optimal curve with the demand constraint
- 583  *===============================================================================================
+ 562   
+ 563  **Unit Coversion
+ 564  Z.L  = Z.L  * Sqkm_ac ;
+ 565  Q.L(j,k,t)  = Q.L(j,k,t)  * Mm3mo_cfs;
+ 566  R.L(j,k,t)  = R.L(j,k,t)  * Sqkm_ac ;
+ 567  F.L(j,k,t)  = F.L(j,k,t)  * Sqkm_ac ;
+ 568  W.L(j,k,t)  = W.L(j,k,t)  * Sqkm_ac ;
+ 569  RR.L(v,t) = RR.L(v,t) * Mm3mo_cfs;
+ 570  STOR.L(v,t) = STOR.L(v,t) * Mm3_acft;
+ 571   
+ 572  FlowMarginal(j,t)  = EQ6.m(j,t) ;
+ 573   
+ 574  *=======================================================================
+ 575  * Unload results to excel
+ 576  *=======================================================================
+ 577  * Dump all input data and results to a GAMS gdx file
+ 578  Execute_Unload "WASH-CEE6410-solution_Sed.gdx";
+ 579  * Dump the gdx file to an Excel workbook
+ 580  Execute "gdx2xls WASH-CEE6410-solution_Sed.gdx"
+ 581   
+ 582  *===============================================================================================
+ 583  *Loop over the objective function to develop a pareto-optimal curve with the demand constraint
+ 584  *===============================================================================================
        
       *Define parameters to store the values of the decision variables for every run
       PARAMETERS
@@ -663,16 +664,16 @@ GDXIN   C:\Users\talha\Downloads\Courses\CEE 6410 Civil Engineering Systems Anal
       Execute_Unload "Tradeoff_03032017.gdx", WASH_lp,dreq, SumDemand, DValue, Q_lp, R_lp, F_lp, W_lp, C_lp, A_lp, RSI_lp, FCI_lp, WSI_lp   ;
       Execute 'GDXXRW.EXE Tradeoff_03032017.gdx par=WASH_lp  rng=WASH!A1  par=DValue  rng=DValue!A1  par=SumDemand  rng=SumDemand!A1   par=Q_lp  rng=Q!A1  par=R_lp  rng=R!A1 par=F_lp  rng=F!A1 par=W_lp  rng=W!A1 par=RSI_lp  rng=RSI!A1 par=FCI_lp  rng=FCI!A1  par=WSI_lp  rng=WSI!A1    par=A_lp  rng=A!A1  par=C_lp  rng=C!A1'             ;
        
- 672   
  673   
  674   
  675   
  676   
  677   
- 678  *=================================================================================================================
- 679  *Loop over the objective function to test the sensitivity of the objective function components to changes in flow
- 680  *=================================================================================================================
- 681   
+ 678   
+ 679  *=================================================================================================================
+ 680  *Loop over the objective function to test the sensitivity of the objective function components to changes in flow
+ 681  *=================================================================================================================
+ 682   
       Parameters
                    WASH_Qlp(Qrun)          A vector paramter to store the values of the objective function for every run in the loop
                    Q_Qlp(j,k,t,Qrun)       A vector parameter to store the values of the flow at every link in the watershed
@@ -718,14 +719,14 @@ GDXIN   C:\Users\talha\Downloads\Courses\CEE 6410 Civil Engineering Systems Anal
        
        
        
- 729   
  730   
- 731  *****************************************************
- 732  *Monte Carlo Simulation for Uncertain Parameters
- 733  *****************************************************
- 734  * Here I'm testin the model response and sensitivity to different parameters
- 735  * and the combinations of uncertain parameters
- 736   
+ 731   
+ 732  *****************************************************
+ 733  *Monte Carlo Simulation for Uncertain Parameters
+ 734  *****************************************************
+ 735  * Here I'm testin the model response and sensitivity to different parameters
+ 736  * and the combinations of uncertain parameters
+ 737   
        
       * Define uncertain parameters
        
@@ -1095,7 +1096,6 @@ GDXIN   C:\Users\talha\Downloads\Courses\CEE 6410 Civil Engineering Systems Anal
        
        
        
-1108   
 1109   
 1110   
 1111   
@@ -1118,10 +1118,11 @@ GDXIN   C:\Users\talha\Downloads\Courses\CEE 6410 Civil Engineering Systems Anal
 1128   
 1129   
 1130   
-1131  *************************
-1132  *End of Code
-1133  *************************
-GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/23/26 16:38:15 Page 2
+1131   
+1132  *************************
+1133  *End of Code
+1134  *************************
+GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/23/26 17:03:06 Page 2
 Watershed Area of Suitable Habitat (WASH) model and an application on the Lower Bear River Watershed
 Include File Summary
 
@@ -1129,37 +1130,37 @@ Include File Summary
    SEQ   GLOBAL TYPE      PARENT   LOCAL  INCLVL  FILENAME
 
      1        1 INPUT          0       0       0  C:\Users\talha\Downloads\Courses\CEE 6410 Civil Engineering Systems Analysis\Assignments\CEE6410Github\CEE6410-Engineering-Systems\I. Mixed Integer Problem\WASH-master\InputDataModel\WASH-CEE6410.gms
-     2      216 CALL           1     216       0  GDXXRW.EXE input=WASH_1yr_InputData.xlsx output=WASH-Data.gdx  Set=t rng=Month!A1:A12 Rdim=1  Set=s rng=SubInd!A1:A100 Rdim=1 set=y rng=FishSpp!A1:A10 Rdim=1 set=n rng=VegSpp!A1:A10 Rdim=1 Set=j rng=Nodes!A1:A100 Rdim=1 Set=wt rng=Wetlands!A1:A100 Rdim...
-     3      234 GDXIN          1     234       0  C:\Users\talha\Downloads\Courses\CEE 6410 Civil Engineering Systems Analysis\Assignments\CEE6410Github\CEE6410-Engineering-Systems\I. Mixed Integer Problem\WASH-master\InputDataModel\WASH-Data.gdx
+     2      217 CALL           1     217       0  GDXXRW.EXE input=WASH_1yr_InputData_Sed.xlsx output=WASH-Data.gdx  Set=t rng=Month!A1:A12 Rdim=1  Set=s rng=SubInd!A1:A100 Rdim=1 set=y rng=FishSpp!A1:A10 Rdim=1 set=n rng=VegSpp!A1:A10 Rdim=1 Set=j rng=Nodes!A1:A100 Rdim=1 Set=wt rng=Wetlands!A1:A100 ...
+     3      235 GDXIN          1     235       0  C:\Users\talha\Downloads\Courses\CEE 6410 Civil Engineering Systems Analysis\Assignments\CEE6410Github\CEE6410-Engineering-Systems\I. Mixed Integer Problem\WASH-master\InputDataModel\WASH-Data.gdx
 
 
-COMPILATION TIME     =        5.000 SECONDS      3 MB  54.4.0 9a60ae27 WEX-WEI
-GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/23/26 16:38:15 Page 3
+COMPILATION TIME     =        2.625 SECONDS      3 MB  54.4.0 9a60ae27 WEX-WEI
+GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/23/26 17:03:06 Page 3
 Watershed Area of Suitable Habitat (WASH) model and an application on the Lower Bear River Watershed
 E x e c u t i o n
 
 
-----    307 SET s  sub-indicators. Here s1=riverine habitat s2=floodplain connectivity and s3=impounded wetlands
+----    308 SET s  sub-indicators. Here s1=riverine habitat s2=floodplain connectivity and s3=impounded wetlands
 
 riverine  ,    floodplain,    wetlands  
 
 
-----    307 SET j  river netowrk nodes which lists all nodes in the network
+----    308 SET j  river netowrk nodes which lists all nodes in the network
 
 j1 ,    j2 ,    j3 ,    j4 ,    j5 ,    j6 ,    j7 ,    j8 ,    j9 ,    j12,    j13,    j14,    j15,    j16,    j17,    j18,    j19,    j20,    j21,    j22,    j23,    j24,    j25,    j26,    j27,    j28,    j29,    j30,    j31,    j32,    j33,    j34,    j35,    j36,    j37,    j38,    j39,    j40,    j41,    j42,    j43,    j44,    j45
 
 
-----    307 SET dem  demand sites which are a subset of the model nodes (j)
+----    308 SET dem  demand sites which are a subset of the model nodes (j)
 
 j3 ,    j8 ,    j13,    j15,    j16,    j27,    j28,    j38,    j39,    j41,    j42,    j44
 
 
-----    307 PARAMETER InitC  Defines inital vegetation cover for the first time step [Mm^2]
+----    308 PARAMETER InitC  Defines inital vegetation cover for the first time step [Mm^2]
 
                       ( ALL       0.000 )
 
 
-----    307 PARAMETER InitD  Defines inital river depth for the first time step [m]
+----    308 PARAMETER InitD  Defines inital river depth for the first time step [m]
 
              j1          j4          j5          j7          j9         j12         j14         j17         j18         j20         j21         j23         j24         j25         j29         j30         j32         j33         j40         j43         j45
 
@@ -1191,14 +1192,14 @@ j43                                                                             
 j45                                                                                                                                                                                                       7.000
 
 
-----    307 PARAMETER InitSTOR  Defines inital reservoir storage [Mm^3]
+----    308 PARAMETER InitSTOR  Defines inital reservoir storage [Mm^3]
 
 j29 5.000,    j33 3.000
 
 
-----    307 PARAMETER b                    =    50000.000  Total management budget to implement restoration actions [$]
+----    308 PARAMETER b                    =    50000.000  Total management budget to implement restoration actions [$]
 
-----    307 PARAMETER wght  The model spatial and temporal weights on every sub-indicator as set by stakeholders [0: no important - 1: important]
+----    308 PARAMETER wght  The model spatial and temporal weights on every sub-indicator as set by stakeholders [0: no important - 1: important]
 
 INDEX 1 = riverine
 
@@ -1267,27 +1268,27 @@ INDEX 1 = wetlands
 j21.j23       1.000       1.000       1.000       1.000       1.000       1.000       1.000       1.000       1.000       1.000       1.000       1.000
 
 
-----    308 SET v  reservoirs which are a subset of the model nodes (j)
+----    309 SET v  reservoirs which are a subset of the model nodes (j)
 
 j1 ,    j7 ,    j17,    j29,    j33
 
 
-----    308 SET t  timesteps in months
+----    309 SET t  timesteps in months
 
 t1 ,    t2 ,    t3 ,    t4 ,    t5 ,    t6 ,    t7 ,    t8 ,    t9 ,    t10,    t11,    t12
 
 
-----    308 SET y  The type(s) of priorty fish species that the model uses as indicator species
+----    309 SET y  The type(s) of priorty fish species that the model uses as indicator species
 
 trout
 
 
-----    308 SET n  The type(s) of prioty vegetation species that the model uses as indicator species
+----    309 SET n  The type(s) of prioty vegetation species that the model uses as indicator species
 
 cottonwood
 
 
-----    308 PARAMETER envSiteExist  Describe if the link is an environmental site or not (1=yes and 0=no). Environmental sites are were sensitive habitat is located and aquatic floodplain and wetland ecological indexes are calculated
+----    309 PARAMETER envSiteExist  Describe if the link is an environmental site or not (1=yes and 0=no). Environmental sites are were sensitive habitat is located and aquatic floodplain and wetland ecological indexes are calculated
 
              j1          j4          j5          j7          j9         j12         j14         j17         j18         j20         j21         j23         j24         j25         j29         j30         j32         j33         j40         j43         j45
 
@@ -1319,7 +1320,7 @@ j43                                                                             
 j45                                                                                                                                                                                                       1.000
 
 
-----    308 PARAMETER linkexist  Describes if the link from node j to node k exists (1=yes and 0=no)
+----    309 PARAMETER linkexist  Describes if the link from node j to node k exists (1=yes and 0=no)
 
              j1          j3          j4          j5          j7          j8          j9         j12         j13         j14         j15         j16         j17         j18         j20         j21         j23         j24         j25         j27         j28         j29         j30         j32         j33         j38         j39         j40         j41         j42         j43         j44         j45
 
@@ -1366,7 +1367,7 @@ j44                                                                             
 j45                                                                                                                                                                                                                                                                                           1.000                                                                   1.000
 
 
-----    309 PARAMETER DiversionExist  Defines if the link is a diversion from the network to a demand site  (1=yes and 0=no)
+----    310 PARAMETER DiversionExist  Defines if the link is a diversion from the network to a demand site  (1=yes and 0=no)
 
              j3          j8         j13         j15         j16         j27         j28         j38         j39         j41         j42         j44
 
@@ -1382,7 +1383,7 @@ j43                                                                             
 j45                                                                                                                               1.000
 
 
-----    309 PARAMETER returnFlowExist  Defines if a return flow exists on a link from a demand site back to the river network  (1=yes and 0=no)
+----    310 PARAMETER returnFlowExist  Defines if a return flow exists on a link from a demand site back to the river network  (1=yes and 0=no)
 
              j9         j14         j18         j24         j25         j29         j30
 
@@ -1399,14 +1400,14 @@ j42                                                                   1.000
 j44                                           1.000
 
 
-----    309 PARAMETER WetlandsExist  Defines if the link has impoounded wetlands (1=yes and 0=no)
+----    310 PARAMETER WetlandsExist  Defines if the link has impoounded wetlands (1=yes and 0=no)
 
             j23
 
 j21       1.000
 
 
-----    310 PARAMETER LinktoReservoir  Defines if the link flows into a reservoir or not (1=yes and 0=no)
+----    311 PARAMETER LinktoReservoir  Defines if the link flows into a reservoir or not (1=yes and 0=no)
 
              j1          j7         j17         j29         j33
 
@@ -1421,7 +1422,7 @@ j41                                           1.000
 j42                                           1.000
 
 
-----    310 PARAMETER LinkOutReservoir  Defines if the link leave a reservoir or not and carry reservoir releases (1=yes and 0=no)
+----    311 PARAMETER LinkOutReservoir  Defines if the link leave a reservoir or not and carry reservoir releases (1=yes and 0=no)
 
              j4          j8          j9         j16         j20         j24         j27         j28         j38         j43         j44
 
@@ -1432,7 +1433,7 @@ j29                                                                   1.000     
 j33                                                                                                       1.000       1.000
 
 
-----    310 PARAMETER reachGain  Defines the flows that feed a node in the network - gain could be headflow or a tributary
+----    311 PARAMETER reachGain  Defines the flows that feed a node in the network - gain could be headflow or a tributary
 
              t1          t2          t3          t4          t5          t6          t7          t8          t9         t10         t11         t12
 
@@ -1446,14 +1447,14 @@ j36      52.589      41.724      56.848      55.268      28.165                 
 j37      21.266      26.589      29.659      27.044      18.033      67.228      76.370      66.767      31.874      16.035      21.262      21.981
 
 
-----    311 PARAMETER aw  Total impounded wetlands area (when filled to maximum depth) [Mm^2]
+----    312 PARAMETER aw  Total impounded wetlands area (when filled to maximum depth) [Mm^2]
 
                  t1          t2          t3          t4          t5          t6          t7          t8          t9         t10         t11         t12
 
 j21.j23     118.400     118.400     118.400     118.400     118.400     118.400     118.400     118.400     118.400     118.400     118.400     118.400
 
 
-----    311 PARAMETER lss  Net losses on link j entering k  as a [%] of flow. Losses could be due to seepage to the groundwater
+----    312 PARAMETER lss  Net losses on link j entering k  as a [%] of flow. Losses could be due to seepage to the groundwater
 
                  t1          t2          t3          t4          t5          t6          t7          t8          t9         t10         t11         t12
 
@@ -1461,7 +1462,7 @@ j12.j13       0.005       0.005       0.005       0.005       0.005       0.005 
 j15.j14       0.400       0.400       0.400       0.400       0.400       0.400       0.400       0.400       0.400       0.400       0.400       0.400
 
 
-----    311 PARAMETER evap  Evaporative losses in reservoirs [m per month]
+----    312 PARAMETER evap  Evaporative losses in reservoirs [m per month]
 
              t4          t5          t6          t7          t8          t9         t10
 
@@ -1472,17 +1473,17 @@ j29       0.030       0.122       0.152       0.183       0.152       0.091     
 j33       0.030       0.122       0.152       0.183       0.152       0.091       0.091
 
 
-----    311 PARAMETER linkEvap  Evaporative losses on links [m per month]
+----    312 PARAMETER linkEvap  Evaporative losses on links [m per month]
 
                       ( ALL       0.000 )
 
 
-----    311 SET RA_par_indx  indexes to read the parameters for the reservoir volume elevation curves
+----    312 SET RA_par_indx  indexes to read the parameters for the reservoir volume elevation curves
 
 RA_par1,    RA_par2,    RA_par3
 
 
-----    311 PARAMETER RA_par  Reads the reservoir area volume curves parameters
+----    312 PARAMETER RA_par  Reads the reservoir area volume curves parameters
 
         RA_par1     RA_par2     RA_par3
 
@@ -1493,7 +1494,7 @@ j29 -4.00000E-4       0.069       0.408
 j33       0.001       0.029       0.090
 
 
-----    312 PARAMETER cons  Consupmtive use fraction expressed as a [%] of all inflow received at a demand site
+----    313 PARAMETER cons  Consupmtive use fraction expressed as a [%] of all inflow received at a demand site
 
              t1          t2          t3          t4          t5          t6          t7          t8          t9         t10         t11         t12
 
@@ -1511,7 +1512,7 @@ j42       0.270       0.270       0.270       0.730       0.730       0.730     
 j44       0.270       0.270       0.270       0.730       0.730       0.730       0.730       0.730       0.730       0.730       0.270       0.270
 
 
-----    312 PARAMETER lng  Length of river links [m]
+----    313 PARAMETER lng  Length of river links [m]
 
              j1          j4          j5          j7          j9         j12         j14         j17         j18         j20         j21         j23         j24         j25         j29         j30         j32         j33         j40         j43         j45
 
@@ -1543,17 +1544,17 @@ j43                                                                             
 j45                                                                                                                                                                                                    9264.090
 
 
-----    312 PARAMETER minstor  Inactive reservoir storage [Mm^3]
+----    313 PARAMETER minstor  Inactive reservoir storage [Mm^3]
 
 j29 4.200,    j33 2.467
 
 
-----    312 PARAMETER maxstor  Reservoir storage capacity [Mm^3]
+----    313 PARAMETER maxstor  Reservoir storage capacity [Mm^3]
 
 j29 23.046,    j33 16.035
 
 
-----    312 PARAMETER dreqBase  Base Demand requirements at demand sites [Mm^3 per month]
+----    313 PARAMETER dreqBase  Base Demand requirements at demand sites [Mm^3 per month]
 
              t1          t2          t3          t4          t5          t6          t7          t8          t9         t10         t11         t12
 
@@ -1566,7 +1567,7 @@ j42                                                       2.876       2.445     
 j44                                                       2.429       4.357       4.291       3.065
 
 
-----    312 PARAMETER dcap  Physical capacity of diversion links [Mm^3 per month] that feed demand sites
+----    313 PARAMETER dcap  Physical capacity of diversion links [Mm^3 per month] that feed demand sites
 
              j3          j8         j13         j15         j16         j27         j28         j38         j39         j41         j42         j44
 
@@ -1581,24 +1582,24 @@ j43                                                                             
 j45                                                                                                                          100000.000
 
 
-----    312 PARAMETER instreamReq  Minimum instream flow requirement as regulated by authories or required for other purposes such as hydropower or endangered species or water rights[m3 per month]
+----    313 PARAMETER instreamReq  Minimum instream flow requirement as regulated by authories or required for other purposes such as hydropower or endangered species or water rights[m3 per month]
 
                  t2          t3          t4          t5          t6          t7          t8          t9         t10
 
 j29.j24       0.600       0.800       1.200       0.200       0.100       0.100       0.100       0.100       0.100
 
 
-----    312 PARAMETER cst  Unit cost of implementing the management objective of Revegetating species n [$]
+----    313 PARAMETER cst  Unit cost of implementing the management objective of Revegetating species n [$]
 
 cottonwood 100.000
 
 
-----    313 SET sf_par_indx  indexes to read the parameters for stage-flow relationships
+----    314 SET sf_par_indx  indexes to read the parameters for stage-flow relationships
 
 sf_par1,    sf_par2
 
 
-----    313 PARAMETER sf_par  Reads the stage-flow relationships parameters
+----    314 PARAMETER sf_par  Reads the stage-flow relationships parameters
 
             sf_par1     sf_par2
 
@@ -1630,12 +1631,12 @@ j43.j45       0.051       0.357
 j45.j32       0.051       0.357
 
 
-----    313 SET wf_par_indx  indexes to read the parameters for width-flow relationships
+----    314 SET wf_par_indx  indexes to read the parameters for width-flow relationships
 
 wf_par1,    wf_par2
 
 
-----    313 PARAMETER wf_par  Reads the width-flow relationships parameters
+----    314 PARAMETER wf_par  Reads the width-flow relationships parameters
 
             wf_par1     wf_par2
 
@@ -1667,12 +1668,12 @@ j43.j45       0.162      15.320
 j45.j32       0.162      15.320
 
 
-----    313 SET wsi_par_indx  indexes to read the parameters for wetlands suitability index relationships
+----    314 SET wsi_par_indx  indexes to read the parameters for wetlands suitability index relationships
 
 wsi_par1,    wsi_par2
 
 
-----    313 PARAMETER wsi_par  Reads the wetlands suitability index monthly relationships parameters
+----    314 PARAMETER wsi_par  Reads the wetlands suitability index monthly relationships parameters
 
 INDEX 1 = j21
 
@@ -1692,17 +1693,17 @@ j23.t11 1.000000E-4       0.393
 j23.t12 1.000000E-4       0.401
 
 
-----    313 SET rsi_indx  indexes to read the parameters for riverine suitability indicator equations
+----    314 SET rsi_indx  indexes to read the parameters for riverine suitability indicator equations
 
 rsi_par1,    rsi_par2,    rsi_par3,    rsi_par4,    Func_typ
 
 
-----    314 SET fci_indx  indexes to read the floodplain connectivity indicator equations
+----    315 SET fci_indx  indexes to read the floodplain connectivity indicator equations
 
 fci_par1,    fci_par2,    fci_par3,    fci_par4
 
 
-----    314 PARAMETER fci_par  Reads the FCI equation parameters as a function of time for monthly flows
+----    315 PARAMETER fci_par  Reads the FCI equation parameters as a function of time for monthly flows
 
 INDEX 1 = j1
 
@@ -2147,7 +2148,7 @@ j32.t11       0.001       0.001       0.001       0.001
 j32.t12       0.001       0.001       0.001       0.001
 
 
-----    314 PARAMETER rsi_par  Reads the RSI equation parameters as a function of time for differnt life stages
+----    315 PARAMETER rsi_par  Reads the RSI equation parameters as a function of time for differnt life stages
 
 INDEX 1 = j1
 
@@ -2592,7 +2593,7 @@ j32.t11       1.000       0.422       0.049       1.000
 j32.t12       1.000       0.422       0.049       1.000
 
 
-----    314 PARAMETER LinkID  A unqie ID to every link in the network to be used for GIS visulaization
+----    315 PARAMETER LinkID  A unqie ID to every link in the network to be used for GIS visulaization
 
              j1          j4          j5          j7          j9         j12         j14         j17         j18         j20         j21         j23         j24         j25         j29         j30         j32         j33         j40         j43         j45
 
@@ -2624,7 +2625,7 @@ j43                                                                             
 j45                                                                                                                                                                                                      30.000
 
 
-----    314 PARAMETER qmin  Defines the physical and natural lower bounds of flow on links [Mm^3 per month] as defined by the channel geometry and historical records
+----    315 PARAMETER qmin  Defines the physical and natural lower bounds of flow on links [Mm^3 per month] as defined by the channel geometry and historical records
 
                  t1          t2          t3          t4          t5          t6          t7          t8          t9         t10         t11         t12
 
@@ -2673,7 +2674,7 @@ j38.j30       2.000       2.000       2.000       2.000       2.000       2.000 
 j39.j18       2.000       2.000       2.000       2.000       2.000       2.000       2.000       2.000       2.000       2.000       2.000       2.000
 
 
-----    314 PARAMETER qmax  Defines the physical and natural upper bounds of flow on links [Mm^3 per month] based on headflow received and reservoir capacity upstream of every link
+----    315 PARAMETER qmax  Defines the physical and natural upper bounds of flow on links [Mm^3 per month] based on headflow received and reservoir capacity upstream of every link
 
                  t1          t2          t3          t4          t5          t6          t7          t8          t9         t10         t11         t12
 
@@ -2734,7 +2735,7 @@ j45.j32      79.858      80.293      83.987      91.405      89.560      84.306 
 j45.j42      79.858      80.293      83.987      91.405      89.560      84.306      80.527      80.257      80.072      79.616      79.723      79.396
 
 
-----    314 PARAMETER Qsim  Flow values for simulation purposes [Mm^3 per month]
+----    315 PARAMETER Qsim  Flow values for simulation purposes [Mm^3 per month]
 
                  t1          t2          t3          t4          t5          t6          t7          t8          t9         t10         t11         t12
 
@@ -2750,7 +2751,7 @@ j32.j29       2.919       2.577       6.166      27.359      36.786      15.109 
 j34.j33       0.361       0.713       1.992       7.083       2.424       0.954       0.409       0.318       0.276       0.236       0.274       0.063
 
 
-----    314 PARAMETER CMax  Maximum vegetation cover allowed based on site floodplain area and revegetation potentials [Mm2 per month]
+----    315 PARAMETER CMax  Maximum vegetation cover allowed based on site floodplain area and revegetation potentials [Mm2 per month]
 
              j1          j4          j5          j7          j9         j12         j14         j17         j18         j20         j21         j23         j24         j25         j29         j30         j32         j33         j40         j43         j45
 
@@ -2783,7 +2784,7 @@ j43                                                                             
 j45                                                                                                                                                                                                       0.275
 
 
-----    314 PARAMETER SimLink  Defines the links where flow is fixed for the simulation case
+----    315 PARAMETER SimLink  Defines the links where flow is fixed for the simulation case
 
              j4          j5          j9         j20         j21         j23         j29         j30         j33
 
@@ -2799,7 +2800,7 @@ j32                                                                             
 j34                                                                                                       1.000
 
 
-----    314 PARAMETER LinkExistSim  Defines all other links where flow is not fixed for the simulation case
+----    315 PARAMETER LinkExistSim  Defines all other links where flow is not fixed for the simulation case
 
              j3          j4          j5          j7          j8          j9         j12         j13         j14         j15         j16         j18         j20         j21         j23         j24         j25         j27         j28         j29         j30         j32         j38         j39
 
@@ -2833,37 +2834,37 @@ j38                                                                             
 j39                                                                                                                                           1.000
 
 
-----    314 SET MassBalanceNodes  Lists all the nodes that will balance the flow not including demands sites because a diffrent equation is used to describe their mass balance
+----    315 SET MassBalanceNodes  Lists all the nodes that will balance the flow not including demands sites because a diffrent equation is used to describe their mass balance
 
 j4 ,    j5 ,    j6 ,    j9 ,    j12,    j14,    j18,    j19,    j20,    j21,    j22,    j23,    j24,    j25,    j26,    j30,    j31,    j32,    j34,    j35,    j36,    j37,    j40,    j43,    j45
 
 
-----    314 PARAMETER g  The natural growth area [Mm2 per month] of species n
+----    315 PARAMETER g  The natural growth area [Mm2 per month] of species n
 
                       ( ALL       0.000 )
 
 
-----    315 SET run  number of runs (iterations) for the allowable shortage to build a WASH-Demand pareto-optimal curve
+----    316 SET run  number of runs (iterations) for the allowable shortage to build a WASH-Demand pareto-optimal curve
 
 s1 ,    s2 ,    s3 ,    s4 ,    s5 ,    s6 ,    s7 ,    s8 ,    s9 ,    s10,    s11,    s12,    s13,    s14,    s15,    s16,    s17,    s18,    s19,    s20,    s21,    s22,    s23,    s24,    s25,    s26,    s27,    s28,    s29,    s30
 
 
-----    315 PARAMETER DValue  Define parameters to run the model over multiple values of demand requirements to build a tradeoff curve
+----    316 PARAMETER DValue  Define parameters to run the model over multiple values of demand requirements to build a tradeoff curve
 
 s1  0.100,    s2  0.200,    s3  0.300,    s4  0.400,    s5  0.500,    s6  0.600,    s7  0.700,    s8  0.800,    s9  0.900,    s10 1.000,    s11 1.100,    s12 1.200,    s13 1.300,    s14 1.400
 
 
-----    316 SET Qrun  number of runs (iterations) for flow values to test the model sensitivity and response to differnt flow values
+----    317 SET Qrun  number of runs (iterations) for flow values to test the model sensitivity and response to differnt flow values
 
 q1 ,    q2 ,    q3 ,    q4 ,    q5 ,    q6 ,    q7 ,    q8 ,    q9 ,    q10
 
 
-----    316 PARAMETER QLoop  Define flow values for the flow sensivity analysis loop
+----    317 PARAMETER QLoop  Define flow values for the flow sensivity analysis loop
 
 q1  22.340,    q2  26.063,    q3  29.786,    q4  33.510,    q5  37.233,    q6  40.956,    q7  44.680,    q8  48.403,    q9  52.126,    q10 55.850
 
 
-----    316 PARAMETER maxrv  Maximum revegetation value
+----    317 PARAMETER maxrv  Maximum revegetation value
 
 INDEX 1 = j1
 
@@ -3094,13 +3095,13 @@ j1.t8       0.040
 j1.t9       0.020
 
 
-----    316 PARAMETER minrv  Minimum revegetation value
+----    317 PARAMETER minrv  Minimum revegetation value
 
                       ( ALL       0.000 )
 
-GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/23/26 16:38:15 Page 4
+GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/23/26 17:03:06 Page 4
 Watershed Area of Suitable Habitat (WASH) model and an application on the Lower Bear River Watershed
-Equation Listing    SOLVE WASH Using NLP From line 545
+Equation Listing    SOLVE WASH Using NLP From line 546
 
 
 ---- EQ1  =E=  Z     Objective function: Watershed Area of Suitable Habitat [Mm^2] and is calculated as the is composed of the weighted sum of the three sub-indicators (Ind): riparian [R] floodplain [F] and wetlands [W]
@@ -14949,9 +14950,9 @@ EQ15(j45,j42,t12)..  Q(j45,j42,t12) =G= 0 ; (LHS = 0)
 
 EQ16..  100*RV(j1,j4,t1,cottonwood) + 100*RV(j1,j4,t2,cottonwood) + 100*RV(j1,j4,t3,cottonwood) + 100*RV(j1,j4,t4,cottonwood) + 100*RV(j1,j4,t5,cottonwood) + 100*RV(j1,j4,t6,cottonwood) + 100*RV(j1,j4,t7,cottonwood) + 100*RV(j1,j4,t8,cottonwood) + 100*RV(j1,j4,t9,cottonwood) + 100*RV(j1,j4,t10,cottonwood) + 100*RV(j1,j4,t11,cottonwood) + 100*RV(j1,j4,t12,cottonwood) + 100*RV(j4,j5,t1,cottonwood) + 100*RV(j4,j5,t2,cottonwood) + 100*RV(j4,j5,t3,cottonwood) + 100*RV(j4,j5,t4,cottonwood) + 100*RV(j4,j5,t5,cottonwood) + 100*RV(j4,j5,t6,cottonwood) + 100*RV(j4,j5,t7,cottonwood) + 100*RV(j4,j5,t8,cottonwood) + 100*RV(j4,j5,t9,cottonwood) + 100*RV(j4,j5,t10,cottonwood) + 100*RV(j4,j5,t11,cottonwood) + 100*RV(j4,j5,t12,cottonwood) + 100*RV(j5,j18,t1,cottonwood) + 100*RV(j5,j18,t2,cottonwood) + 100*RV(j5,j18,t3,cottonwood) + 100*RV(j5,j18,t4,cottonwood) + 100*RV(j5,j18,t5,cottonwood) + 100*RV(j5,j18,t6,cottonwood) + 100*RV(j5,j18,t7,cottonwood) + 100*RV(j5,j18,t8,cottonwood) + 100*RV(j5,j18,t9,cottonwood) + 100*RV(j5,j18,t10,cottonwood) + 100*RV(j5,j18,t11,cottonwood) + 100*RV(j5,j18,t12,cottonwood) + 100*RV(j6,j5,t1,cottonwood) + 100*RV(j6,j5,t2,cottonwood) + 100*RV(j6,j5,t3,cottonwood) + 100*RV(j6,j5,t4,cottonwood) + 100*RV(j6,j5,t5,cottonwood) + 100*RV(j6,j5,t6,cottonwood) + 100*RV(j6,j5,t7,cottonwood) + 100*RV(j6,j5,t8,cottonwood) + 100*RV(j6,j5,t9,cottonwood) + 100*RV(j6,j5,t10,cottonwood) + 100*RV(j6,j5,t11,cottonwood) + 100*RV(j6,j5,t12,cottonwood) + 100*RV(j7,j9,t1,cottonwood) + 100*RV(j7,j9,t2,cottonwood) + 100*RV(j7,j9,t3,cottonwood) + 100*RV(j7,j9,t4,cottonwood) + 100*RV(j7,j9,t5,cottonwood) + 100*RV(j7,j9,t6,cottonwood) + 100*RV(j7,j9,t7,cottonwood) + 100*RV(j7,j9,t8,cottonwood) + 100*RV(j7,j9,t9,cottonwood) + 100*RV(j7,j9,t10,cottonwood) + 100*RV(j7,j9,t11,cottonwood) + 100*RV(j7,j9,t12,cottonwood) + 100*RV(j9,j12,t1,cottonwood) + 100*RV(j9,j12,t2,cottonwood) + 100*RV(j9,j12,t3,cottonwood) + 100*RV(j9,j12,t4,cottonwood) + 100*RV(j9,j12,t5,cottonwood) + 100*RV(j9,j12,t6,cottonwood) + 100*RV(j9,j12,t7,cottonwood) + 100*RV(j9,j12,t8,cottonwood) + 100*RV(j9,j12,t9,cottonwood) + 100*RV(j9,j12,t10,cottonwood) + 100*RV(j9,j12,t11,cottonwood) + 100*RV(j9,j12,t12,cottonwood) + 100*RV(j12,j14,t1,cottonwood) + 100*RV(j12,j14,t2,cottonwood) + 100*RV(j12,j14,t3,cottonwood) + 100*RV(j12,j14,t4,cottonwood) + 100*RV(j12,j14,t5,cottonwood) + 100*RV(j12,j14,t6,cottonwood) + 100*RV(j12,j14,t7,cottonwood) + 100*RV(j12,j14,t8,cottonwood) + 100*RV(j12,j14,t9,cottonwood) + 100*RV(j12,j14,t10,cottonwood) + 100*RV(j12,j14,t11,cottonwood) + 100*RV(j12,j14,t12,cottonwood) + 100*RV(j14,j17,t1,cottonwood) + 100*RV(j14,j17,t2,cottonwood) + 100*RV(j14,j17,t3,cottonwood) + 100*RV(j14,j17,t4,cottonwood) + 100*RV(j14,j17,t5,cottonwood) + 100*RV(j14,j17,t6,cottonwood) + 100*RV(j14,j17,t7,cottonwood) + 100*RV(j14,j17,t8,cottonwood) + 100*RV(j14,j17,t9,cottonwood) + 100*RV(j14,j17,t10,cottonwood) + 100*RV(j14,j17,t11,cottonwood) + 100*RV(j14,j17,t12,cottonwood) + 100*RV(j17,j20,t1,cottonwood) + 100*RV(j17,j20,t2,cottonwood) + 100*RV(j17,j20,t3,cottonwood) + 100*RV(j17,j20,t4,cottonwood) + 100*RV(j17,j20,t5,cottonwood) + 100*RV(j17,j20,t6,cottonwood) + 100*RV(j17,j20,t7,cottonwood) + 100*RV(j17,j20,t8,cottonwood) + 100*RV(j17,j20,t9,cottonwood) + 100*RV(j17,j20,t10,cottonwood) + 100*RV(j17,j20,t11,cottonwood) + 100*RV(j17,j20,t12,cottonwood) + 100*RV(j18,j7,t1,cottonwood) + 100*RV(j18,j7,t2,cottonwood) + 100*RV(j18,j7,t3,cottonwood) + 100*RV(j18,j7,t4,cottonwood) + 100*RV(j18,j7,t5,cottonwood) + 100*RV(j18,j7,t6,cottonwood) + 100*RV(j18,j7,t7,cottonwood) + 100*RV(j18,j7,t8,cottonwood) + 100*RV(j18,j7,t9,cottonwood) + 100*RV(j18,j7,t10,cottonwood) + 100*RV(j18,j7,t11,cottonwood) + 100*RV(j18,j7,t12,cottonwood) + 100*RV(j19,j20,t1,cottonwood) + 100*RV(j19,j20,t2,cottonwood) + 100*RV(j19,j20,t3,cottonwood) + 100*RV(j19,j20,t4,cottonwood) + 100*RV(j19,j20,t5,cottonwood) + 100*RV(j19,j20,t6,cottonwood) + 100*RV(j19,j20,t7,cottonwood) + 100*RV(j19,j20,t8,cottonwood) + 100*RV(j19,j20,t9,cottonwood) + 100*RV(j19,j20,t10,cottonwood) + 100*RV(j19,j20,t11,cottonwood) + 100*RV(j19,j20,t12,cottonwood) + 100*RV(j20,j21,t1,cottonwood) + 100*RV(j20,j21,t2,cottonwood) + 100*RV(j20,j21,t3,cottonwood) + 100*RV(j20,j21,t4,cottonwood) + 100*RV(j20,j21,t5,cottonwood) + 100*RV(j20,j21,t6,cottonwood) + 100*RV(j20,j21,t7,cottonwood) + 100*RV(j20,j21,t8,cottonwood) + 100*RV(j20,j21,t9,cottonwood) + 100*RV(j20,j21,t10,cottonwood) + 100*RV(j20,j21,t11,cottonwood) + 100*RV(j20,j21,t12,cottonwood) + 100*RV(j21,j23,t1,cottonwood) + 100*RV(j21,j23,t2,cottonwood) + 100*RV(j21,j23,t3,cottonwood) + 100*RV(j21,j23,t4,cottonwood) + 100*RV(j21,j23,t5,cottonwood) + 100*RV(j21,j23,t6,cottonwood) + 100*RV(j21,j23,t7,cottonwood) + 100*RV(j21,j23,t8,cottonwood) + 100*RV(j21,j23,t9,cottonwood) + 100*RV(j21,j23,t10,cottonwood) + 100*RV(j21,j23,t11,cottonwood) + 100*RV(j21,j23,t12,cottonwood) + 100*RV(j24,j7,t1,cottonwood) + 100*RV(j24,j7,t2,cottonwood) + 100*RV(j24,j7,t3,cottonwood) + 100*RV(j24,j7,t4,cottonwood) + 100*RV(j24,j7,t5,cottonwood) + 100*RV(j24,j7,t6,cottonwood) + 100*RV(j24,j7,t7,cottonwood) + 100*RV(j24,j7,t8,cottonwood) + 100*RV(j24,j7,t9,cottonwood) + 100*RV(j24,j7,t10,cottonwood) + 100*RV(j24,j7,t11,cottonwood) + 100*RV(j24,j7,t12,cottonwood) + 100*RV(j25,j24,t1,cottonwood) + 100*RV(j25,j24,t2,cottonwood) + 100*RV(j25,j24,t3,cottonwood) + 100*RV(j25,j24,t4,cottonwood) + 100*RV(j25,j24,t5,cottonwood) + 100*RV(j25,j24,t6,cottonwood) + 100*RV(j25,j24,t7,cottonwood) + 100*RV(j25,j24,t8,cottonwood) + 100*RV(j25,j24,t9,cottonwood) + 100*RV(j25,j24,t10,cottonwood) + 100*RV(j25,j24,t11,cottonwood) + 100*RV(j25,j24,t12,cottonwood) + 100*RV(j29,j24,t1,cottonwood) + 100*RV(j29,j24,t2,cottonwood) + 100*RV(j29,j24,t3,cottonwood) + 100*RV(j29,j24,t4,cottonwood) + 100*RV(j29,j24,t5,cottonwood) + 100*RV(j29,j24,t6,cottonwood) + 100*RV(j29,j24,t7,cottonwood) + 100*RV(j29,j24,t8,cottonwood) + 100*RV(j29,j24,t9,cottonwood) + 100*RV(j29,j24,t10,cottonwood) + 100*RV(j29,j24,t11,cottonwood) + 100*RV(j29,j24,t12,cottonwood) + 100*RV(j30,j25,t1,cottonwood) + 100*RV(j30,j25,t2,cottonwood) + 100*RV(j30,j25,t3,cottonwood) + 100*RV(j30,j25,t4,cottonwood) + 100*RV(j30,j25,t5,cottonwood) + 100*RV(j30,j25,t6,cottonwood) + 100*RV(j30,j25,t7,cottonwood) + 100*RV(j30,j25,t8,cottonwood) + 100*RV(j30,j25,t9,cottonwood) + 100*RV(j30,j25,t10,cottonwood) + 100*RV(j30,j25,t11,cottonwood) + 100*RV(j30,j25,t12,cottonwood) + 100*RV(j31,j30,t1,cottonwood) + 100*RV(j31,j30,t2,cottonwood) + 100*RV(j31,j30,t3,cottonwood) + 100*RV(j31,j30,t4,cottonwood) + 100*RV(j31,j30,t5,cottonwood) + 100*RV(j31,j30,t6,cottonwood) + 100*RV(j31,j30,t7,cottonwood) + 100*RV(j31,j30,t8,cottonwood) + 100*RV(j31,j30,t9,cottonwood) + 100*RV(j31,j30,t10,cottonwood) + 100*RV(j31,j30,t11,cottonwood) + 100*RV(j31,j30,t12,cottonwood) + 100*RV(j32,j29,t1,cottonwood) + 100*RV(j32,j29,t2,cottonwood) + 100*RV(j32,j29,t3,cottonwood) + 100*RV(j32,j29,t4,cottonwood) + 100*RV(j32,j29,t5,cottonwood) + 100*RV(j32,j29,t6,cottonwood) + 100*RV(j32,j29,t7,cottonwood) + 100*RV(j32,j29,t8,cottonwood) + 100*RV(j32,j29,t9,cottonwood) + 100*RV(j32,j29,t10,cottonwood) + 100*RV(j32,j29,t11,cottonwood) + 100*RV(j32,j29,t12,cottonwood) + 100*RV(j33,j43,t1,cottonwood) + 100*RV(j33,j43,t2,cottonwood) + 100*RV(j33,j43,t3,cottonwood) + 100*RV(j33,j43,t4,cottonwood) + 100*RV(j33,j43,t5,cottonwood) + 100*RV(j33,j43,t6,cottonwood) + 100*RV(j33,j43,t7,cottonwood) + 100*RV(j33,j43,t8,cottonwood) + 100*RV(j33,j43,t9,cottonwood) + 100*RV(j33,j43,t10,cottonwood) + 100*RV(j33,j43,t11,cottonwood) + 100*RV(j33,j43,t12,cottonwood) + 100*RV(j34,j33,t1,cottonwood) + 100*RV(j34,j33,t2,cottonwood) + 100*RV(j34,j33,t3,cottonwood) + 100*RV(j34,j33,t4,cottonwood) + 100*RV(j34,j33,t5,cottonwood) + 100*RV(j34,j33,t6,cottonwood) + 100*RV(j34,j33,t7,cottonwood) + 100*RV(j34,j33,t8,cottonwood) + 100*RV(j34,j33,t9,cottonwood) + 100*RV(j34,j33,t10,cottonwood) + 100*RV(j34,j33,t11,cottonwood) + 100*RV(j34,j33,t12,cottonwood) + 100*RV(j35,j40,t1,cottonwood) + 100*RV(j35,j40,t2,cottonwood) + 100*RV(j35,j40,t3,cottonwood) + 100*RV(j35,j40,t4,cottonwood) + 100*RV(j35,j40,t5,cottonwood) + 100*RV(j35,j40,t6,cottonwood) + 100*RV(j35,j40,t7,cottonwood) + 100*RV(j35,j40,t8,cottonwood) + 100*RV(j35,j40,t9,cottonwood) + 100*RV(j35,j40,t10,cottonwood) + 100*RV(j35,j40,t11,cottonwood) + 100*RV(j35,j40,t12,cottonwood) + 100*RV(j37,j1,t1,cottonwood) + 100*RV(j37,j1,t2,cottonwood) + 100*RV(j37,j1,t3,cottonwood) + 100*RV(j37,j1,t4,cottonwood) + 100*RV(j37,j1,t5,cottonwood) + 100*RV(j37,j1,t6,cottonwood) + 100*RV(j37,j1,t7,cottonwood) + 100*RV(j37,j1,t8,cottonwood) + 100*RV(j37,j1,t9,cottonwood) + 100*RV(j37,j1,t10,cottonwood) + 100*RV(j37,j1,t11,cottonwood) + 100*RV(j37,j1,t12,cottonwood) + 100*RV(j40,j32,t1,cottonwood) + 100*RV(j40,j32,t2,cottonwood) + 100*RV(j40,j32,t3,cottonwood) + 100*RV(j40,j32,t4,cottonwood) + 100*RV(j40,j32,t5,cottonwood) + 100*RV(j40,j32,t6,cottonwood) + 100*RV(j40,j32,t7,cottonwood) + 100*RV(j40,j32,t8,cottonwood) + 100*RV(j40,j32,t9,cottonwood) + 100*RV(j40,j32,t10,cottonwood) + 100*RV(j40,j32,t11,cottonwood) + 100*RV(j40,j32,t12,cottonwood) + 100*RV(j43,j45,t1,cottonwood) + 100*RV(j43,j45,t2,cottonwood) + 100*RV(j43,j45,t3,cottonwood) + 100*RV(j43,j45,t4,cottonwood) + 100*RV(j43,j45,t5,cottonwood) + 100*RV(j43,j45,t6,cottonwood) + 100*RV(j43,j45,t7,cottonwood) + 100*RV(j43,j45,t8,cottonwood) + 100*RV(j43,j45,t9,cottonwood) + 100*RV(j43,j45,t10,cottonwood) + 100*RV(j43,j45,t11,cottonwood) + 100*RV(j43,j45,t12,cottonwood) + 100*RV(j45,j32,t1,cottonwood) + 100*RV(j45,j32,t2,cottonwood) + 100*RV(j45,j32,t3,cottonwood) + 100*RV(j45,j32,t4,cottonwood) + 100*RV(j45,j32,t5,cottonwood) + 100*RV(j45,j32,t6,cottonwood) + 100*RV(j45,j32,t7,cottonwood) + 100*RV(j45,j32,t8,cottonwood) + 100*RV(j45,j32,t9,cottonwood) + 100*RV(j45,j32,t10,cottonwood) + 100*RV(j45,j32,t11,cottonwood) + 100*RV(j45,j32,t12,cottonwood) =L= 50000 ; (LHS = 0)
      
-GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/23/26 16:38:15 Page 5
+GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/23/26 17:03:06 Page 5
 Watershed Area of Suitable Habitat (WASH) model and an application on the Lower Bear River Watershed
-Column Listing      SOLVE WASH Using NLP From line 545
+Column Listing      SOLVE WASH Using NLP From line 546
 
 
 ---- Z  Objective function value of WASH that the model will try to maximize [Mm^2]
@@ -42119,9 +42120,9 @@ W(j45,j32,t12)
                 (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
        -1       EQ1a(wetlands,j45,j32,t12)
 
-GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/23/26 16:38:15 Page 6
+GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/23/26 17:03:06 Page 6
 Watershed Area of Suitable Habitat (WASH) model and an application on the Lower Bear River Watershed
-Range Statistics    SOLVE WASH Using NLP From line 545
+Range Statistics    SOLVE WASH Using NLP From line 546
 
 
 RANGE STATISTICS (ABSOLUTE NON-ZERO FINITE VALUES)
@@ -42130,9 +42131,9 @@ RHS       [min, max] : [ 1.000E-03, 1.000E+05] - Zero values observed as well
 Bound     [min, max] : [ 2.234E-01, 2.451E+02] - Zero values observed as well
 Matrix    [min, max] : [ 3.459E-11, 1.184E+02] - Zero values observed as well
 
-GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/23/26 16:38:15 Page 7
+GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/23/26 17:03:06 Page 7
 Watershed Area of Suitable Habitat (WASH) model and an application on the Lower Bear River Watershed
-Model Statistics    SOLVE WASH Using NLP From line 545
+Model Statistics    SOLVE WASH Using NLP From line 546
 
 
 MODEL STATISTICS
@@ -42143,23 +42144,23 @@ NON ZERO ELEMENTS        12,097     NON LINEAR N-Z          1,685
 CODE LENGTH               6,734     CONSTANT POOL              53
 
 
-GENERATION TIME      =        0.094 SECONDS      6 MB  54.4.0 9a60ae27 WEX-WEI
-GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/23/26 16:38:15 Page 8
+GENERATION TIME      =        0.062 SECONDS      6 MB  54.4.0 9a60ae27 WEX-WEI
+GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/23/26 17:03:06 Page 8
 Watershed Area of Suitable Habitat (WASH) model and an application on the Lower Bear River Watershed
-Solution Report     SOLVE WASH Using NLP From line 545
+Solution Report     SOLVE WASH Using NLP From line 546
 
 
                S O L V E      S U M M A R Y
 
      MODEL   WASH                OBJECTIVE  Z
      TYPE    NLP                 DIRECTION  MAXIMIZE
-     SOLVER  CONOPT              FROM LINE  545
+     SOLVER  CONOPT              FROM LINE  546
 
 **** SOLVER STATUS     1 Normal Completion
 **** MODEL STATUS      2 Locally Optimal
 **** OBJECTIVE VALUE              491.7908
 
- RESOURCE USAGE, LIMIT          0.438 100000000.000
+ RESOURCE USAGE, LIMIT          0.078 100000000.000
  ITERATION COUNT, LIMIT        18    2147483647
  EVALUATION ERRORS              0             0
  
@@ -42185,12 +42186,12 @@ Solution Report     SOLVE WASH Using NLP From line 545
  ** Optimal solution. Reduced gradient less than tolerance.
  
  
- CONOPT time Total                            0.135 seconds
-   of which: Function evaluations             0.003 =  2.2%
-             1st Derivative evaluations       0.010 =  7.4%
-             2nd Derivative evaluations       0.001 =  0.7%
-             Directional 2nd Deriv(Hess)      0.007 =  5.2%
-             Interval derivative evals        0.003 =  2.2%
+ CONOPT time Total                            0.028 seconds
+   of which: Function evaluations             0.009 = 32.1%
+             1st Derivative evaluations       0.001 =  3.6%
+             2nd Derivative evaluations       0.000 =  0.0%
+             Directional 2nd Deriv(Hess)      0.000 =  0.0%
+             Interval derivative evals        0.000 =  0.0%
  
 
                            LOWER          LEVEL          UPPER         MARGINAL
@@ -53318,30 +53319,30 @@ j45.j32.t12        -INF             .            +INF             .
                              0 INFEASIBLE
                              0  UNBOUNDED
                              0     ERRORS
-GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/23/26 16:38:15 Page 9
+GAMS 54.4.0  9a60ae27 Sep 9, 2026           WEX-WEI x86 64bit/MS Windows - 10/23/26 17:03:06 Page 9
 Watershed Area of Suitable Habitat (WASH) model and an application on the Lower Bear River Watershed
 E x e c u t i o n
 
 
-----    556 MODEL WASH.ModelStat           =        2.000  
+----    557 MODEL WASH.ModelStat           =        2.000  
             MODEL WASH.SolveStat           =        1.000  
             VARIABLE Z.L                   =      491.791  Objective function value of WASH that the model will try to maximize [Mm^2]
 
-----    556 VARIABLE WSI.L  Wetlands Suitability index   [unitless 0: poor -1: excellent]
+----    557 VARIABLE WSI.L  Wetlands Suitability index   [unitless 0: poor -1: excellent]
 
                  t1          t2          t3          t4          t5          t6          t7          t8          t9         t10         t11         t12
 
 j21.j23       0.365       0.414       0.306       0.140       0.121       0.117       0.141       0.135       0.169       0.188       0.399       0.408
 
 
-----    556 VARIABLE W.L  Wetlands habitat sub-indicator  [Mm^2]
+----    557 VARIABLE W.L  Wetlands habitat sub-indicator  [Mm^2]
 
                  t1          t2          t3          t4          t5          t6          t7          t8          t9         t10         t11         t12
 
 j21.j23      43.167      48.983      36.229      16.540      14.367      13.887      16.651      16.012      19.999      22.258      47.279      48.271
 
 
-----    556 VARIABLE FCI.L  Floodplain Suitability Index [unitless 0: poor -1: excellent]
+----    557 VARIABLE FCI.L  Floodplain Suitability Index [unitless 0: poor -1: excellent]
 
 INDEX 1 = j1
 
@@ -53769,7 +53770,7 @@ j32.t11       0.001
 j32.t12       0.001
 
 
-----    556 VARIABLE F.L  Floodplain connectivity habitat sub-indicator  [Mm^2]
+----    557 VARIABLE F.L  Floodplain connectivity habitat sub-indicator  [Mm^2]
 
                  t3          t4          t5          t6          t7          t8          t9         t10         t11         t12
 
@@ -53792,7 +53793,7 @@ j32.j29 5.000000E-5       0.006       0.027       0.040       0.054       0.054 
 j37.j1  5.000000E-5       0.002       0.010       0.025       0.046       0.037       0.002       0.002       0.002       0.002
 
 
-----    556 VARIABLE RSI.L  Riverine Suitability Index   [unitless 0: poor -1: excellent]
+----    557 VARIABLE RSI.L  Riverine Suitability Index   [unitless 0: poor -1: excellent]
 
 INDEX 1 = j1
 
@@ -54220,7 +54221,7 @@ j32.t11       0.498
 j32.t12       0.861
 
 
-----    556 VARIABLE R.L  Riverine habitat sub-indicator    [Mm^2]
+----    557 VARIABLE R.L  Riverine habitat sub-indicator    [Mm^2]
 
                  t1          t2          t3          t4          t5          t6          t7          t8          t9         t10         t11         t12
 
@@ -54251,7 +54252,7 @@ j43.j45       0.055       0.055       0.055       0.264       0.264       0.264 
 j45.j32       0.073       0.077       0.073       0.143       0.143       0.142       0.141       0.141       0.030       0.069       0.072       0.126
 
 
-----    556 VARIABLE Ind.L  Describes the summation of the model sub-indicators before applying any weights [Mm^2]
+----    557 VARIABLE Ind.L  Describes the summation of the model sub-indicators before applying any weights [Mm^2]
 
 INDEX 1 = riverine
 
@@ -54312,7 +54313,7 @@ INDEX 1 = wetlands
 j21.j23      43.167      48.983      36.229      16.540      14.367      13.887      16.651      16.012      19.999      22.258      47.279      48.271
 
 
-----    556 VARIABLE D.L  Water depth in links [m]
+----    557 VARIABLE D.L  Water depth in links [m]
 
                  t1          t2          t3          t4          t5          t6          t7          t8          t9         t10         t11         t12
 
@@ -54343,7 +54344,7 @@ j43.j45       0.357       0.357       0.357       0.357       0.357       0.357 
 j45.j32       0.424       0.429       0.424       0.398       0.398       0.392       0.357       0.357       0.357       0.418       0.422       0.512
 
 
-----    556 VARIABLE Q.L  Flow in links [Mm^3 per month]
+----    557 VARIABLE Q.L  Flow in links [Mm^3 per month]
 
                  t1          t2          t3          t4          t5          t6          t7          t8          t9         t10         t11         t12
 
@@ -54391,7 +54392,7 @@ j45.j32       1.334       1.418       1.331       0.818       0.818       0.693 
 j45.j42                                                       2.876       2.445       1.955       1.776       0.970
 
 
-----    556 VARIABLE C.L  Vegetation cover of ripairn vegentation species n at environmental sites [Mm^2]
+----    557 VARIABLE C.L  Vegetation cover of ripairn vegentation species n at environmental sites [Mm^2]
 
 INDEX 1 = j1
 
@@ -54649,7 +54650,7 @@ j1.t11       1.690
 j1.t12       1.690
 
 
-----    556 VARIABLE A.L  River channel surface area in links [Mm^2]
+----    557 VARIABLE A.L  River channel surface area in links [Mm^2]
 
                  t1          t2          t3          t4          t5          t6          t7          t8          t9         t10         t11         t12
 
@@ -54680,7 +54681,7 @@ j43.j45       0.266       0.266       0.266       0.266       0.266       0.266 
 j45.j32       0.144       0.144       0.144       0.143       0.143       0.143       0.142       0.142       0.142       0.144       0.144       0.147
 
 
-----    556 VARIABLE WD.L  River channel width [m]
+----    557 VARIABLE WD.L  River channel width [m]
 
                  t1          t2          t3          t4          t5          t6          t7          t8          t9         t10         t11         t12
 
@@ -54711,7 +54712,7 @@ j43.j45      15.320      15.320      15.320      15.320      15.320      15.320 
 j45.j32      15.536      15.549      15.535      15.452      15.452      15.432      15.320      15.320      15.320      15.517      15.528      15.816
 
 
-----    556 VARIABLE RR.L  Reservoir monthly releases volume [Mm^3 per month]
+----    557 VARIABLE RR.L  Reservoir monthly releases volume [Mm^3 per month]
 
              t1          t2          t3          t4          t5          t6          t7          t8          t9         t10         t11         t12
 
@@ -54722,7 +54723,7 @@ j29       0.128       0.600       0.800       1.200       4.230       6.634     
 j33                                                       3.772       4.202       3.190       2.499       1.049                               3.063
 
 
-----    556 VARIABLE STOR.L  Reservoir monthly storage volume [Mm^3]
+----    557 VARIABLE STOR.L  Reservoir monthly storage volume [Mm^3]
 
              t1          t2          t3          t4          t5          t6          t7          t8          t9         t10         t11         t12
 
@@ -54730,7 +54731,7 @@ j29       4.200       6.206       7.024      10.056      14.983      17.703     
 j33       2.467       3.361       4.073       6.065      13.139      11.711       8.376       5.521       3.297       2.506       2.726       3.000
 
 
-----    556 PARAMETER dReq  Demand requirements in a loop [Mm^3 per month]
+----    557 PARAMETER dReq  Demand requirements in a loop [Mm^3 per month]
 
              t1          t2          t3          t4          t5          t6          t7          t8          t9         t10         t11         t12
 
@@ -54743,7 +54744,7 @@ j42                                                       2.876       2.445     
 j44                                                       2.429       4.357       4.291       3.065
 
 
-----    556 VARIABLE RV.L  Defines revegetation areas of species n at environmental sites   [Mm^2]
+----    557 VARIABLE RV.L  Defines revegetation areas of species n at environmental sites   [Mm^2]
 
 INDEX 1 = j1
 
@@ -54921,7 +54922,7 @@ j1.t7        0.500
 j1.t8        0.040
 
 
-----    556 VARIABLE RA.L  Reservoir surface area as a function of reservoir storage [Mm^2]
+----    557 VARIABLE RA.L  Reservoir surface area as a function of reservoir storage [Mm^2]
 
              t1          t2          t3          t4          t5          t6          t7          t8          t9         t10         t11         t12
 
@@ -54932,7 +54933,7 @@ j29       0.692       0.823       0.875       1.065       1.358       1.511     
 j33       0.169       0.200       0.226       0.305       0.650       0.572       0.407       0.283       0.198       0.170       0.178       0.187
 
 
-----    556 PARAMETER evap  Evaporative losses in reservoirs [m per month]
+----    557 PARAMETER evap  Evaporative losses in reservoirs [m per month]
 
              t4          t5          t6          t7          t8          t9         t10
 
@@ -54943,7 +54944,7 @@ j29       0.030       0.122       0.152       0.183       0.152       0.091     
 j33       0.030       0.122       0.152       0.183       0.152       0.091       0.091
 
 
-----    556 PARAMETER wght  The model spatial and temporal weights on every sub-indicator as set by stakeholders [0: no important - 1: important]
+----    557 PARAMETER wght  The model spatial and temporal weights on every sub-indicator as set by stakeholders [0: no important - 1: important]
 
 INDEX 1 = riverine
 
@@ -55013,7 +55014,7 @@ j21.j23       1.000       1.000       1.000       1.000       1.000       1.000 
 
 
 
-EXECUTION TIME       =       98.735 SECONDS      6 MB  54.4.0 9a60ae27 WEX-WEI
+EXECUTION TIME       =       71.562 SECONDS      6 MB  54.4.0 9a60ae27 WEX-WEI
 
 
 USER: Course License                                 G260818+0003Ac-GEN
