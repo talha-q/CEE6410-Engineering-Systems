@@ -1,0 +1,172 @@
+=0GAMS/BARON       54.4.0 9a60ae27 Sep 9, 2026           WEI x86 64bit/MS Window
+=C
+=CGAMS/BARON       54.4.0 9a60ae27 Sep 9, 2026           WEI x86 64bit/MS Window
+=C
+=CBARON is a product of The Optimization Firm, LLC. http://www.minlp.com/
+=CParts of the BARON software were created at the
+=CUniversity of Illinois at Urbana-Champaign.
+=C
+ C:\Users\talha\Downloads\Courses\CEE 6410 Civil Engineering Systems Analysis\Assignments\CEE6410Github\CEE6410-Engineering-Systems\I. Mixed Integer Problem\WASH-master\InputDataModel\225a\sum.dat    = problem    5879 5004 9525 6980  491.85844692235741604 skip       = 5879
+ skip       = 5004
+ skip       = 9525
+ skip       = 6980
+ zlbest     = 493.661774796197
+ zub        = 491.858446922357
+ barstatus  = 9
+ modelstatus= 4
+ missingbnd = 0
+ itera      = 20909
+ nodeopt    = -1
+ nodememmax = 48
+ totaltime  = 4476.9
+=9_
+_2
+===========================================================================
+ BARON version 26.5.27. Built: WIN-64 2026-05-27 12:16:23           
+ Running on machine TALHA-LAPTOP
+
+ BARON is a product of The Optimization Firm. For more information and 
+ related optimization and data analytics products visit https://minlp.com.
+
+
+ If you publish work using this software, please cite publications from
+ https://minlp.com/baron-publications, such as: 
+
+ Zhang, Y. and N. V. Sahinidis, Solving continuous and discrete
+ nonlinear programs with BARON, Comput Optim Appl, 92, 1123-1161, 2025. 
+ https://doi.org/10.1007/s10589-024-00633-0
+_2
+===========================================================================
+ This BARON run may utilize the following subsolver(s)
+ For LP/MIP/QP: CLP/CBC, ILOG CPLEX                             
+ For NLP: MINOS, SNOPT, IPOPT, FILTERSQP
+_2
+===========================================================================
+    The options used in solving the problem are as follows:
+       maxtime        =  0.1000E+09
+       maxiter        =      -1
+       numsol         =       1
+       firstfeas      =       0
+       firstloc       =       0
+       cutoff         =  0.1000E+52
+       target         = -0.1000E+52
+       epsa           =  0.1000E-08
+       epsr           =  0.1000E-08
+       relgaptype     =       4
+       deltaterm      =       0
+       deltaa         =  0.1000E+52
+       deltar         =  0.1000E+01
+       deltat         = -0.1000E+03
+       boxtol         =  0.1000E-07
+       isoltol        =  0.1000E-03
+       absconfeastol  =  0.1000E-05
+       relconfeastol  =  0.0000E+00
+       absintfeastol  =  0.1000E-04
+       relintfeastol  =  0.0000E+00
+       primalcstol    =  0.1000E-04
+       dualcstol      =  0.1000E-04
+       dualfeastol    =  0.1000E-04
+       ectol          =  0.1000E-04
+       results        =       1
+       summary        =       1
+       times          =       1
+       wantdual       =       0
+       prtimefreq     =  0.3000E+02
+       prfreq         = 1000000
+       prlevel        =       1
+       lpsol          =       3
+       nlpsol         =      -1
+       allowminos     =       1
+       allowsnopt     =       1
+       allowexternal  =       1
+       allowipopt     =       1
+       allowfiltersd  =       0
+       allowfiltersqp =       1
+       allowcplex     =       1
+       allowxpress    =       0
+       allowcbc       =       1
+       allowhsl       =       1
+       allowhighs     =       0
+       dolocal        =       1
+       numloc         =      20
+       locres         =       0
+       nouter1        =       4
+       noutpervar     =       4
+       noutiter       =       4
+       outgrid        =      20
+       tdo            =       1
+       mdo            =       1
+       obttdo         =       1
+       lbttdo         =       1
+       pdo            =      -2
+       brvarstra      =       0
+       brptstra       =       0
+       nodesel        =       0
+       compiis        =       0
+       iisint         =       1
+       iisorder       =      -1
+       images         =      -1
+       threads        =       1
+       userrel        =       0
+       usergencuts    =       0
+       usersearch     =       0
+       usertighten    =       0
+       problemisconvex=       0
+_2
+===========================================================================
+ Doing local search
+ Preprocessing found feasible solution with value 491.858
+ Solving bounding LP
+ Starting multi-start local search
+ Done with local search
+_2
+===========================================================================
+  Iteration       Time (s)     Mem   Lower bound     Upper bound   Progress
+          1           4.66    33MB     491.858         493.662       74.37%
+        226          33.98    87MB     491.858         493.662       76.68%
+        550          63.70    87MB     491.858         493.662       76.68%
+        875          93.45    87MB     491.858         493.662       76.68%
+       1221         123.20    87MB     491.858         493.662       76.68%
+       1535         152.38    87MB     491.858         493.662       76.68%
+       1865         182.08    87MB     491.858         493.662       76.68%
+       2196         211.84    87MB     491.858         493.662       76.68%
+       2529         241.67    87MB     491.858         493.662       76.68%
+       2873         271.45    87MB     491.858         493.662       76.68%
+       3228         301.33    87MB     491.858         493.662       76.68%
+       3591         330.70    87MB     491.858         493.662       76.68%
+       3934         360.19    87MB     491.858         493.662       76.68%
+       4266         389.98    87MB     491.858         493.662       76.68%
+       4593         419.75    87MB     491.858         493.662       76.68%
+       4946         449.69    87MB     491.858         493.662       76.68%
+       5281         479.45    87MB     491.858         493.662       76.68%
+       5596         509.00    87MB     491.858         493.662       76.68%
+       5915         538.34    87MB     491.858         493.662       76.68%
+       6244         568.09    87MB     491.858         493.662       76.68%
+       6577         597.80    87MB     491.858         493.662       76.68%
+       6901         627.59    87MB     491.858         493.662       76.68%
+       7158         656.86    87MB     491.858         493.662       76.68%
+       7482         686.27    87MB     491.858         493.662       76.68%
+       7758         715.16    87MB     491.858         493.662       76.68%
+       7983         744.73    87MB     491.858         493.662       76.68%
+       8204         774.28    87MB     491.858         493.662       76.68%
+       8437         803.77    87MB     491.858         493.662       76.68%
+       8697         833.25    87MB     491.858         493.662       76.68%
+       9013         862.81    87MB     491.858         493.662       76.68%
+       9331         892.06    87MB     491.858         493.662       76.68%
+       9631         921.78    87MB     491.858         493.662       76.68%
+       9955         951.47    87MB     491.858         493.662       76.68%
+      10234         980.84    87MB     491.858         493.662       76.68%
+      10557        1010.53    87MB     491.858         493.662       76.68%
+      10885        1040.22    87MB     491.858         493.662       76.68%
+      11198        1069.47    87MB     491.858         493.662       76.68%
+      11497        1099.00    87MB     491.858         493.662       76.68%
+      11796        1128.77    87MB     491.858         493.662       76.68%
+      12119        1158.38    87MB     491.858         493.662       76.68%
+      12420        1188.05    87MB     491.858         493.662       76.68%
+      12728        1217.64    87MB     491.858         493.662       76.68%
+      12993        1246.22    87MB     491.858         493.662       76.68%
+      13327        1275.91    87MB     491.858         493.662       76.68%
+      13644        1305.59    87MB     491.858         493.662       76.68%
+      13905        1335.09    87MB     491.858         493.662       76.68%
+      14153        1364.59    87MB     491.858         493.662       76.68%
+      14396        1394.03    87MB     491.858         493.662       7
