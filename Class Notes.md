@@ -311,5 +311,9 @@ MultiObjective Problem 29 October 2026
 
 \-----------------------------------------------
 
+In order to solve the multi objective problem we need to run the problem multiple times. If we have 4 variables and 6 objectives, we need to run it for 6times6times6 each. 
+
+There is a conflict in old way of representing the water distribution problem in Colorado river basin. 
+
 
 
