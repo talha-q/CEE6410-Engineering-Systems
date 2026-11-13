@@ -1,0 +1,12 @@
+
+    Read HW6-MultiObjectiveVisualization.docx.Download HW6-MultiObjectiveVisualization.docx.
+    Open Matlab cloud at http://matlab.usu.edu.
+    Download and unzip the folder from GitHub - https://github.com/dzeke/CEE-6410-Rosenberg/raw/refs/heads/master/Lectures/NSGA2-MatlabReservoir.zip.
+    Follow the remaining directions in the homework prompt.
+
+Update November 10, 2026.
+
+Please use the following R scripts instead of those included in the Zip file in #3. These files only plot pareto optimal alternatives generated in Matlab with Dominance equal to 1.
+
+    https://github.com/dzeke/CEE-6410-Rosenberg/blob/master/Lectures/PCPforHW6_stud2.R
+    https://github.com/dzeke/CEE-6410-Rosenberg/blob/master/Lectures/PCPforHW6_stud2.Rmd
