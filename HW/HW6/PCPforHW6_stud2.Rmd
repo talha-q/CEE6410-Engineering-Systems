@@ -65,11 +65,11 @@ maxes <- ceiling(apply(dfMaggorieAltsPO,2,max))
 Click on any axis title to drag right or left to be next to another axis.
 Select any range on one axis to filter alternatives within that range.
 
-```{r PCPforMaggorie2, echo=FALSE, warning=FALSE, message=FALSE, fig.width = 12}
+```{r PCPforMaggorie2, echo=FALSE, warning=FALSE, message=FALSE, fig.width = 30}
 
 
 p <- plot_ly(data = dfMaggorieAltsPO, type = 'parcoords',
-          line = list(color='blue'),
+          line = list(color='),
           dimensions = list(
             list(range = c(mins[1],maxes[1]),
                  label = MaggorieVarsAbrev[1], values =  ~FloodIntensity,
