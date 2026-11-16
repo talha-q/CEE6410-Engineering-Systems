@@ -69,7 +69,7 @@ Select any range on one axis to filter alternatives within that range.
 
 
 p <- plot_ly(data = dfMaggorieAltsPO, type = 'parcoords',
-          line = list(color='),
+          line = list(color='blue'),
           dimensions = list(
             list(range = c(mins[1],maxes[1]),
                  label = MaggorieVarsAbrev[1], values =  ~FloodIntensity,
@@ -99,8 +99,85 @@ p <- plot_ly(data = dfMaggorieAltsPO, type = 'parcoords',
 
 p
 
+```
+
+```{r PCPforMaggorie2, echo=FALSE, fig.width=500, message=FALSE, warning=FALSE}
+
+# 1. Filter the dataframe for FloodIntensity between 18 and 20
+
+p <- plot_ly(data = dfMaggorieAltsPO, type = 'parcoords',
+          line = list(color='blue'),
+          dimensions = list(
+            list(range = c(mins[1],maxes[1]),
+                 label = MaggorieVarsAbrev[1], values =  ~FloodIntensity),
+            list(range = c(mins[2],maxes[2]),
+                 label = MaggorieVarsAbrev[2], values = ~UnmetIrrDemand),
+            list(range = c(mins[3],maxes[3]),
+                 label = MaggorieVarsAbrev[3], values =  ~UnmetHydroDemand),
+            list(range = c(mins[4],maxes[4]),
+                 label = MaggorieVarsAbrev[4], values = ~UnmetRecreationDemand),
+            list(range = c(mins[5],maxes[5]),
+                 label = MaggorieVarsAbrev[5], values = ~x1),
+            list(range = c(mins[6],maxes[6]),
+                 label = MaggorieVarsAbrev[6], values = ~x2),
+            list(range = c(mins[7],maxes[7]),
+                 label = MaggorieVarsAbrev[7], values = ~x3)
+
+            )
+         )
+
+
+p
+```
+
+
+
+
+
+```{r PCPforMaggorie2, echo=FALSE, warning=FALSE, message=FALSE, fig.width = 500}
+
+# 1. Filter the dataframe for FloodIntensity between 18 and 20
+df_filtered <- dfMaggorieAltsPO %>%
+  filter(FloodIntensity >= 18 & FloodIntensity <= 20)%>%
+  filter(UnmetIrrDemand >= 10 & UnmetIrrDemand <= 11.5)
+
+
+p <- plot_ly(data = df_filtered, type = 'parcoords',
+          line = list(color='blue'),
+          dimensions = list(
+            list(range = c(18,20),
+                 label = MaggorieVarsAbrev[1], values =  ~FloodIntensity),
+            list(range = c(mins[2],maxes[2]),
+                 label = MaggorieVarsAbrev[2], values = ~UnmetIrrDemand),
+            list(range = c(mins[3],maxes[3]),
+                 label = MaggorieVarsAbrev[3], values =  ~UnmetHydroDemand),
+            list(range = c(mins[4],maxes[4]),
+                 label = MaggorieVarsAbrev[4], values = ~UnmetRecreationDemand),
+            list(range = c(mins[5],maxes[5]),
+                 label = MaggorieVarsAbrev[5], values = ~x1),
+            list(range = c(mins[6],maxes[6]),
+                 label = MaggorieVarsAbrev[6], values = ~x2),
+            list(range = c(mins[7],maxes[7]),
+                 label = MaggorieVarsAbrev[7], values = ~x3)
+
+            )
+         )
+
+
+p
+
 
 ```
+
+
+
+
+
+
+
+
+
+
 
 # Figure 2. Scatter matrix plot
 
